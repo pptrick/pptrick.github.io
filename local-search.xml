@@ -4,12 +4,18 @@
   
   
   <entry>
-    <title>new Post</title>
-    <link href="/2020/12/16/new-Post/"/>
-    <url>/2020/12/16/new-Post/</url>
+    <title>Hello World</title>
+    <link href="/2020/12/16/blog/hello-world/"/>
+    <url>/2020/12/16/blog/hello-world/</url>
     
-    <content type="html"><![CDATA[]]></content>
+    <content type="html"><![CDATA[<p>Hello world!</p><p>之前一直想自己搭一个个人博客，并很早就盯上了Hexo这个框架，但苦于当时还对前端构建了解不多，发现Hexo不太能根据我的想法进行调整和扩展的时候，我就放弃这个框架打算开始自己搭前端。</p><p>经历了软件工程一课的前端训练之后，算是有些入门前端了；这个时候再回头看Hexo框架，发现也不是那么不能扩展，只要会自己改框架源码，搭个静态blog还是绰绰有余了。（要问为什么不自己搭，当然是太懒了嘛，有现成框架干嘛不用呢）</p><p>那么，我的个人blog算是正式上线了！我现在的研究兴趣主要在三维计算机视觉、计算机图形学、VR&amp;AR这些领域，之后会推一些相关技术分享。此外，如果有论文发表我也会挂在<code>publication</code>目录下，但这并不是正式学术主页。</p><p>希望之后能够经常更新博客，及时总结一些技术，也希望我写的内容能帮到屏幕前的各位~</p>]]></content>
     
+    
+    <categories>
+      
+      <category>blog</category>
+      
+    </categories>
     
     
   </entry>
@@ -17,12 +23,18 @@
   
   
   <entry>
-    <title>Hello World</title>
-    <link href="/2020/12/16/hello-world/"/>
-    <url>/2020/12/16/hello-world/</url>
+    <title>Robust 3D Self-portraits in Seconds</title>
+    <link href="/2020/06/18/publication/Robust_3D_Self-portraits/"/>
+    <url>/2020/06/18/publication/Robust_3D_Self-portraits/</url>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>In this paper, we propose an efficient method for robust 3D self-portraits using a single RGBD camera. Benefiting from the proposed  PIFusion and lightweight bundle adjustment algorithm, our method can  generate detailed 3D self-portraits in seconds and shows the ability to  handle extremely loose clothes. To achieve highly efficient and robust reconstruction, we  contribute PIFusion, which combines learning-based 3D recovery with volumetric non-rigid fusion to generate accurate sparse partial scans of the performer. Moreover, a non-rigid volumetric deformation method is  proposed to continuously refine the learned shape prior. Finally, a lightweight bundle adjustment algorithm is  proposed to guarantee that all the partial scans can not only ``loop’’  with each other, but also keep consistent with the selected live key observations. Results and experiments show that the proposed method  achieves more robust and efficient 3D self-portraits compared with  state-of-the-art methods.</p><img src="/img/index/cvpr2020.jpg"><h2 id="Links"><a href="#Links" class="headerlink" title="Links"></a>Links</h2><ul><li><a href="http://www.liuyebin.com/portrait/portrait.html">Project Page</a></li><li><a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Li_Robust_3D_Self-Portraits_in_Seconds_CVPR_2020_paper.pdf">Paper</a></li></ul>]]></content>
     
+    
+    <categories>
+      
+      <category>publication</category>
+      
+    </categories>
     
     
   </entry>
