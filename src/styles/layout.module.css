@@ -3,30 +3,45 @@
     padding: 0 1rem;
     margin: 3rem auto 6rem;
     height: 1000px; /* for debug */
-  }
+}
 
 .intropara {
     width: 100%;
     text-align: center;
     margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.iconlink {
+  width: 100%;
+  size: 10px;
+  margin: 12px;
+}
+
+.link {
+  color:grey;
+}
+
+.link:hover {
+  color: black;
 }
   
-  .header {
+.header {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  
-  .headerImage {
+}
+
+.headerImage {
     width: 6rem;
     height: 6rem;
-  }
-  
-  .headerHomeImage {
+}
+
+.headerHomeImage {
     width: 10rem;
     height: 10rem;
-  }
-  
-  .backToHome {
+}
+
+.backToHome {
     margin: 3rem 0 0;
-  }
+}

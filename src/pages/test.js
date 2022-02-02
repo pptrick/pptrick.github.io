@@ -1,5 +1,7 @@
+import MyNav from '../components/layout'
+
 export default function Test(){
     return (
-        <div>This Page is not available yet!</div>
+        <MyNav>This Page is not available yet!</MyNav>
     )
 }
