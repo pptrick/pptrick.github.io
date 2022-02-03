@@ -12,9 +12,9 @@ export default function Layout({ children}) {
         <div className={styles.container}>
             <header className={styles.header}>
                     <img
-                    src="/images/profile.jpg"
-                    className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
-                    alt={name}
+                      src="/images/profile.jpg"
+                      className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
+                      alt={name}
                     />
                     <h1 className={utilStyles.heading2Xl}>{name}</h1>
             </header>

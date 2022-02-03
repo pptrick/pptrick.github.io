@@ -7,11 +7,11 @@
     border-radius: 5px;
     text-decoration: none;
 
-    -webkit-transition: all .4s; 
-    -moz-transition: all .4s; 
-    -ms-transition: all .4s; 
-    -o-transition: all .4s; 
-    transition: all .4s;
+    -webkit-transition: all .3s; 
+    -moz-transition: all .3s; 
+    -ms-transition: all .3s; 
+    -o-transition: all .3s; 
+    transition: all .3s;
 }
 
 .navLink:hover {

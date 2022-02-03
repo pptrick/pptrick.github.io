@@ -30,6 +30,7 @@
   
   .borderCircle {
     border-radius: 9999px;
+    border:2px solid rgb(175, 174, 174);
   }
   
   .colorInherit {
