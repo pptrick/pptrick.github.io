@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import Layout from '../components/layout'
 import styles from '../styles/Home.module.css'
 import utilStyles from '../styles/utils.module.css'
@@ -9,9 +8,6 @@ const iconlink_size = 23
 export default function Home() {
   return (
     <div>
-      <Head>
-        <title>Chuanyu Pan</title>
-      </Head>
       <Layout>
         <section className={utilStyles.headingMd}>
             <p className={styles.intropara}><BsFillPersonFill /> Undergrad of CST, Tsinghua University</p>

@@ -52,3 +52,29 @@
     word-break: normal;
     font-style: italic;
 }
+
+.pubAbstract {
+    font-size: 0.85rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    word-break: normal;
+}
+
+.pubLink {
+    margin-right: 10px;
+    color: #008cff;
+    text-decoration: none;
+    font-size: 1.0rem;
+    word-break: keep-all;
+
+    -webkit-transition: all .2s; 
+    -moz-transition: all .2s; 
+    -ms-transition: all .2s; 
+    -o-transition: all .2s; 
+    transition: all .2s;
+}
+
+.pubLink:hover {
+    color: rgb(75, 181, 247);
+    font-size: 1.05rem;
+}

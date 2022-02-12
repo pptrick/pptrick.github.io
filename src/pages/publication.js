@@ -62,17 +62,8 @@ export default function Publication({pubData}){
         <Layout>
             <Divider className={styles.divider}><BsFillFileEarmarkTextFill/> Publication</Divider>
             <ul className={styles.Container}>
-                {pubData.map(({id, img_path, title, author, conference, date, content}) => (
-                    <PubCard 
-                        key={id} 
-                        id={id}
-                        img_path={img_path} 
-                        title={title} 
-                        author={author}
-                        conference={conference}
-                        date={date}
-                        content={content}
-                    ></PubCard>
+                {pubData.map((info) => (
+                    <PubCard key={info.id} info={info}></PubCard>
                 ))}
             </ul>
         </Layout>

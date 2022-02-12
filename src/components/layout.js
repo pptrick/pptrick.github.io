@@ -1,13 +1,16 @@
+import Head from 'next/head'
 import styles from '../styles/layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import MyNav from './nav'
-import {BsFillPersonFill, BsFillGeoAltFill, BsFillEnvelopeOpenFill, BsGithub, BsGoogle, BsLinkedin} from 'react-icons/bs';
 
 const name = 'Chuanyu Pan (潘传宇)'
 
 export default function Layout({ children}) {
   return (
     <div>
+        <Head>
+          <title>Chuanyu Pan</title>
+        </Head>
         <MyNav/>
         <div className={styles.container}>
             <header className={styles.header}>

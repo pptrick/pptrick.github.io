@@ -14,8 +14,8 @@ export default function MyNav(){
                 <Navbar.Collapse id="navbarScroll" className="justify-content-end">
                     <Nav>
                         <Nav.Item className="my-2"><Link href='/publication'><a className={styles.navLink}><BsFillFileEarmarkTextFill/> Publication</a></Link></Nav.Item>
-                        <Nav.Item className="my-2"><Link href='/test'><a className={styles.navLink}><BsFillBookFill/> Education</a></Link></Nav.Item>
-                        <Nav.Item className="my-2"><Link href='/test'><a className={styles.navLink}><BsFillLightbulbFill/> Blog</a></Link></Nav.Item>
+                        <Nav.Item className="my-2"><Link href='/education'><a className={styles.navLink}><BsFillBookFill/> Education</a></Link></Nav.Item>
+                        <Nav.Item className="my-2"><Link href='/blog'><a className={styles.navLink}><BsFillLightbulbFill/> Blog</a></Link></Nav.Item>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
