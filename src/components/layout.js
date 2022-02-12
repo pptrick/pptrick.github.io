@@ -10,6 +10,10 @@ export default function Layout({ children}) {
     <div>
         <Head>
           <title>Chuanyu Pan</title>
+          <meta name="keywords" content="ChuanyuPan, 潘传宇, Chuanyu, Tsinghua, 清华"></meta>
+          <meta name="description" content="This page is Chuanyu Pan's home page."></meta>
+          <meta name="author" content="Chuanyu Pan 潘传宇"></meta>
+          <meta http-equiv="content-Type" content="text/html; charset=utf-8"></meta>
         </Head>
         <MyNav/>
         <div className={styles.container}>
