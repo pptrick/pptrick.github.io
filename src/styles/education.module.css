@@ -1,0 +1,47 @@
+/* education main page */
+.divider {
+    margin-top: 1.3rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* education card */
+.CardContainer {
+    width: 82%;
+    margin: 0 auto;
+    padding: 1.6rem;
+    border-radius: 2px;
+}
+
+.eduImg {
+    width: 100%;
+}
+
+.eduTitle {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.eduDepart {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.0rem;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.eduDegree {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.0rem;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.eduTime {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.0rem;
+    font-weight: 400;
+    /* font-style: italic; */
+    margin-top: 1rem;
+}

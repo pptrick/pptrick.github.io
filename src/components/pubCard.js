@@ -17,6 +17,8 @@ function PubLink({Icon, name, children}){
     }
 }
 
+// TODO: add links for each author
+
 export default function PubCard(pubData){
     const info = pubData.info; //Information ([dict]) for each publication
     return (
