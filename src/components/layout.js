@@ -14,6 +14,7 @@ export default function Layout({ children}) {
           <meta name="description" content="This page is Chuanyu Pan's home page."></meta>
           <meta name="author" content="Chuanyu Pan 潘传宇"></meta>
           <meta http-equiv="content-Type" content="text/html; charset=utf-8"></meta>
+          <meta name="google-site-verification" content="RisFS-DjchuTNwiHmyLFchX4R3TSW4H2DcU57Zza9d0" />
         </Head>
         <MyNav/>
         <div className={styles.container}>
