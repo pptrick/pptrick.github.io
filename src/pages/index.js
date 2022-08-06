@@ -10,9 +10,9 @@ export default function Home() {
     <div>
       <Layout>
         <section className={utilStyles.headingMd}>
-            <p className={styles.intropara}><BsFillPersonFill /> Undergrad of CST, Tsinghua University</p>
-            <p className={styles.intropara}><BsFillGeoAltFill /> Haidian, Beijing, China</p>
-            <p className={styles.intropara}><BsFillEnvelopeOpenFill /> pancy17@mails.tsinghua.edu.cn</p>
+            <p className={styles.intropara}><BsFillPersonFill /> Master Student of EECS, University of California Berkeley</p>
+            <p className={styles.intropara}><BsFillGeoAltFill /> Berkeley, California, United States</p>
+            <p className={styles.intropara}><BsFillEnvelopeOpenFill /> panchuanyu45@gmail.com</p>
             <p className={styles.intropara}><BsPinterest /> Research Interest: 3D Computer Vision, Computer Graphics, VR/AR/MR</p>
             <ul className={styles.iconpara}>
               <span className={styles.iconlink}><a href='https://github.com/pptrick' className={styles.link}><BsGithub size={iconlink_size}/></a></span>
