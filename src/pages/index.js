@@ -34,7 +34,7 @@ export default function Home() {
           <section className={styles.sectioncard}>
             <h2 className={styles.sectiontitle}>Publication</h2>
             <div className={styles.intropara}>
-              <Grid container spacing={2} className={styles.intropara}>
+              <Grid container spacing={2}>
                     <Grid item xs={4}> {/*An image set on left*/}
                       <img
                       src="/images/pubimg.png"
