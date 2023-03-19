@@ -33,18 +33,20 @@ export default function Home() {
           <Link href='/publication'>
           <section className={styles.sectioncard}>
             <h2 className={styles.sectiontitle}>Publication</h2>
-            <Grid container spacing={2} className={styles.intropara}>
-                  <Grid item xs={4}> {/*An image set on left*/}
-                    <img
-                    src="/images/pubimg.png"
-                    className={styles.image}
-                    alt="pubimg"
-                    />
-                  </Grid>
-                  <Grid item xs={8}> {/*Content set on right*/}
-                  <p className={styles.imagetext}>My research interests mainly lies in 3D vision and computer graphics, and I have publications on top conferences like CVPR, ICLR, etc. I had experience on 3D reconstruction and perception, and hope to investigate more in these fields.</p>
-                  </Grid>
-            </Grid>
+            <div className={styles.intropara}>
+              <Grid container spacing={2} className={styles.intropara}>
+                    <Grid item xs={4}> {/*An image set on left*/}
+                      <img
+                      src="/images/pubimg.png"
+                      className={styles.image}
+                      alt="pubimg"
+                      />
+                    </Grid>
+                    <Grid item xs={8}> {/*Content set on right*/}
+                    <p className={styles.imagetext}>My research interests mainly lies in 3D vision and computer graphics, and I have publications on top conferences like CVPR, ICLR, etc. I had experience on 3D reconstruction and perception, and hope to investigate more in these fields.</p>
+                    </Grid>
+              </Grid>
+            </div>
           </section>
           </Link>
 
@@ -52,18 +54,20 @@ export default function Home() {
           <Link href='/education'>
           <section className={styles.sectioncard}>
             <h2 className={styles.sectiontitle}>Education</h2>
-            <Grid container spacing={2} className={styles.intropara}>
-                  <Grid item xs={4}> {/*An image set on left*/}
-                    <img
-                    src="/images/eduimg.png"
-                    className={styles.image}
-                    alt="pubimg"
-                    />
-                  </Grid>
-                  <Grid item xs={8}> {/*Content set on right*/}
-                  <p className={styles.imagetext}>I'm currently a master student at UC Berkeley, major in computer Science (visual computing and computer graphics). Before joining berkeley, I received my bachelor's degree in Computer Science and Technology at Tsinghua University (Beijing, China).</p>
-                  </Grid>
-            </Grid>
+            <div className={styles.intropara}>
+              <Grid container spacing={2}>
+                    <Grid item xs={4}> {/*An image set on left*/}
+                      <img
+                      src="/images/eduimg.png"
+                      className={styles.image}
+                      alt="pubimg"
+                      />
+                    </Grid>
+                    <Grid item xs={8}> {/*Content set on right*/}
+                    <p className={styles.imagetext}>I'm currently a master student at UC Berkeley, major in computer Science (visual computing and computer graphics). Before joining berkeley, I received my bachelor's degree in Computer Science and Technology at Tsinghua University (Beijing, China).</p>
+                    </Grid>
+              </Grid>
+            </div>
           </section>
           </Link>
 
