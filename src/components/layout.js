@@ -27,6 +27,9 @@ export default function Layout({ children}) {
                     <h1 className={utilStyles.heading2Xl}>{name}</h1>
             </header>
             <main>{children}</main>
+            <footer className={styles.footer}>
+		         <p>&copy; 2023 Chuanyu Pan. All rights reserved.</p>
+            </footer>
         </div>
     </div>
   )

@@ -23,3 +23,9 @@
 .backToHome {
     margin: 3rem 0 0;
 }
+
+.footer {
+    color: grey;
+    padding: 20px;
+    text-align: center;
+}
