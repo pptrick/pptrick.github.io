@@ -1,7 +1,7 @@
 .container {
     max-width: 70rem;
     padding: 0 1rem;
-    margin: 5rem auto 2rem;
+    margin: 0rem auto 0rem;
 }
   
 .header {
@@ -18,6 +18,7 @@
 .headerHomeImage {
     width: 10.5rem;
     height: 10.5rem;
+    margin-top: 5rem;
 }
 
 .backToHome {
@@ -28,4 +29,8 @@
     color: grey;
     padding: 20px;
     text-align: center;
+}
+
+.background {
+    background-color: #f8f9fa;
 }

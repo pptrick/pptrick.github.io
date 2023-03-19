@@ -7,7 +7,7 @@ const name = 'Chuanyu Pan (潘传宇)'
 
 export default function Layout({ children}) {
   return (
-    <div>
+    <div className={styles.background}>
         <Head>
           <title>Chuanyu Pan</title>
           <meta name="keywords" content="ChuanyuPan, 潘传宇, Chuanyu, Tsinghua, 清华"></meta>

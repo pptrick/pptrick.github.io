@@ -7,7 +7,7 @@ import {BsFillFileEarmarkTextFill, BsFillBookFill, BsFillLightbulbFill, BsFillHo
 
 export default function MyNav(){
     return (
-        <Navbar bg="white" expand="lg" fixed="top">
+        <Navbar bg="light" expand="lg" fixed="top">
             <Container fluid>
                 <Navbar.Brand><Link href='/'><a className={styles.navLink}><BsFillHouseFill/> Home</a></Link></Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
