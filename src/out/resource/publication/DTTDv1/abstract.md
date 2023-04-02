@@ -1,6 +1,7 @@
 ---
 title: 'Digital Twin Tracking Dataset (DTTD): A New RGB+Depth 3D Dataset for Longer-Range Object Tracking Applications'
 author: 'Weiyu Feng*, Seth Z. Zhao*, Chuanyu Pan*, Adam Chang, Yichen Chen, Zekun Wang, Allen Y. Yang'
+conference: 'IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2023, the 2nd Workshop Challenge on Vision Datasets Understanding'
 date: '2023-02-12'
 paper: 'https://arxiv.org/abs/2302.05991'
 projectPage: 'https://github.com/augcog/DTTDv1'

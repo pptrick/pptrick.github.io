@@ -6,6 +6,11 @@ First transfer to the project directory `src`. To install all the dependencies:
 npm install
 ```
 
+To run in development mode, run the following command under `src`:
+```bash
+npm run dev
+```
+
 ## deploy
 First build public files:
 ```
@@ -17,5 +22,5 @@ npm run export
 ```
 It will create a directory `src/out/`, which contains static files.
 
-After `export`，add an empty file `.nojekyll`  to `src/out/`.
+After `export`，create an empty file `.nojekyll`  under `src/out/`.
 
