@@ -1,7 +1,7 @@
 import Layout from '../components/layout'
 import styles from '../styles/Home.module.css'
 import utilStyles from '../styles/utils.module.css'
-import {BsFillPersonFill, BsFillGeoAltFill, BsFillEnvelopeOpenFill, BsPinterest, BsGithub, BsGoogle, BsLinkedin} from 'react-icons/bs';
+import {BsFillPersonFill, BsFillGeoAltFill, BsFillEnvelopeOpenFill, BsPinterest, BsGithub, BsGoogle, BsLinkedin, BsFillFileEarmarkMedicalFill} from 'react-icons/bs';
 
 import Link from 'next/link'
 import {Grid, Item} from '@mui/material/'
@@ -26,6 +26,7 @@ export default function Home() {
               <span className={styles.iconlink}><a href='https://github.com/pptrick' className={styles.link}><BsGithub size={iconlink_size}/></a></span>
               <span className={styles.iconlink}><a href='https://scholar.google.com/citations?user=wNKoPGAAAAAJ&hl=en' className={styles.link}><BsGoogle size={iconlink_size}/></a></span>
               <span className={styles.iconlink}><a href='https://www.linkedin.com/in/chuanyu-pan/' className={styles.link}><BsLinkedin size={iconlink_size}/></a></span>
+              <span className={styles.iconlink}><a href='/files/resume.pdf' className={styles.link}><BsFillFileEarmarkMedicalFill size={iconlink_size}/></a></span>
             </ul>
           </section>
 
