@@ -8,8 +8,8 @@ function EducationCard(eduData){
     console.log(eduData)
     return(
         <ul className={styles.CardContainer}>
-            <Grid container spacing={2}>
-                <Grid item xs={4} sm={3} md={2}> {/*An image set on left*/}
+            <Grid container columnSpacing={6} rowSpacing={1}>
+                <Grid item xs={8} md={2.5}> {/*An image set on left*/}
                     <div>
                         <img
                         src={eduData.img_path}
@@ -18,8 +18,7 @@ function EducationCard(eduData){
                         />
                     </div>
                 </Grid>
-                <Grid item xs={0} sm={1} md={2}/>
-                <Grid item xs={8}> {/*Content set on right*/}
+                <Grid item xs={12} md={8}> {/*Content set on right*/}
                     <div className={styles.eduTitle}>{eduData.school}</div>
                     <div className={styles.eduDepart}><BsBuilding/> {eduData.department}</div>
                     <div className={styles.eduDegree}><BsPersonFill/> {eduData.degree}</div>

@@ -1,5 +1,6 @@
 .heading2Xl {
-    font-size: 230%;
+    /* font-size: 200%; */
+    font-size: 4vh;
     line-height: 1.2;
     font-weight: 800;
     letter-spacing: -0.05rem;

@@ -23,8 +23,8 @@ export default function PubCard(pubData){
     const info = pubData.info; //Information ([dict]) for each publication
     return (
         <ul className={styles.pubContainer}>
-            <Grid container spacing={2}>
-                <Grid item xs={4}> {/*An image set on left*/}
+            <Grid container spacing={3}>
+                <Grid item xs={12} md={4}> {/*An image set on left*/}
                     <div className={styles.pubImg}>
                     <Zoom>
                         <img
@@ -35,7 +35,7 @@ export default function PubCard(pubData){
                     </Zoom>
                     </div>
                 </Grid>
-                <Grid item xs={8}> {/*Content set on right*/}
+                <Grid item xs={12} md={8}> {/*Content set on right*/}
                     <div className={styles.pubTitle}>{info.title}</div>
                     <div className={styles.pubAuthor}>{info.author}</div>
                     <div className={styles.pubConf}>{info.conference}</div>
