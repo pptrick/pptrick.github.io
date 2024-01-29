@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)http://www.liuyebin.com/portrait/portrait.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Object-Pursuit Project Page</title>
+  <!-- Bootstrap -->
+  <link href="./res/bootstrap-4.0.0.css" rel="stylesheet">
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1073.0" data-gr-ext-installed="">
+  <div id="page_container">
+    <header>
+      <div class="jumbotron">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h5 class="text-center">ICLR 2022</h5>
+              <h2 class="text-center">Object Pursuit: Building a Space of Objects via Discriminative Weight Generation</h2>
+                <p class="text-center">&nbsp;</p>
+                <h6 class="text-center"><a href="https://pptrick.github.io/">Chuanyu Pan</a>, <a href="https://yanchaoyang.github.io/">Yanchao Yang</a>, <a href="https://cs.stanford.edu/~kaichun/">Kaichun Mo</a>, <a href="https://duanyueqi.github.io/">Yueqi Duan</a>, <a href="https://geometry.stanford.edu/member/guibas/">Leonidas Guibas</a></h6>
+                <p class="text-center">Stanford University, Tsinghua University</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section>
+      <div class="container">
+        <p>&nbsp;</p>
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 text-center">
+            <h2>Abstract</h2>
+          </div>
+        </div>
+      </div>
+      <div class="container ">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 text-center  offset-xl-0 col-xl-12">
+            <p class="text-left"><em>We propose a framework to continuously learn object-centric representations for visual learning and understanding. Existing object-centric representations either rely on supervisions that individualize objects in the scene, or perform unsupervised disentanglement that can hardly deal with complex scenes in the real world. To mitigate the annotation burden and relax the constraints on the statistical complexity of the data, our method leverages interactions to effectively sample diverse variations of an object and the corresponding training signals while learning the object-centric representations. Throughout learning, objects are streamed one by one in random order with unknown identities, and are associated with latent codes that can synthesize discriminative weights for each object through a convolutional hypernetwork. Moreover, re-identification of learned objects and forgetting prevention are employed to make the learning process efficient and robust. We perform an extensive study of the key features of the proposed framework and analyze the characteristics of the learned representations. Furthermore, we demonstrate the capability of the proposed framework in learning representations that can improve label efficiency in downstream tasks. Our code and trained models are made publicly available at: <a href="https://github.com/pptrick/Object-Pursuit">https://github.com/pptrick/Object-Pursuit</a>.</em></p>
+            <p class="text-left">&nbsp;</p>
+            <p class="text-left">&nbsp;</p>
+            <img src="./res/overview.png" width="600" alt="">
+            <p>Fig 1.&nbsp; Agent discovers and learns objects sequentially</p>
+            <p>&nbsp;</p>
+          </div>
+        </div>
+
+        <hr>
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 text-center">
+            <h2>Methods </h2>
+            <p>&nbsp;</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 text-center offset-xl-1 col-xl-10"> <img src="./res/structure.png" width="800" alt="">
+            <p>&nbsp;</p>
+            <p class="text-center">Fig 2. Object space as discriminative weights.</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 text-center offset-xl-1 col-xl-10"> <img src="./res/pipeline.png" width="900" alt="">
+            <p>&nbsp;</p>
+            <p class="text-center">Fig 3. Object Pursuit: learning objects representation continuously.</p>
+            <p>&nbsp;</p>
+          </div>
+        </div>
+
+        <hr>
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 text-center">
+            <h2>Application: One-shot Learning </h2>
+            <p>&nbsp;</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 text-center offset-xl-1 col-xl-10"> <img src="./res/one-shot.png" width="700" alt="">
+            <p>&nbsp;</p>
+            <p class="text-center">Fig 4. Visualization results of one-shot learning on DAVIS dataset.</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+          </div>
+        </div>
+
+        <hr>
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 text-center">
+            <h2>Technical Paper</h2>
+          </div>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 text-center"> <a href="https://openreview.net/pdf?id=lbauk6wK2-y"><img src="./res/paper.png" width="1000" alt=""></a>
+          <p>&nbsp;</p>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-lg-12 mb-4 mt-2 text-center">
+            <h2>Presentation Video</h2>
+          </div>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 text-center"> <a href="https://iclr.cc/virtual/2022/poster/6713"><img src="./res/video.png" width="800" alt=""></a>
+          <p>&nbsp;</p>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 text-center">
+            <h2>Citation</h2>
+          </div>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 text-left">
+          <p><span style="color:#000000;font-family:&#39;Courier New&#39;;font-size:15px;">@inproceedings{pan2021object,
+              <br>
+              &nbsp;&nbsp;title={Object Pursuit: Building a Space of Objects via Discriminative Weight Generation},<br>
+              &nbsp;&nbsp;author={Pan, Chuanyu and Yang, Yanchao and Mo, Kaichun and Duan, Yueqi and Guibas, Leonidas},<br>
+              &nbsp;&nbsp;booktitle={International Conference on Learning Representations},<br>
+              &nbsp;&nbsp;year={2022}<br>
+              }</span></p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+        </div>
+        <div class="row"> </div>
+      </div>
+      <div class="jumbotron"> </div>
+    </section>
+  </div>
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
