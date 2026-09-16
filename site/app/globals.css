@@ -92,9 +92,20 @@ a { color: inherit; }
 
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
-/* Align the identity on one axis beside the detailed scene. Reserve mono for
-   metadata, giving the name and statement a more deliberate type hierarchy. */
+/* Keep the portrait prominent and the introduction to a few readable lines. */
 .site-navigation-links { display: flex; align-items: center; gap: 1.75rem; }
+.site-brand { flex-shrink: 0; white-space: nowrap; }
+.site-utilities { display: flex; align-items: center; gap: 1.25rem; flex-shrink: 0; }
+.site-cv { display: inline-flex; align-items: center; gap: .375rem; min-height: 44px; font-size: .875rem; color: var(--fg-2); }
+.site-cv span { color: var(--muted); }
+.site-cv:hover, .site-cv:focus-visible { color: var(--accent); text-decoration: underline; text-underline-offset: .3em; }
+.site-preferences { display: flex; align-items: center; gap: .5rem; padding-left: 1.25rem; border-left: 1px solid var(--line); }
+.language-switch { display: inline-flex; align-items: center; padding: 3px; border-radius: 6px; background: var(--bg-2); }
+.language-option { display: inline-flex; align-items: center; justify-content: center; min-width: 40px; min-height: 36px; padding-inline: .5rem; border-radius: 4px; font-size: .75rem; font-weight: 500; line-height: 1; color: var(--muted); }
+.language-option--active { background: var(--surface-2); color: var(--fg); box-shadow: 0 1px 3px rgb(0 0 0 / .12); }
+a.language-option:hover, a.language-option:focus-visible { color: var(--accent); background: var(--surface); }
+.theme-toggle { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 6px; color: var(--fg-2); cursor: pointer; transition: background .2s, color .2s; }
+.theme-toggle:hover, .theme-toggle:focus-visible { background: var(--surface-2); color: var(--accent); }
 .scene-scrim { background: var(--scrim); }
 .home-hero {
   min-height: calc(100svh - var(--header-h) - 1px);
@@ -102,72 +113,68 @@ a { color: inherit; }
   align-items: center;
   padding-block: 3rem;
 }
-.home-intro { width: min(100%, 33rem); pointer-events: auto; }
-.home-discipline {
-  display: flex;
-  align-items: center;
-  gap: .9rem;
-  margin-bottom: 1.75rem;
-  color: var(--fg-2);
-  font-family: var(--font-mono);
-  font-size: .6875rem;
-  letter-spacing: .13em;
-  text-transform: uppercase;
-}
-.home-discipline > span { width: 1.5rem; height: 1px; background: var(--accent); }
+.home-intro { width: min(100%, 28rem); pointer-events: auto; }
 .home-name {
-  font-size: clamp(3rem, 5.4vw, 4.875rem);
+  font-size: clamp(2.8rem, 4.5vw, 3.75rem);
   font-weight: 500;
   letter-spacing: -.065em;
   line-height: 1.08;
 }
 .home-statement {
-  margin-top: 1.6rem;
+  margin-top: 1.75rem;
   color: var(--fg-2);
-  font-size: clamp(1.125rem, 1.7vw, 1.5rem);
-  font-weight: 300;
+  font-size: clamp(1.25rem, 1.5vw, 1.375rem);
+  font-weight: 400;
   line-height: 1.6;
   letter-spacing: -.015em;
 }
-.home-profile {
-  display: flex;
-  align-items: center;
-  gap: 1.125rem;
-  margin-top: 2.25rem;
-  padding-top: 1.75rem;
-  border-top: 1px solid var(--line-2);
-  max-width: 27rem;
-}
+.home-statement-focus { display: block; color: var(--fg); }
 .home-portrait {
   display: block;
-  flex: 0 0 3.5rem;
-  height: 4rem;
+  width: clamp(9rem, 23svh, 13rem);
+  aspect-ratio: 1;
+  margin-inline: auto;
+  margin-bottom: 1.5rem;
+  transform: translateX(-3.25rem);
   overflow: hidden;
-  border-radius: 3px;
+  border-radius: 50%;
+  border: 1px solid var(--line-2);
   background: var(--surface);
 }
 .home-portrait img { width: 100%; height: 100%; object-fit: cover; }
-.home-role { font-size: .9375rem; line-height: 1.6; }
-.home-role-separator { padding-inline: .3rem; color: var(--muted); }
+.home-role { margin-top: .5rem; font-size: 1.125rem; line-height: 1.6; }
+.home-role-separator { color: var(--fg-2); }
 .home-role a { text-decoration: underline; text-decoration-color: var(--line-2); text-underline-offset: 4px; }
 .home-role a:hover { color: var(--accent); }
-.home-location { margin-top: .2rem; color: var(--muted); font-size: .8125rem; }
-.home-actions { display: flex; align-items: center; gap: 2rem; margin-top: 2.5rem; }
-.home-actions a { display: inline-flex; align-items: center; gap: 1rem; padding-block: .6rem; font-size: .9375rem; transition: color .2s; }
-.home-research-link { border-bottom: 1px solid var(--accent); }
-.home-research-link svg { color: var(--accent); }
-.home-about-link { color: var(--muted); }
-.home-actions a:hover { color: var(--accent); }
+.home-actions { display: flex; flex-wrap: wrap; align-items: center; row-gap: .25rem; margin-top: 1.75rem; }
+.home-action { display: inline-flex; align-items: center; }
+.home-action-break { display: none; }
+.home-action-separator { margin-inline: .625rem; color: var(--muted); }
+.home-actions a { display: inline-flex; align-items: center; min-height: 44px; font-size: 1.0625rem; color: var(--fg-2); text-decoration: underline; text-decoration-color: var(--line-2); text-decoration-thickness: 1px; text-underline-offset: .35em; transition: color .2s, text-decoration-color .2s; }
+.home-actions a:hover, .home-actions a:focus-visible { color: var(--accent); text-decoration-color: var(--accent); }
 
 /* Keep every destination available in a second row on smaller screens. */
 @media (max-width: 900px) {
   :root { --header-h: 7rem; }
   .site-navigation { flex-wrap: wrap; gap: 0 1rem; align-content: center; }
   .site-navigation-links { order: 1; width: 100%; justify-content: space-between; gap: .75rem; margin-top: .75rem; }
-  .site-navigation-links > a { font-size: .75rem; }
+  .site-navigation-links > a { display: inline-flex; align-items: center; min-height: 36px; font-size: .75rem; }
   .home-intro { width: min(100%, 28rem); }
   .home-name { font-size: clamp(2.8rem, 6.5vw, 4rem); }
-  .home-statement { font-size: 1.125rem; }
+  .home-statement { font-size: 1.25rem; }
+}
+
+/* Landing navigation lives with the introduction, leaving a single header row. */
+:root:has(.site-header--home) { --header-h: 4.5rem; }
+
+@media (max-width: 480px) {
+  .site-navigation { column-gap: .5rem; }
+  .site-brand { font-size: .8125rem; }
+  .site-utilities { gap: .75rem; }
+  .site-cv { font-size: .8125rem; gap: .25rem; }
+  .site-preferences { gap: .25rem; padding-left: .75rem; }
+  .language-option { min-width: 36px; padding-inline: .375rem; }
+  .theme-toggle { width: 36px; }
 }
 
 /* In portrait layouts, give the model its own space below the introduction.
@@ -175,23 +182,23 @@ a { color: inherit; }
    are unchanged. The absolute frame also scrolls naturally on short phones. */
 @media (max-width: 900px) and (orientation: portrait) {
   html.landing, html.landing body { height: auto; overflow: auto; overscroll-behavior: auto; }
-  html.landing .scene-backdrop { position: absolute; top: 560px; bottom: auto; height: max(320px, calc(100svh - 560px)); }
+  html.landing .scene-backdrop { position: absolute; top: 720px; bottom: auto; height: max(320px, calc(100svh - 720px)); }
   html.landing .scene-scrim { background: none; }
   .home-hero { align-items: flex-start; padding-top: 3rem; padding-bottom: 25rem; }
 }
 
 @media (max-width: 600px) {
-  .home-hero { padding-top: 2.5rem; }
+  .home-hero { padding-top: 2rem; }
   .home-intro { width: 100%; }
-  .home-discipline { font-size: .6rem; gap: .65rem; margin-bottom: 1.25rem; }
+  .home-portrait { width: 10rem; margin-bottom: 1.5rem; }
   .home-name { font-size: clamp(2.65rem, 11vw, 4rem); }
-  .home-statement { margin-top: 1.25rem; }
-  .home-line-break { display: none; }
-  .home-profile { margin-top: 1.5rem; padding-top: 1.25rem; gap: .875rem; }
-  .home-role { font-size: .8125rem; }
-  .home-location { font-size: .75rem; }
-  .home-actions { margin-top: 1.5rem; gap: 1.75rem; }
-  .home-actions a { font-size: .875rem; }
+  .home-actions { max-width: 20rem; }
+  .home-action-break { display: block; flex-basis: 100%; }
+  .home-action:nth-child(3) .home-action-separator { visibility: hidden; }
+}
+
+@media (max-width: 600px) and (orientation: portrait) {
+  html.landing .scene-backdrop { top: 620px; height: max(320px, calc(100svh - 620px)); }
 }
 
 @media (max-width: 380px) {
@@ -203,7 +210,5 @@ a { color: inherit; }
 @media (max-height: 680px) and (min-width: 601px) {
   html.landing, html.landing body { height: auto; overflow: auto; overscroll-behavior: auto; }
   .home-hero { padding-block: 2rem; }
-  .home-discipline { margin-bottom: 1rem; }
-  .home-profile { margin-top: 1.5rem; padding-top: 1.25rem; }
-  .home-actions { margin-top: 1.5rem; }
+  .home-portrait { width: 9rem; margin-bottom: 1.5rem; }
 }

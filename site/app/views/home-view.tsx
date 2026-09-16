@@ -1,52 +1,47 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { Fragment } from 'react';
 import { getSite } from '@/lib/content';
 import { href, strings, type Lang } from '@/lib/i18n';
-
-function Arrow({ diagonal = false }: { diagonal?: boolean }) {
-  return (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" aria-hidden="true">
-      <path d={diagonal ? 'M6 18 18 6M6 6h12v12' : 'M4 12h15m-6-6 6 6-6 6'} />
-    </svg>
-  );
-}
 
 export function HomeView({ lang }: { lang: Lang }) {
   const t = strings(lang);
   const site = getSite();
+  const destinations = [
+    { path: '/about/', label: t.about },
+    { path: '/experience/', label: t.experience },
+    { path: '/publications/', label: t.research },
+    { path: '/building/', label: t.building },
+    { path: '/blog/', label: t.blog },
+  ];
 
   return (
     <section className="home-hero" aria-labelledby="home-name">
       <div className="home-intro">
-        <p className="home-discipline"><span aria-hidden="true" />{t.eyebrow}</p>
+        <Link href={href(lang, '/about/')} className="home-portrait" aria-label={lang === 'zh' ? `关于${site.nameZh}` : `About ${site.name}`}>
+          <Image src="/images/profile.jpg" alt="" width={750} height={750} priority sizes="(max-width: 600px) 160px, 208px" />
+        </Link>
         <h1 id="home-name" className="home-name">{site.name}</h1>
+        <p className="home-role">
+          {(lang === 'zh' ? site.titleZh : site.title) ?? site.title}
+          <span className="home-role-separator">{lang === 'zh' ? ' · ' : ' at '}</span>
+          <a href={site.orgUrl}>{site.org}</a>
+        </p>
         <p className="home-statement">
-          {lang === 'zh'
-            ? '我构建重建与生成三维世界的系统。'
-            : <>I build systems that reconstruct<br className="home-line-break" /> and generate 3D worlds.</>}
+          <span>{lang === 'zh' ? '构建系统，探索' : 'Building systems for'}</span>{' '}
+          <span className="home-statement-focus">{lang === 'zh' ? '三维重建与生成。' : '3D reconstruction and generation.'}</span>
         </p>
 
-        <div className="home-profile">
-          <Link href={href(lang, '/about/')} className="home-portrait" aria-label={lang === 'zh' ? `关于${site.nameZh}` : `About ${site.name}`}>
-            <Image src="/images/profile.jpg" alt="" width={750} height={750} priority sizes="64px" />
-          </Link>
-          <div>
-            <p className="home-role">
-              {(lang === 'zh' ? site.titleZh : site.title) ?? site.title}
-              <span className="home-role-separator" aria-hidden="true"> / </span>
-              <a href={site.orgUrl}>{site.org}</a>
-            </p>
-            <p className="home-location">{(lang === 'zh' ? site.locationZh : site.locationShort) ?? site.location}</p>
-          </div>
-        </div>
-
         <nav className="home-actions" aria-label={lang === 'zh' ? '了解更多' : 'Explore my work'}>
-          <Link className="home-research-link" href={href(lang, '/publications/')}>
-            {t.selectedResearch}<Arrow />
-          </Link>
-          <Link className="home-about-link" href={href(lang, '/about/')}>
-            {lang === 'zh' ? '关于我' : 'About me'}<Arrow diagonal />
-          </Link>
+          {destinations.map(({ path, label }, index) => (
+            <Fragment key={path}>
+              <span className="home-action">
+                <Link href={href(lang, path)}>{label}</Link>
+                {index < destinations.length - 1 && <span className="home-action-separator" aria-hidden="true">·</span>}
+              </span>
+              {index === 2 && <span className="home-action-break" aria-hidden="true" />}
+            </Fragment>
+          ))}
         </nav>
       </div>
     </section>
