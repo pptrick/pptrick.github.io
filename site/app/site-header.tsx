@@ -66,7 +66,7 @@ export function SiteHeader({ name, cvHref }: { name: string; cvHref: string }) {
       className="relative z-10 border-b"
       style={{ borderColor: 'var(--line)', background: 'var(--bg)' }}
     >
-      <nav className="mx-auto flex max-w-7xl flex-wrap items-center gap-x-7 gap-y-3 px-4 py-5 sm:px-8">
+      <nav className="mx-auto flex h-[var(--header-h)] max-w-7xl items-center gap-x-7 px-4 sm:px-8">
         <Link
           href={href(lang, '/')}
           className="font-mono text-[0.9375rem] font-medium tracking-tight [word-spacing:-0.2em] hover:text-[var(--accent)]"

@@ -18,7 +18,7 @@ export function HomeView({ lang }: { lang: Lang }) {
   return (
     <div>
       {/* The WebGL bunny lands behind this block; the text composition is final. */}
-      <section className="flex min-h-[calc(100svh-4.75rem)] flex-col justify-center py-16 pb-[14vh]">
+      <section className="flex h-[calc(100svh-var(--header-h))] flex-col justify-center overflow-hidden py-[4vh]">
         {/* The photo centres on the text column while the copy stays flush
             left — the asymmetry is deliberate. Photo above the name is
             GitHub-profile style; it keeps the hero to two columns
@@ -29,8 +29,8 @@ export function HomeView({ lang }: { lang: Lang }) {
           {/* Centred on a 25rem span rather than on the 42rem copy column, so it
               sits clearly left of the column's centre rather than drifting
               right. Narrow this span to move the photo further left. */}
-          <div className="mb-10 max-w-[25rem]">
-            <div className="mx-auto aspect-square w-[11rem] overflow-hidden rounded-full border border-[var(--line-2)] bg-[var(--surface)] sm:w-52 lg:w-[16rem]">
+          <div className="mb-[clamp(1rem,3.5vh,2.5rem)] max-w-[25rem]">
+            <div className="mx-auto aspect-square w-[clamp(6.5rem,23vh,16rem)] overflow-hidden rounded-full border border-[var(--line-2)] bg-[var(--surface)]">
               <Image
                 src="/images/profile.jpg"
                 alt={site.name}
@@ -44,14 +44,14 @@ export function HomeView({ lang }: { lang: Lang }) {
 
           {/* Slashes, not dots: the role byline below the name is already a
               dot-separated line, and two of them read as the same element. */}
-          <p className="mb-5 font-mono text-[12px] font-medium uppercase tracking-[0.2em] text-[var(--accent)]">
+          <p className="mb-[clamp(.5rem,1.4vh,1.25rem)] font-mono text-[12px] font-medium uppercase tracking-[0.2em] text-[var(--accent)]">
             {t.eyebrow}
           </p>
-          <h1 className="font-mono text-[2.2rem] font-medium leading-[1.08] tracking-[-0.018em] [word-spacing:-0.24em] sm:text-5xl lg:text-[3.55rem]">
+          <h1 className="font-mono text-[clamp(1.9rem,5.2vh,3.55rem)] font-medium leading-[1.08] tracking-[-0.018em] [word-spacing:-0.24em]">
             {site.name}
           </h1>
 
-          <p className="mt-5 font-mono text-[13.5px] leading-[1.7] text-[var(--muted)]">
+          <p className="mt-[clamp(.65rem,1.8vh,1.25rem)] font-mono text-[13.5px] leading-[1.7] text-[var(--muted)]">
             {(lang === 'zh' ? site.titleZh : site.title) ?? site.title} ·{' '}
             <a href={site.orgUrl} className="text-[var(--fg-2)] underline decoration-[var(--line-2)] underline-offset-2 hover:text-[var(--accent)] hover:decoration-[var(--accent)]">
               {site.org}
@@ -59,13 +59,13 @@ export function HomeView({ lang }: { lang: Lang }) {
             · {(lang === 'zh' ? site.locationZh : site.locationShort) ?? site.location}
           </p>
 
-          <p className="mt-8 max-w-[30rem] text-[1.02rem] leading-[1.7] text-[var(--fg-2)] sm:text-[1.2rem]">
+          <p className="mt-[clamp(1rem,3vh,2rem)] max-w-[30rem] text-[clamp(.95rem,2vh,1.2rem)] leading-[1.7] text-[var(--fg-2)]">
             {(lang === 'zh' ? site.taglineZh : site.tagline) ?? site.tagline}
           </p>
 
           {/* A plain row, just given the size and spacing it needed: 15px in
               --fg-2 rather than 12px in --muted, which read as a caption. */}
-          <nav className="mt-10 flex flex-wrap gap-x-7 gap-y-3">
+          <nav className="mt-[clamp(1.25rem,3.5vh,2.5rem)] flex flex-wrap gap-x-7 gap-y-2">
             {destinations.map((d) => (
               <Link
                 key={d.path}

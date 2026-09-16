@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { getSite } from '@/lib/content';
 import { SiteHeader } from './site-header';
 import { SceneCanvas } from './scene/scene-canvas';
+import { LandingLock } from './landing-lock';
+import { SiteFooter } from './site-footer';
 import './globals.css';
 
 const site = getSite();
@@ -44,6 +46,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-screen">
         {/* Lives in the layout, not a page: it must survive navigation for the
             camera dolly to work. Sits behind everything at z-0. */}
+        <LandingLock />
         <SceneCanvas />
 
         {/* Scrim: keeps the copy legible where the scene passes behind it, and
@@ -72,12 +75,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
         </main>
 
-        <footer
-          className="relative z-10 mx-auto mt-28 max-w-7xl border-t px-4 py-10 font-mono text-xs sm:px-8"
-          style={{ borderColor: 'var(--line)', color: 'var(--muted)' }}
-        >
-          © {new Date().getFullYear()} {site.name}
-        </footer>
+        <SiteFooter name={site.name} />
       </body>
     </html>
   );
