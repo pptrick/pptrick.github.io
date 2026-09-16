@@ -2,7 +2,6 @@
 **/.DS_Store
 
 # build output is produced by CI, never committed
-/src/out/
 /site/out/
 /site/.next/
 /site/node_modules/

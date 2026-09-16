@@ -12,11 +12,11 @@ const CONTROL =
   'transition-colors hover:border-[var(--accent)] hover:text-[var(--accent)]';
 
 const ROUTES = [
+  { path: '/about/', key: 'about' },
+  { path: '/experience/', key: 'experience' },
   { path: '/publications/', key: 'research' },
   { path: '/building/', key: 'building' },
-  { path: '/experience/', key: 'experience' },
   { path: '/blog/', key: 'blog' },
-  { path: '/about/', key: 'about' },
 ] as const;
 
 function SunIcon() {

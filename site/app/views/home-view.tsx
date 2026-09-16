@@ -8,11 +8,11 @@ export function HomeView({ lang }: { lang: Lang }) {
   const site = getSite();
 
   const destinations = [
+    { path: '/about/', label: t.about },
+    { path: '/experience/', label: t.experience },
     { path: '/publications/', label: t.research },
     { path: '/building/', label: t.building },
-    { path: '/experience/', label: t.experience },
     { path: '/blog/', label: t.blog },
-    { path: '/about/', label: t.about },
   ];
 
   return (
@@ -26,10 +26,10 @@ export function HomeView({ lang }: { lang: Lang }) {
             exactly as shot: a circular crop makes the white background a
             non-issue. Swap rounded-full for rounded-[3px] to get a plate. */}
         <div className="pointer-events-auto max-w-[42rem]">
-          {/* Centred on a 32rem span rather than on the 44rem copy column, so
-              it reads as deliberately left of centre instead of drifting right
-              as the column widens. */}
-          <div className="mb-10 max-w-[32rem]">
+          {/* Centred on a 25rem span rather than on the 42rem copy column, so it
+              sits clearly left of the column's centre rather than drifting
+              right. Narrow this span to move the photo further left. */}
+          <div className="mb-10 max-w-[25rem]">
             <div className="mx-auto aspect-square w-[11rem] overflow-hidden rounded-full border border-[var(--line-2)] bg-[var(--surface)] sm:w-52 lg:w-[16rem]">
               <Image
                 src="/images/profile.jpg"
