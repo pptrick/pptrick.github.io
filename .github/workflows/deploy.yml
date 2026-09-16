@@ -12,8 +12,10 @@ name: Deploy site
 
 on:
   workflow_dispatch:
-  # push:
-  #   branches: [master]
+  push:
+    # Build on the redesign branches so the pipeline is verifiable before the
+    # Pages source is switched; publishing is gated to master in the deploy job.
+    branches: [master, 'redesign/**']
 
 permissions:
   contents: read
