@@ -20,7 +20,7 @@ export const T = {
     allPublications: 'All publications',
     publicationCount: (n: number) => `${n} publication${n === 1 ? '' : 's'}`,
     researchIntro:
-      'Work in 3D reconstruction, object-centric representation learning, and digital humans.',
+      'Work across 3D reconstruction and 3D generative models, and the representations underneath them — from LiDAR scenes to part-level mesh generation.',
     experience: 'Experience',
     education: 'Education',
     advisor: 'Advisor',
@@ -57,7 +57,7 @@ export const T = {
     selectedResearch: '精选研究',
     allPublications: '全部论文',
     publicationCount: (n: number) => `${n} 篇论文`,
-    researchIntro: '研究方向为三维重建、以物体为中心的表征学习，以及数字人。',
+    researchIntro: '研究涵盖三维重建与三维生成模型，以及支撑它们的表征方式——从 LiDAR 场景到部件级网格生成。',
     experience: '工作经历',
     education: '教育经历',
     advisor: '导师',
