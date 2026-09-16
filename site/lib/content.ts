@@ -134,6 +134,9 @@ export function getEducation(): Education {
   return readYaml('education.yaml', EducationSchema);
 }
 
+/** Two lines at the card's column width. */
+const SUMMARY_MAX = 155;
+
 export function getPublications(): Publication[] {
   const dir = path.join(CONTENT, 'publications');
   const files = fs.readdirSync(dir).filter((f) => f.endsWith('.md'));
@@ -147,7 +150,18 @@ export function getPublications(): Publication[] {
         `content/publications/${file} is invalid:\n${explain(parsed.error)}`,
       );
     }
-    return { ...parsed.data, slug, abstract: content.trim() };
+    // The card shows this as a two-line summary, not a full abstract. Enforced
+    // here so it fails the build rather than quietly reflowing to three lines;
+    // the cap is measured against the card's column width.
+    const abstract = content.trim();
+    if (abstract.length > SUMMARY_MAX) {
+      throw new Error(
+        `content/publications/${file}: summary is ${abstract.length} characters, ` +
+          `over the ${SUMMARY_MAX} limit. It renders on the card as at most two ` +
+          `lines — condense it to the paper's actual contribution.`,
+      );
+    }
+    return { ...parsed.data, slug, abstract };
   });
 
   return pubs.sort((a, b) => b.date.getTime() - a.date.getTime());

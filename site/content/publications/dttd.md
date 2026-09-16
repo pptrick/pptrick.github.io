@@ -20,10 +20,4 @@ links:
   paper: https://arxiv.org/abs/2302.05991
   code: https://github.com/augcog/DTTDv1
 ---
-In this work, we create a novel RGB-D dataset, called Digital-Twin Tracking Dataset (DTTD),
-to enable further research of the 3D object tracking problem and extend potential solutions
-towards longer ranges and mm localization accuracy. To reduce point cloud noise from the input
-source, we select the latest Microsoft Azure Kinect as the state-of-the-art time-of-flight
-camera. In total, 103 scenes of 10 common off-the-shelf objects with rich textures are
-recorded, with each frame annotated with a per-pixel semantic segmentation and ground-truth
-object poses provided by a commercial motion capturing system.
+An RGB-D dataset for longer-range 3D object tracking: 103 scenes of 10 objects, with per-pixel masks and motion-capture ground truth.
