@@ -8,6 +8,7 @@ is never blocked on geometry.
 
 Run from site/:  python3 tools/build-geometry.py
 """
+import hashlib
 import json
 import math
 import pathlib
@@ -179,6 +180,16 @@ def main():
         },
         'height': float(hi[1] - lo[1]),
     }
+    # Files in public/ are served under stable names with max-age=600, so a
+    # changed mesh stays invisible to returning visitors until their cache
+    # expires. The engine appends this hash as a query string; the manifest
+    # itself is imported at build time into a content-hashed JS chunk, so a new
+    # deploy always carries a new version.
+    digest = hashlib.sha256()
+    for name in sorted(p.name for p in OUT.iterdir() if p.suffix == '.bin'):
+        digest.update((OUT / name).read_bytes())
+    manifest['version'] = digest.hexdigest()[:12]
+
     (OUT / 'manifest.json').write_text(json.dumps(manifest, indent=2) + '\n')
 
     total = 0

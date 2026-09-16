@@ -11,6 +11,7 @@
  * first-paint bundle.
  */
 import * as THREE from 'three';
+import manifest from '@/public/geometry/manifest.json';
 
 export type ViewMode = 'home' | 'page';
 
@@ -258,21 +259,19 @@ const GRID_FRAG = /* glsl */ `
 
 /* ---------------------------- geometry load ----------------------------- */
 
-interface Manifest {
-  mesh: { triangles: number; vertices: number };
-  points: { count: number; min: number[]; span: number[] };
-  voxels: { count: number; grid: number; size: number; origin: number[] };
-}
-
 async function loadGeometry(base: string) {
+  // The manifest is imported, not fetched: it lands in a content-hashed JS
+  // chunk, so a deploy always ships a fresh `version`, which then busts the
+  // buffers below. public/ is served under stable names with max-age=600, so
+  // without this a changed mesh stays invisible to returning visitors.
+  const v = manifest.version;
   const bin = (name: string) =>
-    fetch(`${base}/${name}`).then((r) => {
+    fetch(`${base}/${name}?v=${v}`).then((r) => {
       if (!r.ok) throw new Error(`${name}: ${r.status}`);
       return r.arrayBuffer();
     });
 
-  const [manifest, posBuf, norBuf, idxBuf, ptBuf, voxBuf] = await Promise.all([
-    fetch(`${base}/manifest.json`).then((r) => r.json() as Promise<Manifest>),
+  const [posBuf, norBuf, idxBuf, ptBuf, voxBuf] = await Promise.all([
     bin('mesh-pos.bin'),
     bin('mesh-nor.bin'),
     bin('mesh-idx.bin'),
