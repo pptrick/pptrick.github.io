@@ -10,8 +10,8 @@ authors:
   - Chongjie Ye
   - Yuanming Hu
   - Xiaoguang Han
-venue: arXiv preprint
-venueShort: Preprint
+venue: ACM SIGGRAPH Asia Conference Papers
+venueShort: SIGGRAPH Asia
 year: 2026
 date: '2026-09-14'
 thumb: /images/pub/sam3d-part.jpg
