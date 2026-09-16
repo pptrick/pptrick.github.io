@@ -58,6 +58,58 @@ def voxelize(V, F, grid, vsize, origin):
     return occ
 
 
+def fill_holes(V, F):
+    """Close the scan's open boundaries with a centroid fan per hole.
+
+    The Stanford bunny is an incomplete scan — it sat on a turntable, so its
+    base was never captured. Five boundary loops remain in the source mesh, and
+    with front-face culling you see straight through them, which reads as
+    missing triangles. Each loop is roughly planar, so a fan to its centroid
+    closes it cleanly.
+    """
+    import collections
+    edges = collections.Counter()
+    for a, b, c in F:
+        for e in ((a, b), (b, c), (c, a)):
+            edges[tuple(sorted(e))] += 1
+    boundary = [e for e, n in edges.items() if n == 1]
+    if not boundary:
+        return V, F
+
+    # orient boundary edges as directed half-edges so each loop can be walked
+    directed = {}
+    for a, b, c in F:
+        for u, v in ((a, b), (b, c), (c, a)):
+            if edges[tuple(sorted((u, v)))] == 1:
+                directed[u] = v
+
+    V = list(map(list, V))
+    F = list(map(list, F))
+    filled = 0
+    seen = set()
+    for start in list(directed):
+        if start in seen:
+            continue
+        loop, u = [], start
+        while u not in seen:
+            seen.add(u)
+            loop.append(u)
+            u = directed.get(u)
+            if u is None:
+                break
+        if len(loop) < 3:
+            continue
+        cx = [sum(V[i][k] for i in loop) / len(loop) for k in range(3)]
+        centre = len(V)
+        V.append(cx)
+        for i in range(len(loop)):
+            # wind opposite to the boundary half-edges so normals stay outward
+            F.append([loop[(i + 1) % len(loop)], loop[i], centre])
+        filled += 1
+    print(f'  filled {filled} hole(s) in the source scan', file=sys.stderr)
+    return np.array(V), np.array(F, dtype=np.int64)
+
+
 def smooth_normals(V, F):
     """Area-weighted vertex normals."""
     n = np.zeros_like(V)
@@ -76,6 +128,7 @@ def main():
     OUT.mkdir(parents=True, exist_ok=True)
 
     V, F = load_obj(str(SRC))
+    V, F = fill_holes(V, F)
     offset, scale = normalize_transform(V)
     Vn = (V + offset) * scale
     print(f'source: {len(V)} verts / {len(F)} faces', file=sys.stderr)

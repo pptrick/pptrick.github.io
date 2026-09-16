@@ -18,7 +18,7 @@ FG = (237, 237, 242)
 MUTED = (133, 133, 143)
 LINE = (35, 35, 46)
 
-MESH = pathlib.Path('content/bunny.json')
+MESH = pathlib.Path('public/geometry')   # binary buffers from build-geometry.py
 OUT = pathlib.Path('app')
 
 MONO = '/System/Library/Fonts/Menlo.ttc'
@@ -26,10 +26,12 @@ SANS = '/System/Library/Fonts/HelveticaNeue.ttc'
 
 
 def load_mesh():
-    d = json.loads(MESH.read_text())
-    verts = d['position']
-    idx = d['index']
-    V = [(verts[i * 3], verts[i * 3 + 1], verts[i * 3 + 2]) for i in range(len(verts) // 3)]
+    """Read the same binary buffers the site ships, so the icon always matches
+    the mesh actually on the page."""
+    import array
+    pos = array.array('f'); pos.frombytes((MESH / 'mesh-pos.bin').read_bytes())
+    idx = array.array('H'); idx.frombytes((MESH / 'mesh-idx.bin').read_bytes())
+    V = [(pos[i * 3], pos[i * 3 + 1], pos[i * 3 + 2]) for i in range(len(pos) // 3)]
     F = [(idx[i], idx[i + 1], idx[i + 2]) for i in range(0, len(idx), 3)]
     return V, F
 
@@ -110,8 +112,8 @@ def font(path, size, index=0):
 
 
 def main():
-    if not MESH.exists():
-        sys.exit(f'missing {MESH} — copy the decimated bunny there first')
+    if not (MESH / 'mesh-pos.bin').exists():
+        sys.exit(f'missing {MESH}/mesh-pos.bin — run tools/build-geometry.py first')
     V, F = load_mesh()
 
     # ---- favicon: solid bunny on a dark rounded plate -------------------

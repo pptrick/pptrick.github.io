@@ -1,14 +1,14 @@
 {
   "source": {
-    "verts": 35947,
-    "faces": 69451
+    "verts": 35952,
+    "faces": 69674
   },
   "mesh": {
-    "triangles": 2599,
-    "vertices": 1323
+    "triangles": 2600,
+    "vertices": 1302
   },
   "points": {
-    "count": 35947,
+    "count": 35952,
     "min": [
       -0.5,
       0.0,
@@ -21,7 +21,7 @@
     ]
   },
   "voxels": {
-    "count": 12687,
+    "count": 12866,
     "grid": 64,
     "size": 0.015625,
     "origin": [

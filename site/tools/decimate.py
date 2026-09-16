@@ -127,6 +127,24 @@ def decimate(V, F, target_faces, verbose=True):
         if len(shared) > 2:
             continue
 
+        # Link condition. Collapsing is topology-preserving only if the vertices
+        # adjacent to BOTH endpoints are exactly the apexes of the shared faces.
+        # Without this, two surface sheets can be welded together and the result
+        # has non-manifold edges — 22 of them, before this check existed.
+        def ring(v):
+            out = set()
+            for f in vfaces[v]:
+                if alive_face[f]:
+                    out.update(faces[f])
+            out.discard(v)
+            return out
+
+        apexes = set()
+        for f in shared:
+            apexes.update(x for x in faces[f] if x != v1 and x != v2)
+        if ring(v1) & ring(v2) != apexes:
+            continue
+
         # ---- perform the collapse: v2 -> v1 ----
         V[v1] = pos
         Q[v1] = Q[v1] + Q[v2]
