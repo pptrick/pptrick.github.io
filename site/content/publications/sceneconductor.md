@@ -13,6 +13,7 @@ year: 2026
 date: '2026-06-07'
 thumb: /images/pub/sceneconductor.jpg
 featured: true
+role: project-lead
 links:
   paper: https://arxiv.org/abs/2606.08402
   code: https://github.com/jhkim0759/SceneConductor

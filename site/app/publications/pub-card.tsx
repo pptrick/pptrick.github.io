@@ -55,13 +55,20 @@ export function PubCard({
         </div>
 
         <div className="min-w-0">
-          <p className="font-mono text-[11px] font-medium uppercase tracking-[0.14em] text-[var(--accent)]">
-            {pub.venueShort ?? pub.venue}
-            <span className="tabular-nums"> {pub.year}</span>
-            {pub.venueNote ? (
-              <span className="text-[var(--muted)]"> · {pub.venueNote}</span>
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
+            <p className="font-mono text-[11px] font-medium uppercase tracking-[0.14em] text-[var(--accent)]">
+              {pub.venueShort ?? pub.venue}
+              <span className="tabular-nums"> {pub.year}</span>
+              {pub.venueNote ? (
+                <span className="text-[var(--muted)]"> · {pub.venueNote}</span>
+              ) : null}
+            </p>
+            {pub.role ? (
+              <span className="rounded-[3px] border border-[var(--line-2)] px-1.5 py-[3px] font-mono text-[10px] uppercase tracking-[0.12em] leading-none text-[var(--fg-2)]">
+                {t.roles[pub.role]}
+              </span>
             ) : null}
-          </p>
+          </div>
 
           <h3 className="mt-3 text-xl font-semibold leading-[1.28] tracking-[-0.012em] text-balance sm:text-[1.375rem]">
             {pub.links.paper ? (

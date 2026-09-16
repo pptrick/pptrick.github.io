@@ -76,6 +76,9 @@ const PublicationSchema = z.object({
   title: z.string(),
   authors: z.array(z.string()).min(1),
   equalContribution: z.boolean().default(false),
+  // Contribution credit that the author order cannot convey: being a middle
+  // author says nothing about having led the project.
+  role: z.enum(['project-lead']).optional(),
   venue: z.string(),
   venueShort: z.string().optional(),
   venueNote: z.string().optional(),

@@ -11,6 +11,7 @@ year: 2026
 date: '2026-09-05'
 thumb: /images/pub/branch-centric-skeletons.jpg
 featured: true
+role: project-lead
 links:
   paper: https://arxiv.org/abs/2609.06218
 ---

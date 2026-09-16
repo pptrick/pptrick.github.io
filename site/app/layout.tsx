@@ -53,8 +53,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             fades out by 72% of the width so the model is not blacked out. */}
         <div
           aria-hidden="true"
-          className="pointer-events-none fixed inset-0 z-0"
-          style={{ background: 'var(--scrim)' }}
+          className="scene-scrim pointer-events-none fixed inset-0 z-0"
         />
 
         <div

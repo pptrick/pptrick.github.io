@@ -81,7 +81,7 @@ export function SceneCanvas() {
   return (
     <div
       aria-hidden="true"
-      className="pointer-events-none fixed inset-0 z-0 transition-opacity duration-700"
+      className="scene-backdrop pointer-events-none fixed inset-0 z-0 transition-opacity duration-700"
       style={{ opacity: ready ? 1 : 0 }}
     >
       <canvas

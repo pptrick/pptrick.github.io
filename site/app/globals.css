@@ -91,3 +91,119 @@ a { color: inherit; }
 ::selection { background: var(--accent); color: var(--accent-ink); }
 
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* Align the identity on one axis beside the detailed scene. Reserve mono for
+   metadata, giving the name and statement a more deliberate type hierarchy. */
+.site-navigation-links { display: flex; align-items: center; gap: 1.75rem; }
+.scene-scrim { background: var(--scrim); }
+.home-hero {
+  min-height: calc(100svh - var(--header-h) - 1px);
+  display: flex;
+  align-items: center;
+  padding-block: 3rem;
+}
+.home-intro { width: min(100%, 33rem); pointer-events: auto; }
+.home-discipline {
+  display: flex;
+  align-items: center;
+  gap: .9rem;
+  margin-bottom: 1.75rem;
+  color: var(--fg-2);
+  font-family: var(--font-mono);
+  font-size: .6875rem;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+.home-discipline > span { width: 1.5rem; height: 1px; background: var(--accent); }
+.home-name {
+  font-size: clamp(3rem, 5.4vw, 4.875rem);
+  font-weight: 500;
+  letter-spacing: -.065em;
+  line-height: 1.08;
+}
+.home-statement {
+  margin-top: 1.6rem;
+  color: var(--fg-2);
+  font-size: clamp(1.125rem, 1.7vw, 1.5rem);
+  font-weight: 300;
+  line-height: 1.6;
+  letter-spacing: -.015em;
+}
+.home-profile {
+  display: flex;
+  align-items: center;
+  gap: 1.125rem;
+  margin-top: 2.25rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--line-2);
+  max-width: 27rem;
+}
+.home-portrait {
+  display: block;
+  flex: 0 0 3.5rem;
+  height: 4rem;
+  overflow: hidden;
+  border-radius: 3px;
+  background: var(--surface);
+}
+.home-portrait img { width: 100%; height: 100%; object-fit: cover; }
+.home-role { font-size: .9375rem; line-height: 1.6; }
+.home-role-separator { padding-inline: .3rem; color: var(--muted); }
+.home-role a { text-decoration: underline; text-decoration-color: var(--line-2); text-underline-offset: 4px; }
+.home-role a:hover { color: var(--accent); }
+.home-location { margin-top: .2rem; color: var(--muted); font-size: .8125rem; }
+.home-actions { display: flex; align-items: center; gap: 2rem; margin-top: 2.5rem; }
+.home-actions a { display: inline-flex; align-items: center; gap: 1rem; padding-block: .6rem; font-size: .9375rem; transition: color .2s; }
+.home-research-link { border-bottom: 1px solid var(--accent); }
+.home-research-link svg { color: var(--accent); }
+.home-about-link { color: var(--muted); }
+.home-actions a:hover { color: var(--accent); }
+
+/* Keep every destination available in a second row on smaller screens. */
+@media (max-width: 900px) {
+  :root { --header-h: 7rem; }
+  .site-navigation { flex-wrap: wrap; gap: 0 1rem; align-content: center; }
+  .site-navigation-links { order: 1; width: 100%; justify-content: space-between; gap: .75rem; margin-top: .75rem; }
+  .site-navigation-links > a { font-size: .75rem; }
+  .home-intro { width: min(100%, 28rem); }
+  .home-name { font-size: clamp(2.8rem, 6.5vw, 4rem); }
+  .home-statement { font-size: 1.125rem; }
+}
+
+/* In portrait layouts, give the model its own space below the introduction.
+   The renderer adapts to its canvas dimensions; its materials and controls
+   are unchanged. The absolute frame also scrolls naturally on short phones. */
+@media (max-width: 900px) and (orientation: portrait) {
+  html.landing, html.landing body { height: auto; overflow: auto; overscroll-behavior: auto; }
+  html.landing .scene-backdrop { position: absolute; top: 560px; bottom: auto; height: max(320px, calc(100svh - 560px)); }
+  html.landing .scene-scrim { background: none; }
+  .home-hero { align-items: flex-start; padding-top: 3rem; padding-bottom: 25rem; }
+}
+
+@media (max-width: 600px) {
+  .home-hero { padding-top: 2.5rem; }
+  .home-intro { width: 100%; }
+  .home-discipline { font-size: .6rem; gap: .65rem; margin-bottom: 1.25rem; }
+  .home-name { font-size: clamp(2.65rem, 11vw, 4rem); }
+  .home-statement { margin-top: 1.25rem; }
+  .home-line-break { display: none; }
+  .home-profile { margin-top: 1.5rem; padding-top: 1.25rem; gap: .875rem; }
+  .home-role { font-size: .8125rem; }
+  .home-location { font-size: .75rem; }
+  .home-actions { margin-top: 1.5rem; gap: 1.75rem; }
+  .home-actions a { font-size: .875rem; }
+}
+
+@media (max-width: 380px) {
+  .site-navigation-links { gap: .375rem; }
+  .site-navigation-links > a { font-size: .625rem; }
+}
+
+/* Browser zoom and short windows must not clip the identity or navigation. */
+@media (max-height: 680px) and (min-width: 601px) {
+  html.landing, html.landing body { height: auto; overflow: auto; overscroll-behavior: auto; }
+  .home-hero { padding-block: 2rem; }
+  .home-discipline { margin-bottom: 1rem; }
+  .home-profile { margin-top: 1.5rem; padding-top: 1.25rem; }
+  .home-actions { margin-top: 1.5rem; }
+}

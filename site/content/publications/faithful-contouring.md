@@ -18,6 +18,7 @@ year: 2026
 date: '2026-06-01'
 thumb: /images/pub/faithful-contouring.jpg
 featured: true
+role: project-lead
 links:
   paper: https://openaccess.thecvf.com/content/CVPR2026/html/Luo_Faithful_Contouring_Near-Lossless_3D_Voxel_Representation_Free_from_Iso-surface_CVPR_2026_paper.html
   code: https://github.com/Luo-Yihao/FaithC

@@ -16,6 +16,7 @@ year: 2026
 date: '2026-09-14'
 thumb: /images/pub/sam3d-part.jpg
 featured: true
+role: project-lead
 links:
   paper: https://arxiv.org/abs/2609.15639
   code: https://github.com/Jiahao620/sam3d-part

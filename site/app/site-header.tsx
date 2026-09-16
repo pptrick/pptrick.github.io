@@ -66,7 +66,7 @@ export function SiteHeader({ name, cvHref }: { name: string; cvHref: string }) {
       className="relative z-10 border-b"
       style={{ borderColor: 'var(--line)', background: 'var(--bg)' }}
     >
-      <nav className="mx-auto flex h-[var(--header-h)] max-w-7xl items-center gap-x-7 px-4 sm:px-8">
+      <nav aria-label={lang === 'zh' ? '主导航' : 'Main navigation'} className="site-navigation mx-auto flex h-[var(--header-h)] max-w-7xl items-center gap-x-7 px-4 sm:px-8">
         <Link
           href={href(lang, '/')}
           className="font-mono text-[0.9375rem] font-medium tracking-tight [word-spacing:-0.2em] hover:text-[var(--accent)]"
@@ -76,23 +76,25 @@ export function SiteHeader({ name, cvHref }: { name: string; cvHref: string }) {
 
         <span className="grow" />
 
-        {ROUTES.map((r) => (
-          <Link
-            key={r.path}
-            href={href(lang, r.path)}
-            aria-current={isActive(r.path) ? 'page' : undefined}
-            className={
-              'font-mono text-[13px] tracking-wide underline-offset-[6px] decoration-[var(--accent)] hover:text-[var(--fg)] hover:underline ' +
-              (isActive(r.path) ? 'text-[var(--fg)] underline' : 'text-[var(--fg-2)]')
-            }
-          >
-            {t[r.key]}
-          </Link>
-        ))}
+        <div className="site-navigation-links">
+          {ROUTES.map((r) => (
+            <Link
+              key={r.path}
+              href={href(lang, r.path)}
+              aria-current={isActive(r.path) ? 'page' : undefined}
+              className={
+                'font-mono text-[13px] tracking-wide underline-offset-[6px] decoration-[var(--accent)] hover:text-[var(--fg)] hover:underline ' +
+                (isActive(r.path) ? 'text-[var(--fg)] underline' : 'text-[var(--fg-2)]')
+              }
+            >
+              {t[r.key]}
+            </Link>
+          ))}
 
-        <a href={cvHref} className={CONTROL}>
-          {t.cv}
-        </a>
+          <a href={cvHref} className={CONTROL}>
+            {t.cv}
+          </a>
+        </div>
 
         {/* Language and theme share the control shape, so the row has one baseline. */}
         <Link href={swapLang(pathname)} className={CONTROL} title={t.switchLang} aria-label={t.switchLang}>
