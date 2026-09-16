@@ -1,0 +1,59 @@
+# Newest first. An org with more than one entry in `roles` renders as a
+# promotion inside a single block rather than as two separate jobs.
+- org: Meshy
+  url: https://www.meshy.ai/
+  location: San Jose, California
+  roles:
+    - title: Research Tech Lead
+      start: 2024-11
+      end: present
+      bullets:
+        - Lead 3D foundation model research at Meshy, from training through to data.
+    - title: 3D AI Research Engineer
+      start: 2023-11
+      end: 2024-11
+      bullets:
+        - Tracked and applied state-of-the-art generative models and 3D representations
+          for 3D generative modeling.
+        - Worked on large-data training for 3D foundation models, and on model efficiency.
+  stack: [Diffusion Models, NeRF, Gaussian Splatting, PyTorch, C++, CUDA]
+
+- org: Honda Research Institute (HRI)
+  location: San Jose, California
+  roles:
+    - title: Research Intern — Neural Rendering & Point Cloud
+      start: 2023-06
+      end: 2023-11
+      bullets:
+        - Applied neural rendering to LiDAR point clouds for 3D street-scene
+          reconstruction and forecasting.
+        - Built the system on CUDA GPUs for real-time performance, reaching
+          state-of-the-art accuracy on 3D reconstruction tasks.
+  advisor: Aolin Xu
+  stack: [3D Vision, NeRF, LiDAR, PyTorch, OpenCV, CUDA]
+
+- org: FHL Vive Center for Enhanced Reality, UC Berkeley
+  location: Berkeley, California
+  roles:
+    - title: Student Project Lead — 3D Object Tracking
+      start: 2022-08
+      end: 2023-07
+      bullets:
+        - Built the Digital Twin Tracking Dataset (DTTD) using LiDAR and motion
+          capture sensors.
+        - Developed real-time, millimetre-error 3D object tracking and pose estimation
+          aimed at general AR applications.
+  advisor: Allen Y. Yang
+  stack: [SFM, Camera Calibration, C++, PyTorch, ARKit, Kinect]
+
+- org: Beijing Huiye Technology
+  location: Beijing, China
+  roles:
+    - title: Software Engineer Intern — Animation
+      start: 2020-06
+      end: 2020-09
+      bullets:
+        - Built a system driving real-time 3D facial animation from audio input.
+        - Shipped it to the 3D avatar "Xiaoyu", live-streamed on Bilibili to 312k viewers.
+  advisor: Buyu Li
+  stack: [Facial Animation, Multi-modal, PyTorch, Unity3D]

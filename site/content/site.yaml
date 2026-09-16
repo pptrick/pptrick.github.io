@@ -1,0 +1,40 @@
+name: Chuanyu Pan
+nameZh: 潘传宇
+# Used to bold the author's own name in publication author lists.
+me: Chuanyu Pan
+title: Research Tech Lead
+titleZh: 研究技术负责人
+org: Meshy
+orgUrl: https://www.meshy.ai/
+location: San Jose, California, United States
+locationShort: San Jose, California
+locationZh: 美国加州圣何塞
+email: chuanyu_pan@berkeley.edu
+tagline: Research Tech Lead at Meshy. I build systems that reconstruct and generate 3D worlds.
+taglineZh: Meshy 研究技术负责人。我构建重建与生成三维世界的系统。
+interests:
+  - 3D AI
+  - Computer Graphics
+  - 3D Vision
+  - VR/AR/MR
+interestsZh:
+  - 3D AI
+  - 计算机图形学
+  - 三维视觉
+  - VR/AR/MR
+bio: >
+  I'm a research tech lead at Meshy, working on 3D foundation models and the future of
+  3D generative tooling. I hold a master's in EECS from UC Berkeley and a bachelor's in
+  Computer Science from Tsinghua University. My work sits where computer graphics meets
+  3D vision — reconstructing real scenes accurately enough to be useful, and generating
+  new ones that hold up under scrutiny.
+bioZh: >
+  我是 Meshy 的研究技术负责人，方向是三维基础模型与下一代三维生成工具。
+  我在加州大学伯克利分校取得 EECS 硕士学位，在清华大学取得计算机科学学士学位。
+  我的工作处在计算机图形学与三维视觉的交叉处——把真实场景重建到足以实用的精度，
+  也生成经得起细看的新场景。
+links:
+  github: https://github.com/pptrick
+  scholar: https://scholar.google.com/citations?user=wNKoPGAAAAAJ&hl=en
+  linkedin: https://www.linkedin.com/in/chuanyu-pan/
+  cv: /files/resume.pdf

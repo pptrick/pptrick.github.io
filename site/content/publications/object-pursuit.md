@@ -1,0 +1,26 @@
+---
+title: "Object Pursuit: Building a Space of Objects via Discriminative Weight Generation"
+authors:
+  - Chuanyu Pan*
+  - Yanchao Yang*
+  - Kaichun Mo
+  - Yueqi Duan
+  - Leonidas J. Guibas
+equalContribution: true
+venue: International Conference on Learning Representations (ICLR)
+venueShort: ICLR
+year: 2022
+date: 2022-01-24
+thumb: /images/pub/object-pursuit.jpg
+featured: true
+links:
+  paper: https://arxiv.org/pdf/2112.07954.pdf
+  project: /static/object-pursuit/index.html
+  video: https://iclr.cc/virtual/2022/poster/6713
+---
+We propose a framework to continuously learn object-centric representations for visual
+learning and understanding. Our method leverages interactions to effectively sample diverse
+variations of an object and the corresponding training signals while learning the
+object-centric representations. Throughout learning, objects are streamed one by one in
+random order with unknown identities, and are associated with latent codes that can
+synthesize discriminative weights for each object through a convolutional hypernetwork.

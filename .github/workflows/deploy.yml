@@ -1,0 +1,66 @@
+# Builds the site and publishes it to GitHub Pages.
+#
+# CUTOVER — two steps, in this order:
+#   1. Repo Settings -> Pages -> Source -> "GitHub Actions".
+#   2. Uncomment the `push` trigger below and delete the old
+#      .github/workflows/intergrate.yml (which never ran a build — it only
+#      copied a committed src/out/ to the `online` branch).
+#
+# Until step 1 is done this workflow can only be run manually, so it cannot
+# take the live site down.
+name: Deploy site
+
+on:
+  workflow_dispatch:
+  # push:
+  #   branches: [master]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Never let two deploys race; a queued one supersedes the one in flight.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./site
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+
+      - run: npm ci
+
+      # next.config.mjs sets output:'export', so this writes site/out/.
+      # Content schemas are validated here: a bad content file fails the build
+      # instead of shipping "undefined" to the live site.
+      - run: npm run build
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site/out
+
+  deploy:
+    needs: build
+    # Only master publishes. A workflow_dispatch on a branch therefore builds
+    # and uploads the artifact without touching the live site, which makes the
+    # pipeline testable before the Pages source is switched over.
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

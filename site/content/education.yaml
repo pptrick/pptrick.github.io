@@ -1,0 +1,29 @@
+# Newest first, by start date.
+- school: University of California, Berkeley
+  department: Electrical Engineering and Computer Sciences
+  degree: Master of Engineering
+  field: Visual Computing and Computer Graphics
+  start: 2022-08
+  end: 2023-05
+  logo: /images/edu/berkeley.png
+
+- school: Stanford University
+  department: Geometric Computation Group, Artificial Intelligence Lab
+  degree: Exchange Research Student
+  start: 2021-03
+  end: 2021-11
+  logo: /images/edu/stanford.png
+
+- school: Tsinghua University
+  department: Computer Science and Technology
+  degree: Bachelor of Engineering
+  start: 2019-07
+  end: 2022-07
+  logo: /images/edu/tsinghua.png
+
+- school: Tsinghua University
+  department: Physics
+  degree: Undergraduate
+  start: 2017-08
+  end: 2019-07
+  logo: /images/edu/tsinghua.png
