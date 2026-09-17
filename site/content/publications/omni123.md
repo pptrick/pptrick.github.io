@@ -9,7 +9,10 @@ authors:
   - Yuanming Hu
   - Xiaoguang Han
 venue: arXiv preprint
+venueZh: arXiv 预印本
 venueShort: Preprint
+venueShortZh: 预印本
+summaryZh: 把文本、图像与三维视作同一个 token 序列，让充足的二维数据在三维数据稀缺处充当几何先验。
 year: 2026
 date: '2026-04-02'
 thumb: /images/pub/omni123.jpg

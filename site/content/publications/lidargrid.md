@@ -5,6 +5,7 @@ authors:
   - Aolin Xu
 venue: Conference on Robot Learning (CoRL)
 venueShort: CoRL
+summaryZh: 用可微体渲染把无标注 LiDAR 转成稠密的三维不透明度网格，再由它预测未来的点云。
 year: 2024
 date: '2024-11-06'
 thumb: /images/pub/lidargrid.jpg

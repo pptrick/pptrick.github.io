@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Fragment } from 'react';
 import { getSite } from '@/lib/content';
-import { href, strings, type Lang } from '@/lib/i18n';
+import { href, localized, strings, type Lang } from '@/lib/i18n';
 
 export function HomeView({ lang }: { lang: Lang }) {
   const t = strings(lang);
@@ -21,7 +21,7 @@ export function HomeView({ lang }: { lang: Lang }) {
         <Link href={href(lang, '/about/')} className="home-portrait" aria-label={lang === 'zh' ? `关于${site.nameZh}` : `About ${site.name}`}>
           <Image src="/images/profile.jpg" alt="" width={750} height={750} priority sizes="(max-width: 600px) 160px, 208px" />
         </Link>
-        <h1 id="home-name" className="home-name">{site.name}</h1>
+        <h1 id="home-name" className="home-name">{localized(lang, site.name, site.nameZh)}</h1>
         <p className="home-statement">
           <span>{lang === 'zh' ? '构建系统，探索' : 'Building systems for'}</span>{' '}
           <span className="home-statement-focus">

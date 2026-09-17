@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import { href, isHomePath, langOf, strings, swapLang, type Lang } from '@/lib/i18n';
+import { href, isHomePath, langOf, localized, strings, swapLang, type Lang } from '@/lib/i18n';
 
 const ROUTES = [
   { path: '/about/', key: 'about' },
@@ -32,7 +32,18 @@ function MoonIcon() {
   );
 }
 
-export function SiteHeader({ name, cvHref }: { name: string; cvHref: string }) {
+// Both names are passed in rather than one: the layout is a server component
+// rendered once for every route, so it cannot know which language it is in.
+// This component already derives that from the pathname.
+export function SiteHeader({
+  name,
+  nameZh,
+  cvHref,
+}: {
+  name: string;
+  nameZh: string;
+  cvHref: string;
+}) {
   const pathname = usePathname() || '/';
   const lang: Lang = langOf(pathname);
   const isHome = isHomePath(pathname);
@@ -76,7 +87,7 @@ export function SiteHeader({ name, cvHref }: { name: string; cvHref: string }) {
           href={href(lang, '/')}
           className="site-brand font-mono text-[0.9375rem] font-medium tracking-tight [word-spacing:-0.2em] hover:text-[var(--accent)]"
         >
-          {name}
+          {localized(lang, name, nameZh)}
         </Link>
 
         <span className="grow" />

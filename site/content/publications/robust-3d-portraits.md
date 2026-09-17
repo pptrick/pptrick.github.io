@@ -9,6 +9,8 @@ authors:
 venue: IEEE Conference on Computer Vision and Pattern Recognition (CVPR)
 venueShort: CVPR
 venueNote: Oral presentation
+venueNoteZh: 口头报告
+summaryZh: 用一台 RGBD 相机在数秒内得到精细的三维自拍人像，结合学习式恢复与体积非刚性融合。
 year: 2020
 date: 2020-03-15
 thumb: /images/pub/robust-3d-portraits.jpg

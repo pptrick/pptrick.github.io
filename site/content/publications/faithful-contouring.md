@@ -14,6 +14,8 @@ authors:
 venue: IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)
 venueShort: CVPR
 venueNote: Oral presentation
+venueNoteZh: 口头报告
+summaryZh: 一种完全跳过等值面提取的稀疏体素表示，在 2048³ 分辨率下保留锐利边缘与内部结构。
 year: 2026
 date: '2026-06-01'
 thumb: /images/pub/faithful-contouring.jpg

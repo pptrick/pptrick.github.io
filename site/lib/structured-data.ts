@@ -1,6 +1,6 @@
 import { getEducation, getExperience, getPublications, getSite } from './content';
 import { absolute, SITE_URL } from './seo';
-import type { Lang } from './i18n';
+import { localized, type Lang } from './i18n';
 
 const PERSON_ID = `${SITE_URL}/#person`;
 
@@ -15,28 +15,31 @@ export function personSchema(lang: Lang) {
     '@context': 'https://schema.org',
     '@type': 'Person',
     '@id': PERSON_ID,
-    name: site.name,
-    alternateName: site.nameZh,
+    // On /zh the Chinese name leads and the English one becomes the alternate,
+    // so each tree presents the name a reader of that language would search.
+    name: localized(lang, site.name, site.nameZh),
+    alternateName: localized(lang, site.nameZh, site.name),
     url: absolute(lang, '/'),
     image: `${SITE_URL}/images/profile.jpg`,
-    jobTitle: (lang === 'zh' ? site.titleZh : site.title) ?? site.title,
+    jobTitle: localized(lang, site.title, site.titleZh),
     email: `mailto:${site.email}`,
-    description: (lang === 'zh' ? site.taglineZh : site.tagline) ?? site.tagline,
+    description: localized(lang, site.tagline, site.taglineZh),
     worksFor: { '@type': 'Organization', name: site.org, url: site.orgUrl },
     address: { '@type': 'PostalAddress', addressLocality: 'San Francisco', addressRegion: 'CA', addressCountry: 'US' },
-    alumniOf: [...new Set(education.map((e) => e.school))].map((school) => ({
-      '@type': 'CollegeOrUniversity',
-      name: school,
-    })),
-    knowsAbout: site.interests,
+    alumniOf: [
+      ...new Map(
+        education.map((e) => [e.school, localized(lang, e.school, e.schoolZh)]),
+      ).values(),
+    ].map((school) => ({ '@type': 'CollegeOrUniversity', name: school })),
+    knowsAbout: localized(lang, site.interests, site.interestsZh),
     sameAs: [site.links.github, site.links.scholar, site.links.linkedin],
     hasOccupation: experience.flatMap((job) =>
       job.roles.map((role) => ({
         '@type': 'Role',
-        roleName: role.title,
+        roleName: localized(lang, role.title, role.titleZh),
         startDate: role.start,
         ...(role.end !== 'present' ? { endDate: role.end } : {}),
-        'worksFor': { '@type': 'Organization', name: job.org },
+        'worksFor': { '@type': 'Organization', name: localized(lang, job.org, job.orgZh) },
       })),
     ),
   };
@@ -59,7 +62,9 @@ export function publicationsSchema(lang: Lang) {
         '@type': 'ScholarlyArticle',
         name: pub.title,
         headline: pub.title,
-        abstract: pub.abstract,
+        // Title, authors and venue stay English — that is how the paper is
+        // cited. Only the summary is translated.
+        abstract: localized(lang, pub.abstract, pub.summaryZh),
         datePublished: pub.date.toISOString().slice(0, 10),
         image: `${SITE_URL}${pub.thumb}`,
         author: pub.authors.map((a) => ({
@@ -83,7 +88,7 @@ export function siteSchema(lang: Lang) {
     '@type': 'WebSite',
     '@id': `${SITE_URL}/#website`,
     url: absolute(lang, '/'),
-    name: site.name,
+    name: localized(lang, site.name, site.nameZh),
     inLanguage: lang === 'zh' ? 'zh-CN' : 'en',
     publisher: { '@id': PERSON_ID },
   };

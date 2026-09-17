@@ -6,7 +6,10 @@ authors:
   - Yuanming Hu
   - Raymond Yeh
 venue: arXiv preprint
+venueZh: arXiv 预印本
 venueShort: Preprint
+venueShortZh: 预印本
+summaryZh: 以分支而非 BFS 顺序对骨架做 token 化，并在测试时融合网格多个旋转视角下的预测。
 year: 2026
 date: '2026-09-05'
 thumb: /images/pub/branch-centric-skeletons.jpg

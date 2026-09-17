@@ -6,8 +6,11 @@
 @theme {
   --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
-  /* used by /zh; the English pages carry no CJK, so the face is not requested */
-  --font-zh: "Noto Sans SC", "IBM Plex Sans", sans-serif;
+  /* Applied on /zh. Plex leads and Noto follows, because font fallback is
+     per-glyph: the Latin that runs through the Chinese pages — paper titles,
+     author names, Meshy — keeps the same face as the English tree, and only
+     the CJK glyphs, which Plex does not carry, come from Noto. */
+  --font-zh: "IBM Plex Sans", "Noto Sans SC", sans-serif;
 }
 
 /* class-based dark mode, so the toggle wins over the OS setting */
@@ -88,6 +91,9 @@ body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
 }
+
+/* Relies on the lang attribute being right; see tools/stamp-lang.mjs. */
+html[lang="zh-CN"] body { font-family: var(--font-zh); }
 
 a { color: inherit; }
 

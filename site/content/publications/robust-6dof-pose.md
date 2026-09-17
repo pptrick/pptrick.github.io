@@ -9,6 +9,7 @@ authors:
 venue: IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)
 venueShort: CVPR Workshop
 venueNote: Mobile AI Workshop
+summaryZh: 一个在深度噪声下依然稳健的 RGBD 6DoF 位姿 Transformer，并附带用 iPhone 14 Pro 采集的 DTTD-Mobile 数据集。
 year: 2025
 date: '2025-06-01'
 thumb: /images/pub/robust-6dof-pose.jpg

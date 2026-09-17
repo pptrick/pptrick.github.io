@@ -60,7 +60,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
 
-        <SiteHeader name={site.name} cvHref={site.links.cv} />
+        <SiteHeader name={site.name} nameZh={site.nameZh} cvHref={site.links.cv} />
 
         {/* pointer-events-none so drags reach the canvas behind; each page turns
             them back on for its own content. Without this <main> covers the
@@ -69,7 +69,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
         </main>
 
-        <SiteFooter name={site.name} />
+        <SiteFooter name={site.name} nameZh={site.nameZh} />
       </body>
     </html>
   );

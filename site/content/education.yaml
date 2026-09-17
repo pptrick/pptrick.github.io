@@ -1,29 +1,43 @@
-# Newest first, by start date.
+# Newest first, by start date. University, department and degree names are
+# translated; see the note in experience.yaml for what is not.
 - school: University of California, Berkeley
+  schoolZh: 加州大学伯克利分校
   department: Electrical Engineering and Computer Sciences
+  departmentZh: 电子工程与计算机科学系
   degree: Master of Engineering
+  degreeZh: 工程硕士
   field: Visual Computing and Computer Graphics
+  fieldZh: 视觉计算与计算机图形学
   start: 2022-08
   end: 2023-05
   logo: /images/edu/berkeley.png
 
 - school: Stanford University
+  schoolZh: 斯坦福大学
   department: Geometric Computation Group, Artificial Intelligence Lab
+  departmentZh: 几何计算组，人工智能实验室
   degree: Exchange Research Student
+  degreeZh: 交换研究学生
   start: 2021-03
   end: 2021-11
   logo: /images/edu/stanford.png
 
 - school: Tsinghua University
+  schoolZh: 清华大学
   department: Computer Science and Technology
+  departmentZh: 计算机科学与技术系
   degree: Bachelor of Engineering
+  degreeZh: 工学学士
   start: 2019-07
   end: 2022-07
   logo: /images/edu/tsinghua.png
 
 - school: Tsinghua University
+  schoolZh: 清华大学
   department: Physics
+  departmentZh: 物理系
   degree: Undergraduate
+  degreeZh: 本科
   start: 2017-08
   end: 2019-07
   logo: /images/edu/tsinghua.png

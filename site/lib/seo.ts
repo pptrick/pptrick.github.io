@@ -27,19 +27,22 @@ export function pageMetadata(opts: {
   const { lang, path, title, description } = opts;
   const site = getSite();
   const url = absolute(lang, path);
+  const displayName = lang === 'zh' ? site.nameZh : site.name;
 
   return {
-    // Passing `title: undefined` CLEARS the layout's title.default and the page
-    // ships with no <title> at all, so the key is omitted instead. The landing
-    // pages get an absolute title — on /zh it carries both scripts, which is
-    // what someone searching 潘传宇 will match.
-    ...(title
-      ? { title }
-      : {
-          title: {
-            absolute: lang === 'zh' ? `${site.name} ${site.nameZh}` : site.name,
-          },
-        }),
+    // Always absolute, never the layout's `%s · Chuanyu Pan` template: the
+    // template is fixed at the layout and would put the English name after a
+    // Chinese page title. Passing `title: undefined` is also not an option —
+    // it clears the layout's title.default and the page ships with no <title>
+    // at all. The landing pages carry both scripts, which is what someone
+    // searching 潘传宇 will match.
+    title: {
+      absolute: title
+        ? `${title} · ${displayName}`
+        : lang === 'zh'
+          ? `${site.nameZh} ${site.name}`
+          : site.name,
+    },
     description,
     alternates: {
       canonical: url,
@@ -52,7 +55,7 @@ export function pageMetadata(opts: {
     },
     openGraph: {
       type: path === '/' ? 'profile' : 'website',
-      title: title ? `${title} · ${site.name}` : site.name,
+      title: title ? `${title} · ${displayName}` : displayName,
       description,
       url,
       siteName: site.name,
@@ -61,7 +64,7 @@ export function pageMetadata(opts: {
     },
     twitter: {
       card: 'summary_large_image',
-      title: title ? `${title} · ${site.name}` : site.name,
+      title: title ? `${title} · ${displayName}` : displayName,
       description,
     },
   };

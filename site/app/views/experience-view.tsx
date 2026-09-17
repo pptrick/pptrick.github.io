@@ -1,9 +1,11 @@
 import Image from 'next/image';
 import { getExperience, getEducation, formatRange } from '@/lib/content';
-import { href, strings, type Lang } from '@/lib/i18n';
+import { listSeparator, localized, strings, type Lang } from '@/lib/i18n';
 
 export function ExperienceView({ lang }: { lang: Lang }) {
   const t = strings(lang);
+  const bullets = (role: { bullets: string[]; bulletsZh?: string[] }) =>
+    localized(lang, role.bullets, role.bulletsZh);
   const experience = getExperience();
   const education = getEducation();
 
@@ -26,14 +28,20 @@ export function ExperienceView({ lang }: { lang: Lang }) {
                 <p className="text-[var(--fg-2)]">
                   {job.url ? (
                     <a href={job.url} className="hover:text-[var(--accent)]">
-                      {job.org}
+                      {localized(lang, job.org, job.orgZh)}
                     </a>
                   ) : (
-                    job.org
+                    localized(lang, job.org, job.orgZh)
                   )}
                 </p>
-                {job.location && <p className="mt-1">{job.location}</p>}
-                {job.advisor && <p className="mt-1">{t.advisor}: {job.advisor}</p>}
+                {job.location && <p className="mt-1">{localized(lang, job.location, job.locationZh)}</p>}
+                {job.advisor && (
+                  <p className="mt-1">
+                    {t.advisor}
+                    {lang === 'zh' ? '：' : ': '}
+                    {job.advisor}
+                  </p>
+                )}
               </div>
 
               <div>
@@ -42,14 +50,14 @@ export function ExperienceView({ lang }: { lang: Lang }) {
                   {job.roles.map((role) => (
                     <li key={role.title}>
                       <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
-                        <h3 className="font-medium">{role.title}</h3>
+                        <h3 className="font-medium">{localized(lang, role.title, role.titleZh)}</h3>
                         <p className="font-mono text-xs tabular-nums text-[var(--muted)]">
                           {formatRange(role.start, role.end, lang)}
                         </p>
                       </div>
-                      {role.bullets.length > 0 && (
+                      {bullets(role).length > 0 && (
                         <ul className="mt-3 grid gap-2">
-                          {role.bullets.map((bullet) => (
+                          {bullets(role).map((bullet) => (
                             <li
                               key={bullet}
                               className="max-w-prose text-sm leading-[1.7] text-[var(--fg-2)]"
@@ -65,7 +73,7 @@ export function ExperienceView({ lang }: { lang: Lang }) {
 
                 {job.stack.length > 0 && (
                   <p className="mt-5 font-mono text-[11px] leading-[1.9] text-[var(--muted)]">
-                    {job.stack.join(' · ')}
+                    {localized(lang, job.stack, job.stackZh).join(' · ')}
                   </p>
                 )}
               </div>
@@ -90,7 +98,7 @@ export function ExperienceView({ lang }: { lang: Lang }) {
                 {entry.logo && (
                   <Image
                     src={entry.logo}
-                    alt={entry.school}
+                    alt={localized(lang, entry.school, entry.schoolZh)}
                     width={120}
                     height={120}
                     className="h-9 w-9 object-contain"
@@ -102,13 +110,15 @@ export function ExperienceView({ lang }: { lang: Lang }) {
               </div>
 
               <div>
-                <h3 className="font-medium">{entry.school}</h3>
+                <h3 className="font-medium">{localized(lang, entry.school, entry.schoolZh)}</h3>
                 <p className="mt-2 text-sm leading-[1.7] text-[var(--fg-2)]">
-                  {entry.degree}
-                  {entry.field ? `, ${entry.field}` : ''}
+                  {localized(lang, entry.degree, entry.degreeZh)}
+                  {entry.field
+                    ? `${listSeparator(lang)}${localized(lang, entry.field, entry.fieldZh)}`
+                    : ''}
                 </p>
                 <p className="mt-1 font-mono text-[11px] text-[var(--muted)]">
-                  {entry.department}
+                  {localized(lang, entry.department, entry.departmentZh)}
                 </p>
               </div>
             </li>

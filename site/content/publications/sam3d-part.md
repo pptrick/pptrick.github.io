@@ -12,6 +12,7 @@ authors:
   - Xiaoguang Han
 venue: ACM SIGGRAPH Asia Conference Papers
 venueShort: SIGGRAPH Asia
+summaryZh: 在网格的渲染视角上点选一个部件，就得到一个完整网格——把部件提取表述为条件生成而非分割。
 year: 2026
 date: '2026-09-14'
 thumb: /images/pub/sam3d-part.jpg

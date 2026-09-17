@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { getSite } from '@/lib/content';
-import { href, strings, type Lang } from '@/lib/i18n';
+import { localized, strings, type Lang } from '@/lib/i18n';
 
 export function AboutView({ lang }: { lang: Lang }) {
   const t = strings(lang);
@@ -13,7 +13,7 @@ export function AboutView({ lang }: { lang: Lang }) {
         <div className="aspect-square w-32 self-start overflow-hidden rounded-full border border-[var(--line-2)] bg-[var(--surface)] sm:w-40">
           <Image
             src="/images/profile.jpg"
-            alt={site.name}
+            alt={localized(lang, site.name, site.nameZh)}
             width={750}
             height={750}
             priority
@@ -25,14 +25,14 @@ export function AboutView({ lang }: { lang: Lang }) {
             {t.about}
           </h1>
           <p className="mt-6 max-w-prose text-[1.0625rem] leading-[1.75] text-[var(--fg-2)]">
-            {(lang === 'zh' ? site.bioZh : site.bio) ?? site.bio}
+            {localized(lang, site.bio, site.bioZh)}
           </p>
 
           <dl className="mt-10 grid gap-x-8 gap-y-4 font-mono text-xs sm:grid-cols-2">
             <div>
               <dt className="text-[var(--muted)]">{t.role}</dt>
               <dd className="mt-1.5">
-                {(lang === 'zh' ? site.titleZh : site.title) ?? site.title} ·{' '}
+                {localized(lang, site.title, site.titleZh)} ·{' '}
                 <a href={site.orgUrl} className="text-[var(--accent)]">
                   {site.org}
                 </a>
@@ -40,7 +40,7 @@ export function AboutView({ lang }: { lang: Lang }) {
             </div>
             <div>
               <dt className="text-[var(--muted)]">{t.location}</dt>
-              <dd className="mt-1.5">{(lang === 'zh' ? site.locationZh : site.location) ?? site.location}</dd>
+              <dd className="mt-1.5">{localized(lang, site.location, site.locationZh)}</dd>
             </div>
             <div>
               <dt className="text-[var(--muted)]">{t.email}</dt>
@@ -52,7 +52,7 @@ export function AboutView({ lang }: { lang: Lang }) {
             </div>
             <div>
               <dt className="text-[var(--muted)]">{t.interests}</dt>
-              <dd className="mt-1.5">{((lang === 'zh' ? site.interestsZh : site.interests) ?? site.interests).join(' · ')}</dd>
+              <dd className="mt-1.5">{localized(lang, site.interests, site.interestsZh).join(' · ')}</dd>
             </div>
           </dl>
 

@@ -3,8 +3,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && node tools/stamp-lang.mjs",
-    "lint": "next lint"
+    "build": "node tools/check-i18n.mjs && next build && node tools/stamp-lang.mjs",
+    "lint": "next lint",
+    "i18n:check": "node tools/check-i18n.mjs"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",

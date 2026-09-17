@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import type { Publication } from '@/lib/content';
-import { strings, type Lang } from '@/lib/i18n';
+import { localized, strings, type Lang } from '@/lib/i18n';
 
 /** Bolds the site owner within the author list, and marks equal contribution. */
 function Authors({ authors, me }: { authors: string[]; me: string }) {
@@ -57,10 +57,13 @@ export function PubCard({
         <div className="min-w-0">
           <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
             <p className="font-mono text-[11px] font-medium uppercase tracking-[0.14em] text-[var(--accent)]">
-              {pub.venueShort ?? pub.venue}
+              {localized(lang, pub.venueShort ?? pub.venue, pub.venueShortZh ?? pub.venueZh)}
               <span className="tabular-nums"> {pub.year}</span>
               {pub.venueNote ? (
-                <span className="text-[var(--muted)]"> · {pub.venueNote}</span>
+                <span className="text-[var(--muted)]">
+                  {' · '}
+                  {localized(lang, pub.venueNote, pub.venueNoteZh)}
+                </span>
               ) : null}
             </p>
             {pub.role ? (
@@ -86,13 +89,13 @@ export function PubCard({
           <Authors authors={pub.authors} me={me} />
 
           <p className="mt-2 font-mono text-[11px] leading-[1.7] text-[var(--muted)]">
-            {pub.venue}
+            {localized(lang, pub.venue, pub.venueZh)}
             {pub.equalContribution ? ` · * ${t.equalContribution}` : ''}
           </p>
 
           {!compact && (
             <p className="mt-4 max-w-prose text-[0.9375rem] leading-[1.8] text-[var(--fg-2)]">
-              {pub.abstract}
+              {localized(lang, pub.abstract, pub.summaryZh)}
             </p>
           )}
 

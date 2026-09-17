@@ -1,27 +1,42 @@
 # Newest first. An org with more than one entry in `roles` renders as a
 # promotion inside a single block rather than as two separate jobs.
+#
+# `*Zh` fields are the Chinese rendering. Company names stay in English, as do
+# library and framework names; role titles, bullets and locations are
+# translated. tools/check-i18n.mjs fails the build if one is missing.
 - org: Meshy
   url: https://www.meshy.ai/
   location: San Jose, California
+  locationZh: 美国加州圣何塞
   roles:
     - title: Research Tech Lead
+      titleZh: 研究技术负责人
       start: 2024-11
       end: present
       bullets:
         - Lead 3D foundation model research at Meshy, from training through to data.
+      bulletsZh:
+        - 在 Meshy 主导三维基础模型研究，从模型训练到数据构建。
     - title: 3D AI Research Engineer
+      titleZh: 三维 AI 研究工程师
       start: 2023-11
       end: 2024-11
       bullets:
         - Tracked and applied state-of-the-art generative models and 3D representations
           for 3D generative modeling.
         - Worked on large-data training for 3D foundation models, and on model efficiency.
+      bulletsZh:
+        - 跟踪并应用最前沿的生成模型与三维表征，用于三维生成建模。
+        - 参与三维基础模型的大规模数据训练，以及模型效率优化。
   stack: [Diffusion Models, NeRF, Gaussian Splatting, PyTorch, C++, CUDA]
+  stackZh: [扩散模型, NeRF, Gaussian Splatting, PyTorch, C++, CUDA]
 
 - org: Honda Research Institute (HRI)
   location: San Jose, California
+  locationZh: 美国加州圣何塞
   roles:
     - title: Research Intern — Neural Rendering & Point Cloud
+      titleZh: 研究实习生 — 神经渲染与点云
       start: 2023-06
       end: 2023-11
       bullets:
@@ -29,13 +44,20 @@
           reconstruction and forecasting.
         - Built the system on CUDA GPUs for real-time performance, reaching
           state-of-the-art accuracy on 3D reconstruction tasks.
+      bulletsZh:
+        - 将神经渲染应用于 LiDAR 点云，用于三维街景的重建与预测。
+        - 在 CUDA GPU 上构建系统以达到实时性能，并在三维重建任务上取得当时最好的精度。
   advisor: Aolin Xu
   stack: [3D Vision, NeRF, LiDAR, PyTorch, OpenCV, CUDA]
+  stackZh: [三维视觉, NeRF, LiDAR, PyTorch, OpenCV, CUDA]
 
 - org: FHL Vive Center for Enhanced Reality, UC Berkeley
+  orgZh: FHL Vive Center for Enhanced Reality，加州大学伯克利分校
   location: Berkeley, California
+  locationZh: 美国加州伯克利
   roles:
     - title: Student Project Lead — 3D Object Tracking
+      titleZh: 学生项目负责人 — 三维物体追踪
       start: 2022-08
       end: 2023-07
       bullets:
@@ -43,17 +65,27 @@
           capture sensors.
         - Developed real-time, millimetre-error 3D object tracking and pose estimation
           aimed at general AR applications.
+      bulletsZh:
+        - 使用 LiDAR 与动作捕捉传感器构建了 Digital Twin Tracking Dataset（DTTD）。
+        - 开发面向通用 AR 应用的实时三维物体追踪与位姿估计，误差达到毫米级。
   advisor: Allen Y. Yang
   stack: [SFM, Camera Calibration, C++, PyTorch, ARKit, Kinect]
+  stackZh: [SFM, 相机标定, C++, PyTorch, ARKit, Kinect]
 
 - org: Beijing Huiye Technology
   location: Beijing, China
+  locationZh: 中国北京
   roles:
     - title: Software Engineer Intern — Animation
+      titleZh: 软件工程实习生 — 动画
       start: 2020-06
       end: 2020-09
       bullets:
         - Built a system driving real-time 3D facial animation from audio input.
         - Shipped it to the 3D avatar "Xiaoyu", live-streamed on Bilibili to 312k viewers.
+      bulletsZh:
+        - 构建了由音频输入驱动实时三维面部动画的系统。
+        - 该系统用于三维虚拟形象 “Xiaoyu”，在 Bilibili 直播中触达 31.2 万观众。
   advisor: Buyu Li
   stack: [Facial Animation, Multi-modal, PyTorch, Unity3D]
+  stackZh: [面部动画, 多模态, PyTorch, Unity3D]

@@ -42,30 +42,41 @@ const SiteSchema = z.object({
   }),
 });
 
+// Every `*Zh` field is optional so that content can be added in English and
+// translated after; tools/check-i18n.mjs is what stops one being forgotten.
 const RoleSchema = z.object({
   title: z.string(),
+  titleZh: z.string().optional(),
   start: YearMonth,
   end: YearMonth,
   bullets: z.array(z.string()).default([]),
+  bulletsZh: z.array(z.string()).optional(),
 });
 
 const ExperienceSchema = z.array(
   z.object({
     org: z.string(),
+    orgZh: z.string().optional(),
     url: z.string().url().optional(),
     location: z.string().optional(),
+    locationZh: z.string().optional(),
     roles: z.array(RoleSchema).min(1),
     advisor: z.string().optional(),
     stack: z.array(z.string()).default([]),
+    stackZh: z.array(z.string()).optional(),
   }),
 );
 
 const EducationSchema = z.array(
   z.object({
     school: z.string(),
+    schoolZh: z.string().optional(),
     department: z.string(),
+    departmentZh: z.string().optional(),
     degree: z.string(),
+    degreeZh: z.string().optional(),
     field: z.string().optional(),
+    fieldZh: z.string().optional(),
     start: YearMonth,
     end: YearMonth,
     logo: z.string().optional(),
@@ -79,9 +90,16 @@ const PublicationSchema = z.object({
   // Contribution credit that the author order cannot convey: being a middle
   // author says nothing about having led the project.
   role: z.enum(['project-lead']).optional(),
+  // Titles, author names and conference names stay in English on both trees:
+  // that is how they are cited and how they are searched for. Only the parts
+  // written as prose get a translation.
   venue: z.string(),
+  venueZh: z.string().optional(),
   venueShort: z.string().optional(),
+  venueShortZh: z.string().optional(),
   venueNote: z.string().optional(),
+  venueNoteZh: z.string().optional(),
+  summaryZh: z.string().optional(),
   year: z.number().int(),
   date: z.coerce.date(),
   thumb: z.string(),
@@ -137,8 +155,10 @@ export function getEducation(): Education {
   return readYaml('education.yaml', EducationSchema);
 }
 
-/** Two lines at the card's column width. */
+/** Two lines at the card's column width. Chinese sets far denser, so the same
+ *  two lines hold roughly half as many characters. */
 const SUMMARY_MAX = 155;
+const SUMMARY_MAX_ZH = 80;
 
 export function getPublications(): Publication[] {
   const dir = path.join(CONTENT, 'publications');
@@ -162,6 +182,13 @@ export function getPublications(): Publication[] {
         `content/publications/${file}: summary is ${abstract.length} characters, ` +
           `over the ${SUMMARY_MAX} limit. It renders on the card as at most two ` +
           `lines — condense it to the paper's actual contribution.`,
+      );
+    }
+    const zh = parsed.data.summaryZh;
+    if (zh && zh.length > SUMMARY_MAX_ZH) {
+      throw new Error(
+        `content/publications/${file}: summaryZh is ${zh.length} characters, ` +
+          `over the ${SUMMARY_MAX_ZH} limit for Chinese.`,
       );
     }
     return { ...parsed.data, slug, abstract };

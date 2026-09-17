@@ -3,10 +3,13 @@ export type Lang = 'en' | 'zh';
 export const LANGS: Lang[] = ['en', 'zh'];
 
 /**
- * UI strings only. Long-form content — paper titles, abstracts, post bodies —
- * stays in English, because keeping two versions of every abstract in sync is a
- * standing cost with little payoff for this audience. Short content (role,
- * location, tagline, bio) is translated in content/site.yaml.
+ * UI strings only; the content files carry their own translations.
+ *
+ * What deliberately stays in English on the Chinese pages: paper titles, author
+ * names, venue names, company names, and terms of art that are read in English
+ * by the people who work in this field (NeRF, LiDAR, PyTorch, CUDA). Everything
+ * written as prose — roles, bullets, summaries, locations, university and
+ * department names — is translated.
  */
 export const T = {
   en: {
@@ -77,7 +80,7 @@ export const T = {
     meta: {
       home: '潘传宇（Chuanyu Pan），Meshy 研究技术负责人，研究三维世界建模与生成、三维基础模型与混合现实。',
       about: '关于潘传宇（Chuanyu Pan）——Meshy 研究技术负责人，加州大学伯克利分校工程硕士、清华大学学士，方向为计算机图形学与三维视觉。',
-      experience: '潘传宇的经历：Meshy 研究技术负责人，此前任职于本田研究院与加州大学伯克利分校 FHL Vive Center，曾就读伯克利、斯坦福与清华。',
+      experience: '潘传宇的经历：Meshy 研究技术负责人，此前任职于 Honda Research Institute 与加州大学伯克利分校 FHL Vive Center，曾就读于加州大学伯克利分校、斯坦福大学与清华大学。',
       research: '潘传宇（Chuanyu Pan）在三维重建与三维生成模型方向的论文，发表于 SIGGRAPH Asia、CVPR、ICLR 与 CoRL，包括 SAM3D-Part、Faithful Contouring 与 LiDARGrid。',
       building: '潘传宇构建的系统与产品，包括 Meshy 的三维基础模型工作。',
       blog: '潘传宇关于三维重建、三维生成与图形学研究的文章。',
@@ -108,6 +111,22 @@ export const T = {
 
 export function strings(lang: Lang) {
   return T[lang];
+}
+
+/**
+ * Picks a translated value, falling back to the English one.
+ *
+ * Every translated content field is optional, so an entry added without a
+ * translation renders in English rather than as a blank — the alternative is a
+ * required field that invites a placeholder.
+ */
+export function localized<T>(lang: Lang, en: T, zh: T | null | undefined): T {
+  return lang === 'zh' && zh != null ? zh : en;
+}
+
+/** Chinese uses a full-width comma, and sets no space around it. */
+export function listSeparator(lang: Lang): string {
+  return lang === 'zh' ? '\uff0c' : ', ';
 }
 
 /** Prefix a route for the given language. English lives at the root. */

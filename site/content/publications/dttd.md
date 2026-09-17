@@ -12,6 +12,7 @@ equalContribution: true
 venue: IEEE Conference on Computer Vision and Pattern Recognition (CVPR)
 venueShort: CVPR Workshop
 venueNote: 2nd Workshop Challenge on Vision Datasets Understanding
+summaryZh: 面向更远距离三维物体追踪的 RGB-D 数据集：10 类物体、103 个场景，含逐像素掩码与动作捕捉真值。
 year: 2023
 date: 2023-02-12
 thumb: /images/pub/dttd.jpg

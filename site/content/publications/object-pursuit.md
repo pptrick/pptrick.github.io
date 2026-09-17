@@ -9,6 +9,7 @@ authors:
 equalContribution: true
 venue: International Conference on Learning Representations (ICLR)
 venueShort: ICLR
+summaryZh: 持续地学习以物体为中心的表征，用超网络从隐编码生成每个物体的判别性权重。
 year: 2022
 date: 2022-01-24
 thumb: /images/pub/object-pursuit.jpg
