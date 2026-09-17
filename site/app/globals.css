@@ -155,6 +155,15 @@ a.language-option:hover, a.language-option:focus-visible { color: var(--accent);
   background: var(--surface);
 }
 .home-portrait img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Chinese landing differs in two ways, both because the copy sets differently.
+   The portrait aligns to the text's left edge rather than being centred on the
+   measure — the Chinese name is four glyphs wide, so the off-centre placement
+   that balances "Chuanyu Pan" has nothing to balance against here. And the
+   emphasised clause stays on the opening line: the two together are one
+   sentence of about the same length as the English first line alone. */
+html[lang="zh-CN"] .home-portrait { margin-inline: 0; transform: none; }
+html[lang="zh-CN"] .home-statement-focus { display: inline; }
 .home-actions { display: flex; flex-wrap: wrap; align-items: center; row-gap: .25rem; margin-top: 1.75rem; }
 .home-action { display: inline-flex; align-items: center; }
 .home-action-break { display: none; }

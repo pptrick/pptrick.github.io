@@ -23,7 +23,11 @@ export function HomeView({ lang }: { lang: Lang }) {
         </Link>
         <h1 id="home-name" className="home-name">{localized(lang, site.name, site.nameZh)}</h1>
         <p className="home-statement">
-          <span>{lang === 'zh' ? '构建系统，探索' : 'Building systems for'}</span>{' '}
+          <span>{lang === 'zh' ? '构建系统，探索' : 'Building systems for'}</span>
+          {/* English breaks the emphasised clause onto its own line, so it needs
+              the word space. Chinese keeps the clause inline and sets no space
+              across the join — 探索三维 is one phrase, not two words. */}
+          {lang === 'en' ? ' ' : null}
           <span className="home-statement-focus">
             {lang === 'zh' ? '三维世界建模与生成。' : '3D world modeling and generation.'}
           </span>
