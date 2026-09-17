@@ -148,10 +148,6 @@ a.language-option:hover, a.language-option:focus-visible { color: var(--accent);
   background: var(--surface);
 }
 .home-portrait img { width: 100%; height: 100%; object-fit: cover; }
-.home-role { margin-top: .5rem; font-size: 1.125rem; line-height: 1.6; }
-.home-role-separator { color: var(--fg-2); }
-.home-role a { text-decoration: underline; text-decoration-color: var(--line-2); text-underline-offset: 4px; }
-.home-role a:hover { color: var(--accent); }
 .home-actions { display: flex; flex-wrap: wrap; align-items: center; row-gap: .25rem; margin-top: 1.75rem; }
 .home-action { display: inline-flex; align-items: center; }
 .home-action-break { display: none; }

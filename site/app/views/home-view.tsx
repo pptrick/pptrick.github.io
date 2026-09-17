@@ -22,11 +22,6 @@ export function HomeView({ lang }: { lang: Lang }) {
           <Image src="/images/profile.jpg" alt="" width={750} height={750} priority sizes="(max-width: 600px) 160px, 208px" />
         </Link>
         <h1 id="home-name" className="home-name">{site.name}</h1>
-        <p className="home-role">
-          {(lang === 'zh' ? site.titleZh : site.title) ?? site.title}
-          <span className="home-role-separator">{lang === 'zh' ? ' · ' : ' at '}</span>
-          <a href={site.orgUrl}>{site.org}</a>
-        </p>
         <p className="home-statement">
           <span>{lang === 'zh' ? '构建系统，探索' : 'Building systems for'}</span>{' '}
           <span className="home-statement-focus">
