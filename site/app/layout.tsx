@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { getSite } from '@/lib/content';
 import { SiteHeader } from './site-header';
 import { SceneCanvas } from './scene/scene-canvas';
-import { LandingLock } from './landing-lock';
+import { RootAttributes } from './root-attributes';
 import { SiteFooter } from './site-footer';
 import './globals.css';
 
@@ -20,8 +20,10 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  // No `lang` on <html> here: one root layout serves both language trees, so
+  // see RootAttributes for where the attribute actually comes from.
   return (
-    <html lang="en">
+    <html>
       <head>
         <script
           // Must run before paint: reads the saved choice and stamps it, so a
@@ -39,7 +41,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-screen">
         {/* Lives in the layout, not a page: it must survive navigation for the
             camera dolly to work. Sits behind everything at z-0. */}
-        <LandingLock />
+        <RootAttributes />
         <SceneCanvas />
 
         {/* Scrim: keeps the copy legible where the scene passes behind it, and
