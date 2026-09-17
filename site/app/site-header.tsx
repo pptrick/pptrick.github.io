@@ -109,7 +109,14 @@ export function SiteHeader({
         </div>}
 
         <div className="site-utilities">
-          <a href={cvHref} className="site-cv" aria-label={lang === 'zh' ? '查看简历（PDF）' : 'View CV (PDF)'}>
+          {/* The ↗ already promises a new tab; target makes it true. */}
+          <a
+            href={cvHref}
+            target="_blank"
+            rel="noopener"
+            className="site-cv"
+            aria-label={lang === 'zh' ? '查看简历（PDF）' : 'View CV (PDF)'}
+          >
             {t.cv}<span aria-hidden="true">↗</span>
           </a>
           <div className="site-preferences">

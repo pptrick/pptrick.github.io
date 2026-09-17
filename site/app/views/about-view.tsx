@@ -57,10 +57,20 @@ export function AboutView({ lang }: { lang: Lang }) {
           </dl>
 
           <p className="mt-10 flex flex-wrap gap-x-6 gap-y-2 font-mono text-xs">
-            <a href={site.links.github} className="text-[var(--accent)]">GitHub</a>
-            <a href={site.links.scholar} className="text-[var(--accent)]">Google Scholar</a>
-            <a href={site.links.linkedin} className="text-[var(--accent)]">LinkedIn</a>
-            <a href={site.links.cv} className="text-[var(--accent)]">{t.cv} (PDF)</a>
+            <a href={site.links.github} className="link-quiet">GitHub</a>
+            <a href={site.links.scholar} className="link-quiet">Google Scholar</a>
+            <a href={site.links.linkedin} className="link-quiet">LinkedIn</a>
+            {/* The CV opens in its own tab: it is a PDF, and handing the tab
+                over to the browser's viewer would drop the reader out of the
+                site with only Back to return. */}
+            <a
+              href={site.links.cv}
+              target="_blank"
+              rel="noopener"
+              className="link-quiet"
+            >
+              {t.cv} (PDF)
+            </a>
           </p>
         </div>
       </section>

@@ -168,8 +168,22 @@ html[lang="zh-CN"] .home-statement-focus { display: inline; }
 .home-action { display: inline-flex; align-items: center; }
 .home-action-break { display: none; }
 .home-action-separator { margin-inline: .625rem; color: var(--muted); }
-.home-actions a { display: inline-flex; align-items: center; min-height: 44px; font-size: 1.0625rem; color: var(--fg-2); text-decoration: underline; text-decoration-color: var(--line-2); text-decoration-thickness: 1px; text-underline-offset: .35em; transition: color .2s, text-decoration-color .2s; }
-.home-actions a:hover, .home-actions a:focus-visible { color: var(--accent); text-decoration-color: var(--accent); }
+/* Quiet until hover, when the text and its underline both take the accent.
+   Shared so the landing destinations and the About page's profile links are
+   literally the same control rather than two copies that drift apart. */
+.link-quiet {
+  color: var(--fg-2);
+  text-decoration: underline;
+  text-decoration-color: var(--line-2);
+  text-decoration-thickness: 1px;
+  text-underline-offset: .35em;
+  transition: color .2s, text-decoration-color .2s;
+}
+.link-quiet:hover,
+.link-quiet:focus-visible { color: var(--accent); text-decoration-color: var(--accent); }
+
+/* The landing contributes only its own sizing and hit area. */
+.home-actions a { display: inline-flex; align-items: center; min-height: 44px; font-size: 1.0625rem; }
 
 /* Keep every destination available in a second row on smaller screens. */
 @media (max-width: 900px) {

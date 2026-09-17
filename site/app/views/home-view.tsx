@@ -40,7 +40,7 @@ export function HomeView({ lang }: { lang: Lang }) {
           {destinations.map(({ path, label }, index) => (
             <Fragment key={path}>
               <span className="home-action">
-                <Link href={href(lang, path)}>{label}</Link>
+                <Link href={href(lang, path)} className="link-quiet">{label}</Link>
                 {index < destinations.length - 1 && <span className="home-action-separator" aria-hidden="true">·</span>}
               </span>
               {index === 2 && <span className="home-action-break" aria-hidden="true" />}
