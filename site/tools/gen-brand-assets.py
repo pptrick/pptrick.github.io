@@ -104,6 +104,24 @@ def wireframe(V, F, w, h, yaw, scale_px, cx, cy, colour, width=1):
     return img.resize((w, h), Image.LANCZOS)
 
 
+def ico_prefer(path, size):
+    """Move one size's directory entry to the front of an ICO.
+
+    Next fills in the <link rel=icon sizes> attribute from the ICO's *first*
+    directory entry, and Pillow always writes them smallest-first, so the file
+    would advertise itself as 16x16 — while Google asks for a favicon that is a
+    multiple of 48px. Each directory entry carries its own offset into the file,
+    so reordering them is a metadata-only edit; no image data moves.
+    """
+    data = bytearray(path.read_bytes())
+    count = int.from_bytes(data[4:6], 'little')
+    entries = [bytes(data[6 + 16 * i:22 + 16 * i]) for i in range(count)]
+    wanted = next(i for i, e in enumerate(entries) if (e[0] or 256) == size)
+    entries.insert(0, entries.pop(wanted))
+    data[6:6 + 16 * count] = b''.join(entries)
+    path.write_bytes(bytes(data))
+
+
 def font(path, size, index=0):
     try:
         return ImageFont.truetype(path, size, index=index)
@@ -122,6 +140,22 @@ def main():
     # apple-touch wants no transparency and a bit more padding
     apple = silhouette(V, F, 180, margin=26, fill=ACCENT + (255,), bg=BG, radius=0)
     apple.save(OUT / 'apple-icon.png', 'PNG', optimize=True)
+
+    # /favicon.ico as well as the PNG, because Google caches the favicon under
+    # that exact URL: the old site served one there, so leaving it a 404 means
+    # search results keep showing the icon Google fetched years ago. Each size
+    # is rendered from the mesh rather than downsampled from the 512px PNG, so
+    # the margin and the corner radius stay proportional instead of collapsing.
+    sizes = (16, 32, 48, 64, 128)
+    frames = [
+        silhouette(V, F, n, margin=max(1, round(n * 0.105)),
+                   fill=ACCENT + (255,), bg=BG, radius=max(1, round(n * 0.1875)))
+        for n in sizes
+    ]
+    # Pillow writes the first image and stores the rest from `append_images`.
+    frames[-1].save(OUT / 'favicon.ico', format='ICO',
+                    sizes=[(n, n) for n in sizes])
+    ico_prefer(OUT / 'favicon.ico', 48)
 
     # ---- Open Graph card ------------------------------------------------
     W, H = 1200, 630
