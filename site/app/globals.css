@@ -132,9 +132,10 @@ a.language-option:hover, a.language-option:focus-visible { color: var(--accent);
   letter-spacing: -.015em;
 }
 .home-statement-focus { display: block; color: var(--fg); }
-/* The second sentence is a coda, not a headline: same measure, stepped back
-   so the emphasised line above it keeps the weight. */
-.home-statement-coda { display: block; margin-top: .5rem; color: var(--muted); font-size: .9em; }
+/* The second sentence is a coda, not a headline: it takes the same colour as
+   the opening line and steps back on size alone, so the emphasised line
+   between them keeps the weight without this one reading as greyed out. */
+.home-statement-coda { display: block; margin-top: .5rem; font-size: .9em; }
 .home-portrait {
   display: block;
   width: clamp(9rem, 23svh, 13rem);
