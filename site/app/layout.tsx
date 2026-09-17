@@ -14,15 +14,8 @@ export const metadata: Metadata = {
   keywords: ['Chuanyu Pan', '潘传宇', '3D AI', 'computer graphics', '3D vision', 'Meshy'],
   authors: [{ name: site.name }],
   metadataBase: new URL('https://pptrick.github.io'),
-  // The old site had no og:*/twitter:* at all, so shared links previewed blank.
-  openGraph: {
-    type: 'profile',
-    title: site.name,
-    description: site.tagline,
-    url: 'https://pptrick.github.io',
-    siteName: site.name,
-  },
-  twitter: { card: 'summary_large_image', title: site.name, description: site.tagline },
+  // openGraph and canonical live per route in lib/seo.ts; a block here
+  // would be inherited and every page would claim to be the homepage.
   verification: { google: 'RisFS-DjchuTNwiHmyLFchX4R3TSW4H2DcU57Zza9d0' },
 };
 

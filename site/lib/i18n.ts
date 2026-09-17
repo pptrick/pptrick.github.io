@@ -26,6 +26,16 @@ export const T = {
     advisor: 'Advisor',
     equalContribution: 'equal contribution',
     roles: { 'project-lead': 'Project lead' },
+    // Search-result copy. Distinct per page: a shared description gives Google
+    // nothing to distinguish twelve pages by.
+    meta: {
+      home: 'Chuanyu Pan is Research Tech Lead at Meshy, building systems for 3D world modeling and generation, 3D foundation models, and mixed reality.',
+      about: 'About Chuanyu Pan — Research Tech Lead at Meshy. Master of Engineering from UC Berkeley, bachelor from Tsinghua University. Computer graphics and 3D vision.',
+      experience: 'Chuanyu Pan: Research Tech Lead at Meshy, previously Honda Research Institute and the FHL Vive Center at UC Berkeley. Education at Berkeley, Stanford and Tsinghua.',
+      research: 'Publications by Chuanyu Pan on 3D reconstruction and 3D generative models, at SIGGRAPH Asia, CVPR, ICLR and CoRL — including SAM3D-Part, Faithful Contouring and LiDARGrid.',
+      building: 'Systems and products Chuanyu Pan has built, including 3D foundation model work at Meshy.',
+      blog: 'Notes by Chuanyu Pan on 3D reconstruction, 3D generation and graphics research.',
+    },
     role: 'Role',
     location: 'Location',
     email: 'Email',
@@ -64,6 +74,14 @@ export const T = {
     advisor: '导师',
     equalContribution: '同等贡献',
     roles: { 'project-lead': '项目负责人' },
+    meta: {
+      home: '潘传宇（Chuanyu Pan），Meshy 研究技术负责人，研究三维世界建模与生成、三维基础模型与混合现实。',
+      about: '关于潘传宇（Chuanyu Pan）——Meshy 研究技术负责人，加州大学伯克利分校工程硕士、清华大学学士，方向为计算机图形学与三维视觉。',
+      experience: '潘传宇的经历：Meshy 研究技术负责人，此前任职于本田研究院与加州大学伯克利分校 FHL Vive Center，曾就读伯克利、斯坦福与清华。',
+      research: '潘传宇（Chuanyu Pan）在三维重建与三维生成模型方向的论文，发表于 SIGGRAPH Asia、CVPR、ICLR 与 CoRL，包括 SAM3D-Part、Faithful Contouring 与 LiDARGrid。',
+      building: '潘传宇构建的系统与产品，包括 Meshy 的三维基础模型工作。',
+      blog: '潘传宇关于三维重建、三维生成与图形学研究的文章。',
+    },
     role: '职位',
     location: '地点',
     email: '邮箱',
