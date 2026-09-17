@@ -1,6 +1,5 @@
 import type { MetadataRoute } from 'next';
-
-const BASE = 'https://pptrick.github.io';
+import { SITE_URL as BASE } from '@/lib/site-url';
 
 export const dynamic = 'force-static';
 

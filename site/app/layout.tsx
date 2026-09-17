@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { getSite } from '@/lib/content';
+import { SITE_URL } from '@/lib/site-url';
 import { SiteHeader } from './site-header';
 import { SceneCanvas } from './scene/scene-canvas';
 import { RootAttributes } from './root-attributes';
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
   description: site.tagline,
   keywords: ['Chuanyu Pan', '潘传宇', '3D AI', 'computer graphics', '3D vision', 'Meshy'],
   authors: [{ name: site.name }],
-  metadataBase: new URL('https://pptrick.github.io'),
+  metadataBase: new URL(SITE_URL),
   // openGraph and canonical live per route in lib/seo.ts; a block here
   // would be inherited and every page would claim to be the homepage.
   verification: { google: 'RisFS-DjchuTNwiHmyLFchX4R3TSW4H2DcU57Zza9d0' },

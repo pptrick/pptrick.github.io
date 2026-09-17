@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import { getSite } from './content';
 import { href, type Lang } from './i18n';
+import { SITE_URL } from './site-url';
 
-export const SITE_URL = 'https://pptrick.github.io';
+export { SITE_URL };
 
 /** Absolute URL for a route in a given language. */
 export function absolute(lang: Lang, path: string): string {
