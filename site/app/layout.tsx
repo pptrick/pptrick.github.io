@@ -5,6 +5,7 @@ import { SiteHeader } from './site-header';
 import { SceneCanvas } from './scene/scene-canvas';
 import { RootAttributes } from './root-attributes';
 import { SiteFooter } from './site-footer';
+import { PageTransition } from './page-transition';
 import './globals.css';
 
 const site = getSite();
@@ -67,7 +68,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             them back on for its own content. Without this <main> covers the
             whole viewport at z-10 and the model cannot be grabbed at all. */}
         <main className="pointer-events-none relative z-10 mx-auto max-w-7xl px-4 sm:px-8">
-          {children}
+          <PageTransition>{children}</PageTransition>
         </main>
 
         <SiteFooter name={site.name} nameZh={site.nameZh} />

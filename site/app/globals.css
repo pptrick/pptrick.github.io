@@ -168,6 +168,21 @@ html[lang="zh-CN"] .home-statement-focus { display: inline; }
 .home-action { display: inline-flex; align-items: center; }
 .home-action-break { display: none; }
 .home-action-separator { margin-inline: .625rem; color: var(--muted); }
+/* Page content settling in on navigation. Short and small on purpose: the
+   camera dolly behind it runs 0.7s, and a content move large enough to notice
+   on its own would read as two unrelated animations rather than one. The
+   easing decelerates, so it arrives rather than stopping. */
+@keyframes page-enter {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.page-enter { animation: page-enter .3s cubic-bezier(.22, .61, .36, 1) both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .page-enter { animation: none; }
+}
+
 /* Quiet until hover, when the text and its underline both take the accent.
    Shared so the landing destinations and the About page's profile links are
    literally the same control rather than two copies that drift apart. */
