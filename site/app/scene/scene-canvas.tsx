@@ -86,13 +86,11 @@ export function SceneCanvas() {
     >
       <canvas
         ref={canvasRef}
-        // Up close on a sub-page the scene is texture, so it must not eat
-        // scrolls or clicks; on the home view it is draggable.
-        className={
-          isHome
-            ? 'pointer-events-auto h-full w-full cursor-grab touch-none'
-            : 'h-full w-full'
-        }
+        // Never interactive by default. The `--interactive` class only takes
+        // effect for fine pointers on wide screens (see globals.css), so on a
+        // touch device the canvas stays a pure backdrop and every scroll and tap
+        // reaches the page instead of being swallowed by touch-action: none.
+        className={`scene-canvas${isHome ? ' scene-canvas--interactive' : ''}`}
         style={
           isHome
             ? undefined

@@ -28,6 +28,7 @@
   --accent-ink: #062b36;
   --header-h: 4.5rem;
   --scrim: linear-gradient(100deg, #07070a 0%, rgba(7,7,10,.94) 30%, rgba(7,7,10,.5) 46%, rgba(7,7,10,.1) 60%, rgba(7,7,10,0) 72%);
+  --scrim-portrait: linear-gradient(to bottom, #07070a 0%, rgba(7,7,10,.94) 34%, rgba(7,7,10,.55) 55%, rgba(7,7,10,.12) 74%, rgba(7,7,10,0) 88%);
 }
 
 /* system light, only when no explicit choice has been stamped */
@@ -46,6 +47,7 @@
     --accent-2: #155e75;
     --accent-ink: #ffffff;
     --scrim: linear-gradient(100deg, #f7f9f8 0%, rgba(247,249,248,.94) 30%, rgba(247,249,248,.52) 46%, rgba(247,249,248,.12) 60%, rgba(247,249,248,0) 72%);
+    --scrim-portrait: linear-gradient(to bottom, #f7f9f8 0%, rgba(247,249,248,.94) 34%, rgba(247,249,248,.56) 55%, rgba(247,249,248,.14) 74%, rgba(247,249,248,0) 88%);
   }
 }
 
@@ -64,6 +66,7 @@
   --accent-2: #155e75;
   --accent-ink: #ffffff;
   --scrim: linear-gradient(100deg, #f7f9f8 0%, rgba(247,249,248,.94) 30%, rgba(247,249,248,.52) 46%, rgba(247,249,248,.12) 60%, rgba(247,249,248,0) 72%);
+  --scrim-portrait: linear-gradient(to bottom, #f7f9f8 0%, rgba(247,249,248,.94) 34%, rgba(247,249,248,.56) 55%, rgba(247,249,248,.14) 74%, rgba(247,249,248,0) 88%);
 }
 
 html { color-scheme: dark light; }
@@ -129,6 +132,9 @@ a.language-option:hover, a.language-option:focus-visible { color: var(--accent);
   letter-spacing: -.015em;
 }
 .home-statement-focus { display: block; color: var(--fg); }
+/* The second sentence is a coda, not a headline: same measure, stepped back
+   so the emphasised line above it keeps the weight. */
+.home-statement-coda { display: block; margin-top: .5rem; color: var(--muted); font-size: .9em; }
 .home-portrait {
   display: block;
   width: clamp(9rem, 23svh, 13rem);
@@ -177,14 +183,17 @@ a.language-option:hover, a.language-option:focus-visible { color: var(--accent);
   .theme-toggle { width: 36px; }
 }
 
-/* In portrait layouts, give the model its own space below the introduction.
-   The renderer adapts to its canvas dimensions; its materials and controls
-   are unchanged. The absolute frame also scrolls naturally on short phones. */
+/* Portrait keeps the scene as a full-bleed backdrop rather than giving it a band
+   below the copy. The scrim switches to a top-down gradient, because the
+   landscape one runs left-to-right and does nothing for copy in a narrow
+   column. The copy is top-aligned so the model reads underneath it. */
 @media (max-width: 900px) and (orientation: portrait) {
-  html.landing, html.landing body { height: auto; overflow: auto; overscroll-behavior: auto; }
-  html.landing .scene-backdrop { position: absolute; top: 720px; bottom: auto; height: max(320px, calc(100svh - 720px)); }
-  html.landing .scene-scrim { background: none; }
-  .home-hero { align-items: flex-start; padding-top: 3rem; padding-bottom: 25rem; }
+  html.landing .scene-scrim { background: var(--scrim-portrait); }
+  /* Held well back on a phone: the copy runs the full width here, so the model
+     has nowhere to sit beside it and has to read as texture behind the nav
+     rather than competing with it. */
+  html.landing .scene-canvas { opacity: .42; }
+  .home-hero { align-items: flex-start; padding-top: 3rem; }
 }
 
 @media (max-width: 600px) {
@@ -197,8 +206,14 @@ a.language-option:hover, a.language-option:focus-visible { color: var(--accent);
   .home-action:nth-child(3) .home-action-separator { visibility: hidden; }
 }
 
-@media (max-width: 600px) and (orientation: portrait) {
-  html.landing .scene-backdrop { top: 620px; height: max(320px, calc(100svh - 620px)); }
+/* Dragging the model is a desktop affordance. On touch the canvas covers the
+   whole viewport behind the content, so giving it pointer events would swallow
+   scrolls and taps belonging to the page, and `touch-action: none` would block
+   scrolling outright. Only fine pointers on wide screens get to grab it. */
+.scene-canvas { width: 100%; height: 100%; }
+
+@media (min-width: 901px) and (pointer: fine) {
+  .scene-canvas--interactive { pointer-events: auto; cursor: grab; touch-action: none; }
 }
 
 @media (max-width: 380px) {

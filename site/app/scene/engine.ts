@@ -33,7 +33,10 @@ const HOME_DIST = 4.15;
 const HOME_X = 0.62;
 const PAGE_DIST = 1.55;
 const PAGE_X = 0.34;
-const NARROW_DIST = 6.0; // portrait viewports are width-bound, not height-bound
+// Portrait viewports are width-bound, not height-bound: at 390x844 the visible
+// half-width is only dist*0.306*0.462, so anything under ~6.9 crops the model's
+// 0.975-unit half-width. 7.6 leaves about 10% margin.
+const NARROW_DIST = 7.6;
 const NARROW_PX = 720;
 
 const U = {

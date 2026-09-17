@@ -29,7 +29,12 @@ export function HomeView({ lang }: { lang: Lang }) {
         </p>
         <p className="home-statement">
           <span>{lang === 'zh' ? '构建系统，探索' : 'Building systems for'}</span>{' '}
-          <span className="home-statement-focus">{lang === 'zh' ? '三维重建与生成。' : '3D reconstruction and generation.'}</span>
+          <span className="home-statement-focus">
+            {lang === 'zh' ? '三维世界建模与生成。' : '3D world modeling and generation.'}
+          </span>
+          <span className="home-statement-coda">
+            {lang === 'zh' ? '以混合现实释放想象力。' : 'Unleashing imagination through mixed reality.'}
+          </span>
         </p>
 
         <nav className="home-actions" aria-label={lang === 'zh' ? '了解更多' : 'Explore my work'}>
