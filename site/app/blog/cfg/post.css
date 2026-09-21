@@ -1,0 +1,162 @@
+/* Long-form article styling. Everything is scoped under .post so none of it
+   leaks into the rest of the site; colours come from the site's tokens in
+   globals.css. Only the chart series colours are defined here, because the
+   brand has one accent and a chart needs three distinguishable hues. */
+
+.post {
+  --c1: #67e8f9;
+  --c2: #f0a868;
+  --c3: #b29bd8;
+  --c1-soft: rgba(103, 232, 249, 0.13);
+  --c2-soft: rgba(240, 168, 104, 0.14);
+  --cg: rgba(133, 133, 143, 0.55);
+  max-width: 44rem;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) .post {
+    --c1: #0e7490; --c2: #b45309; --c3: #6d28d9;
+    --c1-soft: rgba(14, 116, 144, 0.12); --c2-soft: rgba(180, 83, 9, 0.12);
+    --cg: rgba(94, 106, 104, 0.6);
+  }
+}
+:root[data-theme="light"] .post {
+  --c1: #0e7490; --c2: #b45309; --c3: #6d28d9;
+  --c1-soft: rgba(14, 116, 144, 0.12); --c2-soft: rgba(180, 83, 9, 0.12);
+  --cg: rgba(94, 106, 104, 0.6);
+}
+
+/* ---- header ---- */
+.post .eyebrow { font-family: var(--font-mono); font-size: 11px; font-weight: 500;
+  letter-spacing: .2em; text-transform: uppercase; color: var(--accent); margin: 0 0 16px; }
+.post .post-title { font-family: var(--font-mono); font-weight: 500;
+  font-size: clamp(28px, 5vw, 40px); line-height: 1.1; letter-spacing: -.02em; margin: 0 0 18px; }
+.post .sub { color: var(--fg-2); font-size: 1.0625rem; line-height: 1.75; margin: 0; max-width: 36rem; }
+.post .post-meta { font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+  margin: 18px 0 44px; letter-spacing: .02em; }
+
+/* ---- prose ---- */
+.post h2 { font-family: var(--font-mono); font-weight: 500; font-size: 22px; line-height: 1.25;
+  letter-spacing: -.015em; margin: 58px 0 6px; scroll-margin-top: 20px; }
+.post h2 .num { font-family: var(--font-mono); font-size: 11px; font-weight: 500; color: var(--accent);
+  display: block; letter-spacing: .2em; margin-bottom: 10px; }
+.post h3 { font-family: var(--font-mono); font-weight: 500; font-size: 17.5px; margin: 38px 0 4px;
+  letter-spacing: -.01em; line-height: 1.35; }
+.post h3.eff { margin-top: 52px; padding-top: 22px; border-top: 1px solid var(--line); font-size: 19px; }
+.post h3.eff .k { display: block; font-family: var(--font-mono); font-size: 10.5px; font-weight: 500;
+  letter-spacing: .2em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+.post p { margin: 14px 0; }
+.post strong { font-weight: 600; color: var(--fg); }
+.post em { font-style: normal; border-bottom: 1px solid var(--line-2); padding-bottom: 1px; }
+.post a { color: var(--accent); text-underline-offset: .3em; }
+.post a:hover { text-decoration: underline; }
+
+.post .lead { font-size: 1.0625rem; color: var(--fg-2); }
+.post .pull { font-family: var(--font-mono); font-size: 16px; line-height: 1.65; font-weight: 500;
+  border-left: 2px solid var(--accent); padding: 4px 0 4px 18px; margin: 28px 0; color: var(--fg); }
+.post .note { border-left: 2px solid var(--line-2); padding-left: 16px; font-size: 14px;
+  color: var(--fg-2); margin: 22px 0; }
+
+.post code { font-family: var(--font-mono); font-size: .86em; background: var(--surface-2);
+  padding: 1.5px 5px; border-radius: 3px; color: var(--fg); }
+.post pre { font-family: var(--font-mono); font-size: 13px; line-height: 1.8; background: var(--surface);
+  border: 1px solid var(--line); border-radius: 4px; padding: 16px 18px; overflow-x: auto; margin: 22px 0; }
+.post pre code { background: none; padding: 0; font-size: inherit; }
+
+.post table { border-collapse: collapse; width: 100%; font-size: 14px; margin: 22px 0;
+  display: block; overflow-x: auto; }
+.post th, .post td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--line);
+  vertical-align: top; line-height: 1.65; }
+.post th { font-family: var(--font-mono); font-size: 10.5px; font-weight: 500; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--accent); white-space: nowrap; }
+.post td { color: var(--fg-2); }
+.post td:first-child { font-weight: 600; color: var(--fg); white-space: nowrap; }
+.post table.sym td:first-child { font-family: var(--font-mono); font-weight: 500; }
+/* prediction vs measurement: fixed columns, so the short "predicted" cells
+   are not squeezed to one character per line by the long "measured" cells */
+.post table.verdict { display: table; table-layout: fixed; }
+.post table.verdict td:nth-child(2) { white-space: nowrap; color: var(--fg-2); }
+.post table.verdict th:nth-child(1), .post table.verdict td:nth-child(1) { width: 15%; }
+.post table.verdict th:nth-child(2), .post table.verdict td:nth-child(2) { width: 23%; }
+/* side-by-side comparison: two equal prose columns, never nowrap */
+.post table.split { display: table; table-layout: fixed; }
+.post table.split th:nth-child(1), .post table.split td:nth-child(1) { width: 14%; }
+.post table.split th:nth-child(2), .post table.split td:nth-child(2) { width: 43%; }
+@media (max-width: 620px) {
+  .post table.split, .post table.verdict { display: block; table-layout: auto; }
+  .post table.split th, .post table.split td,
+  .post table.verdict th, .post table.verdict td { width: auto; white-space: normal; }
+}
+
+.post ul, .post ol { margin: 14px 0; padding-left: 20px; }
+.post ul { list-style: disc; }
+.post ol { list-style: decimal; }
+.post li { margin: 7px 0; color: var(--fg-2); }
+.post li strong { color: var(--fg); }
+
+.post details { background: var(--surface); border: 1px solid var(--line); border-radius: 4px;
+  margin: 22px 0; overflow: hidden; transition: border-color .2s; }
+.post details:hover { border-color: var(--line-2); }
+.post summary { cursor: pointer; padding: 11px 16px; font-size: 13.5px; font-weight: 500;
+  color: var(--fg-2); list-style: none; display: flex; align-items: center; gap: 9px;
+  font-family: var(--font-mono); }
+.post summary::-webkit-details-marker { display: none; }
+.post summary::before { content: "+"; color: var(--accent); font-size: 13px; line-height: 1; }
+.post details[open] summary::before { content: "−"; }
+.post summary:hover { color: var(--accent); }
+.post .det-body { padding: 0 16px 14px; font-size: 14px; color: var(--fg-2); line-height: 1.8; }
+.post .det-body pre { margin: 12px 0; font-size: 12.5px; }
+
+/* ---- figures: static images and interactive canvases share one frame ---- */
+.post figure.fig { margin: 30px 0; border: 1px solid var(--line); border-radius: 4px;
+  background: var(--surface); overflow: hidden; }
+.post .fig-head { display: flex; align-items: baseline; gap: 10px; padding: 13px 16px 0; }
+.post .fig-label { font-family: var(--font-mono); font-size: 10px; font-weight: 500; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--accent); }
+.post .fig-title { font-family: var(--font-mono); font-size: 14px; font-weight: 500; color: var(--fg); }
+.post .fig-ctl { display: flex; flex-wrap: wrap; gap: 12px 24px; padding: 12px 16px 4px; }
+.post .fc { flex: 1 1 180px; min-width: 0; }
+.post .fc-head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; margin-bottom: 2px; }
+.post .fc-name { font-family: var(--font-mono); font-size: 10px; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--muted); }
+.post .fc-val { font-family: var(--font-mono); font-size: 14px; font-weight: 500; color: var(--fg);
+  font-variant-numeric: tabular-nums; }
+.post .fig input[type=range] { width: 100%; accent-color: var(--accent); height: 20px; margin: 0;
+  display: block; background: transparent; cursor: pointer; }
+.post .fc-note { font-size: 11px; color: var(--muted); margin: 1px 0 0; line-height: 1.45; }
+.post .fig canvas { display: block; width: 100%; height: auto; max-width: 100%; }
+.post .fig img { display: block; width: 100%; height: auto; background: #000; }
+.post .fig-axis { display: flex; padding: 5px 14px 0; font-family: var(--font-mono);
+  font-size: 10.5px; color: var(--muted); }
+.post .fig-axis span { flex: 1; text-align: center; }
+.post .fig-plot { padding: 6px 14px 4px; }
+.post .fig-legend { display: flex; flex-wrap: wrap; gap: 4px 16px; padding: 4px 16px 0;
+  font-family: var(--font-mono); font-size: 10.5px; color: var(--fg-2); }
+.post .fig-legend span { display: inline-flex; align-items: center; gap: 6px; }
+.post .sw { width: 17px; height: 2.5px; border-radius: 2px; flex: 0 0 auto; }
+/* dashes drawn as a gradient: a 2px dashed border renders almost solid at this width */
+.post .sw.dash { border-radius: 0; background: repeating-linear-gradient(90deg,
+  currentColor 0 4.5px, transparent 4.5px 8px); }
+.post .sw.dot { border-radius: 0; background: repeating-linear-gradient(90deg,
+  currentColor 0 2px, transparent 2px 5px); }
+.post .sw.round { width: 7px; height: 7px; border-radius: 50%; }
+.post .fig-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 2px 14px; padding: 10px 14px 2px; }
+.post .gt { font-family: var(--font-mono); font-size: 10px; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--muted); margin-bottom: 2px; }
+.post .pt { padding: 10px 16px 0; }
+.post figcaption { padding: 12px 16px 14px; font-size: 12.5px; color: var(--muted); line-height: 1.7;
+  border-top: 1px solid var(--line); margin-top: 8px; }
+.post figcaption b { color: var(--fg-2); font-weight: 600; }
+
+/* ---- citations ---- */
+.post sup.cite { font-size: .7em; line-height: 0; margin-left: 1px; }
+.post sup.cite a { color: var(--accent); text-decoration: none; }
+.post sup.cite a:hover { text-decoration: underline; }
+.post h2.refs-h { font-size: 1rem; margin-top: 48px; }
+.post ol.refs { font-size: 13px; line-height: 1.7; color: var(--fg-2); padding-left: 1.6em; }
+.post ol.refs li { margin-bottom: 6px; }
+.post ol.refs a { color: var(--accent); text-decoration: none; }
+.post ol.refs a:hover { text-decoration: underline; }
+.post ol.refs em { border: 0; font-style: italic; }
+
+.post .post-back { margin-top: 56px; font-family: var(--font-mono); font-size: 13px; }

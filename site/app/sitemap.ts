@@ -1,10 +1,14 @@
 import type { MetadataRoute } from 'next';
 import { SITE_URL as BASE } from '@/lib/site-url';
+import { getPosts } from '@/lib/posts';
 
 export const dynamic = 'force-static';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const routes = ['', '/publications', '/building', '/experience', '/blog', '/about'];
+  const routes = [
+    '', '/publications', '/building', '/experience', '/blog', '/about',
+    ...getPosts().map((post) => `/blog/${post.slug}`),
+  ];
   // both languages, English at the root and Chinese under /zh
   return ['', '/zh'].flatMap((prefix) =>
     routes.map((route) => ({

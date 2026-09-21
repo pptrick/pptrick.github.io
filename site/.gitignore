@@ -4,3 +4,6 @@
 next-env.d.ts
 *.tsbuildinfo
 .DS_Store
+
+# Research notes behind the blog posts: working material, not site content.
+content/drafts/

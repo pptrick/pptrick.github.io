@@ -1,6 +1,7 @@
 import { getEducation, getExperience, getPublications, getSite } from './content';
 import { absolute, SITE_URL } from './seo';
 import { localized, type Lang } from './i18n';
+import type { Post } from './posts';
 
 const PERSON_ID = `${SITE_URL}/#person`;
 
@@ -77,6 +78,27 @@ export function publicationsSchema(lang: Lang) {
         ...(pub.links.code ? { codeRepository: pub.links.code } : {}),
       },
     })),
+  };
+}
+
+/** One blog post as a TechArticle by the site's Person. */
+export function articleSchema(lang: Lang, post: Post) {
+  const site = getSite();
+  const url = absolute(lang, `/blog/${post.slug}/`);
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    '@id': `${url}#article`,
+    headline: localized(lang, post.title, post.titleZh),
+    description: localized(lang, post.summary, post.summaryZh),
+    inLanguage: lang === 'zh' ? 'zh-CN' : 'en',
+    datePublished: post.date,
+    dateModified: post.date,
+    url,
+    mainEntityOfPage: url,
+    author: { '@type': 'Person', '@id': PERSON_ID, name: localized(lang, site.name, site.nameZh) },
+    publisher: { '@id': PERSON_ID },
+    isPartOf: { '@id': `${SITE_URL}/#website` },
   };
 }
 
