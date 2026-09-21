@@ -10,7 +10,11 @@
   --c1-soft: rgba(103, 232, 249, 0.13);
   --c2-soft: rgba(240, 168, 104, 0.14);
   --cg: rgba(133, 133, 143, 0.55);
-  max-width: 44rem;
+  /* A reading column, centred in the shell: the other subpages sit left so
+     the scene shows on the right, but a long article reads better centred
+     and the charts want the extra width. */
+  max-width: 54rem;
+  margin-inline: auto;
 }
 @media (prefers-color-scheme: light) {
   :root:not([data-theme="dark"]) .post {
@@ -30,7 +34,7 @@
   letter-spacing: .2em; text-transform: uppercase; color: var(--accent); margin: 0 0 16px; }
 .post .post-title { font-family: var(--font-mono); font-weight: 500;
   font-size: clamp(28px, 5vw, 40px); line-height: 1.1; letter-spacing: -.02em; margin: 0 0 18px; }
-.post .sub { color: var(--fg-2); font-size: 1.0625rem; line-height: 1.75; margin: 0; max-width: 36rem; }
+.post .sub { color: var(--fg-2); font-size: 1.0625rem; line-height: 1.75; margin: 0; max-width: 40rem; }
 .post .post-meta { font-family: var(--font-mono); font-size: 12px; color: var(--muted);
   margin: 18px 0 44px; letter-spacing: .02em; }
 
