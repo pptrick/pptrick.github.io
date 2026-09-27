@@ -417,7 +417,9 @@ function layout(animate, list){
   var reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
   var W=grid.clientWidth; if(W<=0) return;
   var gap = W<640 ? 12 : 18;
-  var cols = Math.max(2, Math.min(6, Math.round(W/232)));
+  // Four across, which is what the collection looks best at; a phone steps
+  // down rather than rendering four ~85px slivers.
+  var cols = W<560 ? 2 : W<900 ? 3 : 4;
   var colW = Math.floor((W - gap*(cols-1))/cols);
   var h=[], i; for(i=0;i<cols;i++) h.push(0);
 

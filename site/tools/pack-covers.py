@@ -24,6 +24,30 @@ COVERS = SITE / "public/boardgames/covers"
 SOURCE_SUFFIXES = {".jpg", ".jpeg", ".png", ".webp", ".heic", ".tif", ".tiff"}
 
 
+def trim_margin(im: Image.Image) -> Image.Image:
+    """Crop a near-white border off a product render.
+
+    Box art scraped from a shop is often a 3D render floating on a white
+    square -- one source was only 49% content -- which reads as a hole in the
+    waterfall next to tightly-cropped covers. Anything already filling its
+    frame is returned untouched.
+    """
+    from PIL import ImageChops
+
+    white = Image.new("RGB", im.size, (255, 255, 255))
+    mask = ImageChops.difference(im, white).convert("L").point(lambda p: 255 if p > 11 else 0)
+    box = mask.getbbox()
+    if not box:
+        return im
+    w, h = im.size
+    filled = ((box[2] - box[0]) * (box[3] - box[1])) / float(w * h)
+    if filled > 0.92:
+        return im
+    pad = round(max(w, h) * 0.015)
+    return im.crop((max(0, box[0] - pad), max(0, box[1] - pad),
+                    min(w, box[2] + pad), min(h, box[3] + pad)))
+
+
 def pack(src: Path, dest: Path) -> str:
     im = Image.open(src)
     # Phone photos carry rotation in EXIF; without this they land sideways.
@@ -41,6 +65,8 @@ def pack(src: Path, dest: Path) -> str:
         im = flat
     else:
         im = im.convert("RGB")
+
+    im = trim_margin(im)
 
     w, h = im.size
     if max(w, h) > MAX_EDGE:

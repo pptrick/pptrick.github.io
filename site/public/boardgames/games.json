@@ -301,7 +301,7 @@
         "zh": "身份局 4–10 人；国战模式可到 12 人，军争篇另含 1v1 与 3v3",
         "en": "4–10 in hidden-role mode; Kingdom Wars goes to 12, and Warfare adds 1v1 and 3v3"
       },
-      "coverAspect": 0.78
+      "coverAspect": 0.7594
     },
     {
       "id": "night-of-the-ninja",
@@ -536,8 +536,8 @@
         "en": "Da Vinci Code"
       },
       "alt": {
-        "zh": "日版名 Algo，国际版名 Coda",
-        "en": "published as Algo in Japan, Coda internationally"
+        "zh": "繁中版《DaVinci code 终极密码》；日版 Algo，国际版 Coda",
+        "en": "Algo in Japan, Coda internationally"
       },
       "cover": "covers/davinci-code.webp",
       "players": [
@@ -561,7 +561,7 @@
         "zh": "每人一排隐藏的数字牌，轮流猜别人的牌。猜中对方翻开，猜错自己翻开。规则三句话就能讲完，推理空间却意外地深，两个人也很好玩。",
         "en": "Everyone holds a row of hidden numbered tiles in sorted order. Guess an opponent's tile correctly and they flip it; guess wrong and you flip one of your own. Three sentences of rules hiding a genuinely deep deduction game — and it's excellent at two."
       },
-      "coverAspect": 0.78
+      "coverAspect": 1.108
     },
     {
       "id": "mini-mahjong",
@@ -591,7 +591,7 @@
         "zh": "缩小版麻将，一盒装得下，出门旅行随身带。三人也能打，但四人才是正经局。玩法按你们熟悉的规则来就行。",
         "en": "A shrunk-down mahjong set that fits in one small box and travels anywhere. Three can play, but four is the real game. House rules welcome — we play whichever variant the table knows."
       },
-      "coverAspect": 0.78
+      "coverAspect": 1.0
     },
     {
       "id": "texas-holdem",
@@ -622,7 +622,7 @@
         "zh": "筹码管够，人数只受一副牌限制——理论上最多 22 人",
         "en": "We have chips for days; the only limit is one deck of cards — 22 players, theoretically"
       },
-      "coverAspect": 0.78
+      "coverAspect": 1.7812
     }
   ]
 }
