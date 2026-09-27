@@ -69,7 +69,6 @@
         45,
         120
       ],
-      "size": "large",
       "tags": [
         "deduction",
         "talky",
@@ -109,7 +108,8 @@
           "zh": "华灯初上",
           "en": "Temple Fair"
         }
-      ]
+      ],
+      "coverAspect": 1.0
     },
     {
       "id": "splendor",
@@ -126,7 +126,6 @@
         30,
         30
       ],
-      "size": "large",
       "tags": [
         "strategy",
         "engine",
@@ -140,7 +139,8 @@
       "desc": {
         "zh": "收集宝石筹码去买发展卡，买到的卡又变成永久折扣——越到后面一回合能做的事越多。规则五分钟讲完，是带新人入坑最稳的一款。",
         "en": "Collect gem chips, spend them on development cards, and every card you buy becomes a permanent discount — so each turn does more than the last. Five minutes to teach. The safest game to hand a first-timer."
-      }
+      },
+      "coverAspect": 0.7825
     },
     {
       "id": "deception",
@@ -157,7 +157,6 @@
         20,
         30
       ],
-      "size": "large",
       "tags": [
         "deduction",
         "party",
@@ -171,7 +170,8 @@
       "desc": {
         "zh": "一人当法医，全程不能开口，只能通过摆放「死因 / 线索」标记给出暗示；侦探要从满桌凶器和证物里拼出真正的作案组合。人越多越热闹，规则十分钟讲完。",
         "en": "One player is the forensic scientist and may never talk — they can only place tiles marking cause of death and key evidence. Everyone else reads those clues to work out which weapon and which clue actually belong to the killer. Scales beautifully to a crowd, teaches in ten minutes."
-      }
+      },
+      "coverAspect": 1.0
     },
     {
       "id": "codenames",
@@ -188,7 +188,6 @@
         15,
         30
       ],
-      "size": "normal",
       "tags": [
         "party",
         "beginner",
@@ -206,7 +205,8 @@
       "desc": {
         "zh": "两队各有一位军师，只能用「一个词＋一个数字」提示队友在 5×5 词阵里找出自己的特工。最刺激的是刺客格——碰到直接输。人数可以随便加，旁观的人也会忍不住一起吵。",
         "en": "Each team's spymaster gives a single word and a number, and their team has to pick their own agents out of a 5×5 grid of words. One square is the assassin — touch it and you lose on the spot. Add as many people as you like; the spectators end up shouting too."
-      }
+      },
+      "coverAspect": 0.6975
     },
     {
       "id": "fengsheng",
@@ -223,7 +223,6 @@
         30,
         45
       ],
-      "size": "normal",
       "tags": [
         "deduction",
         "talky",
@@ -236,7 +235,8 @@
       "desc": {
         "zh": "改编自电影《风声》的身份推理游戏。红蓝两方加第三方各有各的目标，靠传递情报和互相「澄清」来试探。单局短、重开快，一晚上能连着打好几轮。",
         "en": "A hidden-role game built on the Chinese spy film Fengsheng. Two intelligence factions plus a third party each chase different win conditions, passing intelligence cards around and calling each other out. Short games, fast resets — you'll play five in a row."
-      }
+      },
+      "coverAspect": 1.0
     },
     {
       "id": "avalon",
@@ -254,7 +254,6 @@
         30,
         30
       ],
-      "size": "normal",
       "tags": [
         "deduction",
         "talky",
@@ -267,7 +266,8 @@
       "desc": {
         "zh": "好人要连成三次任务，坏人要破坏三次——或者在最后一刺刺中梅林直接翻盘。全程没有人出局，所有人从头说到尾。七人局最经典。",
         "en": "Good needs three successful quests; evil needs three failures — or one correct guess at Merlin in the final moment. Nobody is ever eliminated, so everyone argues from start to finish. Seven players is the classic count."
-      }
+      },
+      "coverAspect": 0.75
     },
     {
       "id": "sanguosha",
@@ -284,7 +284,6 @@
         30,
         60
       ],
-      "size": "normal",
       "tags": [
         "deduction",
         "crowd",
@@ -301,7 +300,8 @@
       "playersNote": {
         "zh": "身份局 4–10 人；国战模式可到 12 人，军争篇另含 1v1 与 3v3",
         "en": "4–10 in hidden-role mode; Kingdom Wars goes to 12, and Warfare adds 1v1 and 3v3"
-      }
+      },
+      "coverAspect": 0.78
     },
     {
       "id": "night-of-the-ninja",
@@ -318,7 +318,6 @@
         15,
         30
       ],
-      "size": "normal",
       "tags": [
         "deduction",
         "party",
@@ -335,7 +334,8 @@
       "desc": {
         "zh": "两大家族互相潜伏。每轮你要挑一个忍者身份：间谍和占卜师能拿情报，但只有忍者和盲刺客能真的动手杀人。单局非常短，输了马上再来一把。",
         "en": "Two houses, both infiltrated. Each round you choose which ninja to be: a Spy or Fortune Teller gathers information, but only a Shinobi or Blind Assassin can actually take someone out. Rounds are so short that losing just means dealing again."
-      }
+      },
+      "coverAspect": 0.9988
     },
     {
       "id": "one-night-werewolf",
@@ -352,7 +352,6 @@
         10,
         10
       ],
-      "size": "small",
       "tags": [
         "deduction",
         "party",
@@ -370,7 +369,8 @@
       "playersNote": {
         "zh": "盒子印的是 3–10 人，但 3 人太少玩不起来，人多反而更好玩",
         "en": "The box says 3–10, but three is far too thin — it gets better the more people you add"
-      }
+      },
+      "coverAspect": 1.0
     },
     {
       "id": "castles-of-burgundy",
@@ -387,7 +387,6 @@
         30,
         90
       ],
-      "size": "large",
       "tags": [
         "strategy",
         "heavy",
@@ -400,7 +399,8 @@
       "desc": {
         "zh": "用两颗骰子决定能取哪块板块、能放在哪里，把自己的领地一格格填满。板块之间的连锁得分让每个决策都要权衡「现在就拿」还是「等更好的」。欧式策略的教科书，耐玩度极高。",
         "en": "Two dice decide which tiles you can take and where they can go, and you fill in your estate hex by hex. Completing regions triggers chain scoring, so every turn is a choice between taking what's there and holding out for the better fit. A textbook euro, and it never gets old."
-      }
+      },
+      "coverAspect": 0.705
     },
     {
       "id": "grand-austria-hotel",
@@ -417,7 +417,6 @@
         60,
         120
       ],
-      "size": "normal",
       "tags": [
         "strategy",
         "heavy"
@@ -429,7 +428,8 @@
       "desc": {
         "zh": "骰子决定了每轮桌面上能选的行动，但怎么用完全看你。招员工、备酒水、安排客人入住，员工之间的连锁效果是全局的核心。中重度欧式策略，两人局也很紧凑。",
         "en": "A shared pool of dice sets which actions are available each round, but what you do with them is entirely yours. Hire staff, stock the bar, seat guests in the right rooms — the staff combos are where the game really lives. Mid-heavy euro that stays tight at two."
-      }
+      },
+      "coverAspect": 0.7137
     },
     {
       "id": "crew-deep-sea",
@@ -446,7 +446,6 @@
         20,
         20
       ],
-      "size": "normal",
       "tags": [
         "coop",
         "strategy",
@@ -459,7 +458,8 @@
       "desc": {
         "zh": "合作版的吃墩游戏：每局有指定任务（比如「我必须赢下红 3」），但全程几乎不能交流，只能靠一枚提示标记给队友暗示。共 96 关，难度逐级升高，可以当成一场长线战役慢慢推。",
         "en": "Trick-taking, but cooperative. Each mission hands out tasks like \"I must win the red 3\" — and you may not discuss them. One communication token per player is all the signalling you get. 96 missions of escalating difficulty, playable as a long campaign."
-      }
+      },
+      "coverAspect": 0.7217
     },
     {
       "id": "dixit",
@@ -480,7 +480,6 @@
         30,
         30
       ],
-      "size": "normal",
       "tags": [
         "party",
         "story",
@@ -493,7 +492,8 @@
       "desc": {
         "zh": "讲故事的人给自己的牌起一个提示，其他人各出一张牌来混淆，然后大家猜哪张是原牌。妙处在于：所有人都猜中、或者都没猜中，讲故事的人都不得分——提示要卡在「刚刚好」。",
         "en": "The storyteller gives a clue for one of their dreamlike cards; everyone else submits a card to muddy the water, then all players guess which was the original. The catch: if everyone guesses right, or everyone guesses wrong, the storyteller scores nothing. The clue has to land exactly in between."
-      }
+      },
+      "coverAspect": 1.0
     },
     {
       "id": "stella",
@@ -514,7 +514,6 @@
         30,
         45
       ],
-      "size": "normal",
       "tags": [
         "party",
         "story",
@@ -527,7 +526,8 @@
       "desc": {
         "zh": "Dixit 世界观下的竞速版本：给一个词，所有人同时在板上圈出自己觉得相关的牌。和别人选得一样才得分，选了没人选的反而扣分。还得决定什么时候收手——贪心会爆掉。",
         "en": "A race set in the Dixit universe. One word is revealed, and everyone simultaneously marks the cards they think connect to it. Matching other players scores; going out alone costs you. The real decision is when to stop — push too far and the round collapses."
-      }
+      },
+      "coverAspect": 1.0
     },
     {
       "id": "davinci-code",
@@ -548,7 +548,6 @@
         15,
         30
       ],
-      "size": "small",
       "tags": [
         "abstract",
         "twoPlayer",
@@ -561,7 +560,8 @@
       "desc": {
         "zh": "每人一排隐藏的数字牌，轮流猜别人的牌。猜中对方翻开，猜错自己翻开。规则三句话就能讲完，推理空间却意外地深，两个人也很好玩。",
         "en": "Everyone holds a row of hidden numbered tiles in sorted order. Guess an opponent's tile correctly and they flip it; guess wrong and you flip one of your own. Three sentences of rules hiding a genuinely deep deduction game — and it's excellent at two."
-      }
+      },
+      "coverAspect": 0.78
     },
     {
       "id": "mini-mahjong",
@@ -579,7 +579,6 @@
         30,
         60
       ],
-      "size": "small",
       "tags": [
         "abstract",
         "crowd"
@@ -591,7 +590,8 @@
       "desc": {
         "zh": "缩小版麻将，一盒装得下，出门旅行随身带。三人也能打，但四人才是正经局。玩法按你们熟悉的规则来就行。",
         "en": "A shrunk-down mahjong set that fits in one small box and travels anywhere. Three can play, but four is the real game. House rules welcome — we play whichever variant the table knows."
-      }
+      },
+      "coverAspect": 0.78
     },
     {
       "id": "texas-holdem",
@@ -605,7 +605,6 @@
         22
       ],
       "time": null,
-      "size": "small",
       "tags": [
         "strategy",
         "talky",
@@ -622,7 +621,8 @@
       "playersNote": {
         "zh": "筹码管够，人数只受一副牌限制——理论上最多 22 人",
         "en": "We have chips for days; the only limit is one deck of cards — 22 players, theoretically"
-      }
+      },
+      "coverAspect": 0.78
     }
   ]
 }
