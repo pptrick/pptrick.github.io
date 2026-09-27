@@ -80,15 +80,15 @@
         "en": "plus 1 Storyteller"
       },
       "blurb": {
-        "zh": "死了也能继续说话——狼人杀的终极进化。",
+        "zh": "死人也能继续说话，狼人杀老玩家来了都得重新学。",
         "en": "Dead players keep talking. Werewolf, finally perfected."
       },
       "desc": {
-        "zh": "需要一位「说书人」主持。村民阵营要找出恶魔，恶魔阵营要活到最后。最大的不同是：你死了还能投票、还能发言，所以没有人会提前退场干坐着。",
+        "zh": "得有个人当说书人。好人要找出恶魔，恶魔要活到最后。跟狼人杀最不一样的地方是，你被杀了照样能发言、还剩一票，所以没人干坐着等散场。策略深度比狼人杀和阿瓦隆都高一截，上手要花点时间，玩明白了就很难回去了。",
         "en": "One player runs the game as Storyteller. The town hunts the Demon; the Demon survives to the end. The twist: dying doesn't remove you — you still speak, still vote once. Nobody sits out."
       },
       "notes": {
-        "zh": "我们有四套内容：暗流涌动（新手首选）、黯月初升、梦殒春宵，以及华灯初上（角色合集，需搭配自定义剧本使用）。",
+        "zh": "四套内容都有：暗流涌动（新手先玩这个）、黯月初升、梦殒春宵，还有华灯初上——它是角色合集，不能单独开，得配自定义剧本用。",
         "en": "We own four sets: Trouble Brewing (start here), Bad Moon Rising, Sects & Violets, and Temple Fair — a character collection rather than a standalone script, so it needs a custom script to play."
       },
       "extras": [
@@ -133,11 +133,11 @@
         "twoPlayer"
       ],
       "blurb": {
-        "zh": "拿宝石、买卡、滚雪球，停不下来的三十分钟。",
+        "zh": "规则五分钟讲完，滚起雪球就停不下来。",
         "en": "Take gems, buy cards, snowball. Thirty minutes, gone."
       },
       "desc": {
-        "zh": "收集宝石筹码去买发展卡，买到的卡又变成永久折扣——越到后面一回合能做的事越多。规则五分钟讲完，是带新人入坑最稳的一款。",
+        "zh": "攒宝石、买卡，买到的卡变成永久折扣，越往后一回合能干的事越多。桌上的牌和宝石就那么多，看着简单其实全是勾心斗角。轻策常青树，推新最稳的一款，易学难精。",
         "en": "Collect gem chips, spend them on development cards, and every card you buy becomes a permanent discount — so each turn does more than the last. Five minutes to teach. The safest game to hand a first-timer."
       },
       "coverAspect": 0.7825
@@ -164,11 +164,11 @@
         "beginner"
       ],
       "blurb": {
-        "zh": "法医只能用证物说话，而凶手就坐在桌上。",
+        "zh": "法医全程不能开口，凶手就坐在桌上听着。",
         "en": "The forensic scientist can't speak. The murderer is at the table."
       },
       "desc": {
-        "zh": "一人当法医，全程不能开口，只能通过摆放「死因 / 线索」标记给出暗示；侦探要从满桌凶器和证物里拼出真正的作案组合。人越多越热闹，规则十分钟讲完。",
+        "zh": "一个人当法医，只能靠摆「死因」和「线索」标记给提示；其他人从满桌凶器证物里拼出凶手到底用的哪一套。人越多越热闹，规则十分钟讲完，聚会上最容易炸场的那种。",
         "en": "One player is the forensic scientist and may never talk — they can only place tiles marking cause of death and key evidence. Everyone else reads those clues to work out which weapon and which clue actually belong to the killer. Scales beautifully to a crowd, teaches in ten minutes."
       },
       "coverAspect": 1.0
@@ -199,11 +199,11 @@
         "en": "8+ works fine too"
       },
       "blurb": {
-        "zh": "一个词加一个数字，看队友能不能读懂你。",
+        "zh": "一个词一个数字，就看队友跟你脑回路合不合。",
         "en": "One word, one number. Now pray your friends think like you."
       },
       "desc": {
-        "zh": "两队各有一位军师，只能用「一个词＋一个数字」提示队友在 5×5 词阵里找出自己的特工。最刺激的是刺客格——碰到直接输。人数可以随便加，旁观的人也会忍不住一起吵。",
+        "zh": "两队各出一个军师，只能说「一个词＋一个数字」，让队友从 5×5 的词阵里挑出自己人。碰到刺客那格直接输。人多了也不怕，围观的往往比上场的还激动。",
         "en": "Each team's spymaster gives a single word and a number, and their team has to pick their own agents out of a 5×5 grid of words. One square is the assassin — touch it and you lose on the spot. Add as many people as you like; the spectators end up shouting too."
       },
       "coverAspect": 0.6975
@@ -233,7 +233,7 @@
         "en": "Pass the intel, hide your allegiance, talk someone into the ground."
       },
       "desc": {
-        "zh": "改编自电影《风声》的身份推理游戏。红蓝两方加第三方各有各的目标，靠传递情报和互相「澄清」来试探。单局短、重开快，一晚上能连着打好几轮。",
+        "zh": "电影《风声》改的身份局。红蓝两方加第三方各有各的赢法，靠传情报和互相试探摸底。单局短、重开快，一晚上能连打好几把。",
         "en": "A hidden-role game built on the Chinese spy film Fengsheng. Two intelligence factions plus a third party each chase different win conditions, passing intelligence cards around and calling each other out. Short games, fast resets — you'll play five in a row."
       },
       "coverAspect": 1.0
@@ -260,11 +260,11 @@
         "crowd"
       ],
       "blurb": {
-        "zh": "梅林知道一切，但不能让莫德雷德发现他是谁。",
+        "zh": "梅林什么都知道，但话说多了就得死。",
         "en": "Merlin knows everything — and must never let it show."
       },
       "desc": {
-        "zh": "好人要连成三次任务，坏人要破坏三次——或者在最后一刺刺中梅林直接翻盘。全程没有人出局，所有人从头说到尾。七人局最经典。",
+        "zh": "好人做成三个任务就赢，坏人搅黄三个、或者最后一刀刺中梅林也能翻盘。全程没人出局，所有人从头吵到尾。七人局最经典，也最容易翻车。",
         "en": "Good needs three successful quests; evil needs three failures — or one correct guess at Merlin in the final moment. Nobody is ever eliminated, so everyone argues from start to finish. Seven players is the classic count."
       },
       "coverAspect": 0.75
@@ -294,7 +294,7 @@
         "en": "Lord, loyalists, rebels, and one traitor. China's household hidden-role game."
       },
       "desc": {
-        "zh": "典藏版含标准版＋军争篇＋风火扩展，武将和牌堆都齐。主公 / 忠臣 / 反贼 / 内奸各有各的胜利条件，人多的时候最闹。基本属于不用解释规则的那种游戏。",
+        "zh": "典藏版含标准版＋军争篇＋风火扩展，再加一套国战，武将和牌堆都齐了。四种身份各有各的赢法，人多的时候最闹。规则基本不用讲，随便凑几个人就能开。",
         "en": "The Collector's Edition bundles the base game with the Warfare and Wind/Fire expansions, and we have Kingdom Wars alongside it, so the full hero roster is here. Everyone draws a secret role — Lord, Loyalist, Rebel, or Traitor — each with its own win condition, and plays a character with unique powers. Loud and chaotic at high counts."
       },
       "playersNote": {
@@ -328,11 +328,11 @@
         "en": "official 2-player variant exists"
       },
       "blurb": {
-        "zh": "选身份、暗杀、结盟，五分钟一局的极速狼人。",
+        "zh": "五分钟一局，输了洗牌重来就是。",
         "en": "Pick a role, stab someone, betray a friend. Five minutes a round."
       },
       "desc": {
-        "zh": "两大家族互相潜伏。每轮你要挑一个忍者身份：间谍和占卜师能拿情报，但只有忍者和盲刺客能真的动手杀人。单局非常短，输了马上再来一把。",
+        "zh": "两家互相潜伏。每轮先挑身份，间谍和占卜师拿情报，只有忍者和盲刺客能动手。节奏快到不太给你思考时间，一晚上能打十几把。官方还配了 2 人规则。",
         "en": "Two houses, both infiltrated. Each round you choose which ninja to be: a Spy or Fortune Teller gathers information, but only a Shinobi or Blind Assassin can actually take someone out. Rounds are so short that losing just means dealing again."
       },
       "coverAspect": 0.9988
@@ -359,11 +359,11 @@
         "beginner"
       ],
       "blurb": {
-        "zh": "只有一个夜晚，没有出局，十分钟结束战斗。",
+        "zh": "只过一个晚上，十分钟一把，没人出局。",
         "en": "One night, one vote, ten minutes. Nobody sits out."
       },
       "desc": {
-        "zh": "狼人杀的极速版：只过一个晚上，白天投一次票就结束。身份在夜里会被换来换去，所以你未必还是你以为的那个身份。配套 App 主持，不需要有人专门当法官。",
+        "zh": "狼人杀的极速版，一个夜晚加一次投票就完事。身份在夜里会被换来换去，你看到的那张未必还是你自己的。配 App 主持，不用专门抓个人当法官。",
         "en": "Werewolf compressed to a single night and one vote. Roles get swapped around in the dark, so the card you looked at may no longer be who you are. The companion app narrates, so nobody has to sit out as moderator."
       },
       "playersNote": {
@@ -393,11 +393,11 @@
         "twoPlayer"
       ],
       "blurb": {
-        "zh": "骰子放置的经典之作，每一步都在算性价比。",
+        "zh": "德策进阶的唯一指定入口，怎么玩都不腻。",
         "en": "The dice-placement classic. Every turn is an efficiency puzzle."
       },
       "desc": {
-        "zh": "用两颗骰子决定能取哪块板块、能放在哪里，把自己的领地一格格填满。板块之间的连锁得分让每个决策都要权衡「现在就拿」还是「等更好的」。欧式策略的教科书，耐玩度极高。",
+        "zh": "两颗骰子决定你能拿哪块板块、摆在哪儿，一格一格把领地填满。核心行动就四五种，规则不复杂，但每一步都在算性价比。2011 年到现在稳在 BGG 前 20，重开性极高。",
         "en": "Two dice decide which tiles you can take and where they can go, and you fill in your estate hex by hex. Completing regions triggers chain scoring, so every turn is a choice between taking what's there and holding out for the better fit. A textbook euro, and it never gets old."
       },
       "coverAspect": 0.705
@@ -422,11 +422,11 @@
         "heavy"
       ],
       "blurb": {
-        "zh": "掷骰选行动，把小咖啡馆经营成维也纳大饭店。",
+        "zh": "大家一起掷骰子，然后抢的是同一堆骰子。",
         "en": "Turn a Viennese café into the hotel the emperor visits."
       },
       "desc": {
-        "zh": "骰子决定了每轮桌面上能选的行动，但怎么用完全看你。招员工、备酒水、安排客人入住，员工之间的连锁效果是全局的核心。中重度欧式策略，两人局也很紧凑。",
+        "zh": "所有人共用一堆骰子，点数决定这轮能做什么，但拿走一颗，那个行动就弱一分。招员工、备酒水、把客人安排进对的房间，员工之间的连锁才是真正的核心。中策偏重，思考时间长，双人局反而比四人更紧凑。",
         "en": "A shared pool of dice sets which actions are available each round, but what you do with them is entirely yours. Hire staff, stock the bar, seat guests in the right rooms — the staff combos are where the game really lives. Mid-heavy euro that stays tight at two."
       },
       "coverAspect": 0.7137
@@ -434,7 +434,7 @@
     {
       "id": "crew-deep-sea",
       "name": {
-        "zh": "深海远征",
+        "zh": "星际探险队：深海任务",
         "en": "The Crew: Mission Deep Sea"
       },
       "cover": "covers/crew-deep-sea.webp",
@@ -452,11 +452,11 @@
         "twoPlayer"
       ],
       "blurb": {
-        "zh": "不能说话的合作吃墩，96 个任务一路打下去。",
+        "zh": "合作吃墩，但你几乎不能开口。",
         "en": "Co-op trick-taking where you're barely allowed to speak. 96 missions deep."
       },
       "desc": {
-        "zh": "合作版的吃墩游戏：每局有指定任务（比如「我必须赢下红 3」），但全程几乎不能交流，只能靠一枚提示标记给队友暗示。共 96 关，难度逐级升高，可以当成一场长线战役慢慢推。",
+        "zh": "规则像简化版桥牌，跟色出牌、数字大的赢墩。难点在于每局都有指定任务（比如「红 3 必须我来吃」），全程不许交流，每人只有一枚提示标记能用。96 关难度递进，任务卡随机抽，可以当战役慢慢推。",
         "en": "Trick-taking, but cooperative. Each mission hands out tasks like \"I must win the red 3\" — and you may not discuss them. One communication token per player is all the signalling you get. 96 missions of escalating difficulty, playable as a long campaign."
       },
       "coverAspect": 0.7217
@@ -486,11 +486,11 @@
         "beginner"
       ],
       "blurb": {
-        "zh": "一句话形容一张画，太准和太玄都会输。",
+        "zh": "说太明白不得分，说太玄也不得分。",
         "en": "Describe the picture. Too clear loses. Too clever loses too."
       },
       "desc": {
-        "zh": "讲故事的人给自己的牌起一个提示，其他人各出一张牌来混淆，然后大家猜哪张是原牌。妙处在于：所有人都猜中、或者都没猜中，讲故事的人都不得分——提示要卡在「刚刚好」。",
+        "zh": "讲故事的人给自己那张画编个谜面，其他人各丢一张出来混淆，然后大家猜哪张是原牌。全猜中和全没猜中，讲故事的人都是零分，分寸得卡得刚刚好。这游戏很看人，跟脑洞大的人玩才尽兴。",
         "en": "The storyteller gives a clue for one of their dreamlike cards; everyone else submits a card to muddy the water, then all players guess which was the original. The catch: if everyone guesses right, or everyone guesses wrong, the storyteller scores nothing. The clue has to land exactly in between."
       },
       "coverAspect": 1.0
@@ -520,11 +520,11 @@
         "beginner"
       ],
       "blurb": {
-        "zh": "同样的梦幻插画，这次比的是「猜大家会怎么想」。",
+        "zh": "还是那套梦幻插画，这回比的是跟大家想到一块去。",
         "en": "Same dreamlike art — but now you're guessing how everyone else thinks."
       },
       "desc": {
-        "zh": "Dixit 世界观下的竞速版本：给一个词，所有人同时在板上圈出自己觉得相关的牌。和别人选得一样才得分，选了没人选的反而扣分。还得决定什么时候收手——贪心会爆掉。",
+        "zh": "Dixit 世界观下的竞速版。给一个词，所有人同时在板上圈自己觉得沾边的牌。跟别人圈得一样才得分，圈了没人要的反而倒扣。最要命的是不知道什么时候该收手，贪一张就可能全盘皆输。",
         "en": "A race set in the Dixit universe. One word is revealed, and everyone simultaneously marks the cards they think connect to it. Matching other players scores; going out alone costs you. The real decision is when to stop — push too far and the round collapses."
       },
       "coverAspect": 1.0
@@ -554,11 +554,11 @@
         "beginner"
       ],
       "blurb": {
-        "zh": "黑白数字牌，一次猜错就暴露自己。",
+        "zh": "黑白数字牌，猜错一次就自曝一张。",
         "en": "Black and white number tiles. Guess wrong and you expose yourself."
       },
       "desc": {
-        "zh": "每人一排隐藏的数字牌，轮流猜别人的牌。猜中对方翻开，猜错自己翻开。规则三句话就能讲完，推理空间却意外地深，两个人也很好玩。",
+        "zh": "每人一排藏着的数字牌，按大小排好，轮流猜别人的。猜中了对方翻开，猜错了自己翻开。规则三句话讲完，推理空间却意外地深，两个人玩也完全成立。",
         "en": "Everyone holds a row of hidden numbered tiles in sorted order. Guess an opponent's tile correctly and they flip it; guess wrong and you flip one of your own. Three sentences of rules hiding a genuinely deep deduction game — and it's excellent at two."
       },
       "coverAspect": 1.108
@@ -584,11 +584,11 @@
         "crowd"
       ],
       "blurb": {
-        "zh": "便携版国粹，凑齐四个人就能开。",
+        "zh": "一盒装得下的国粹，凑齐四个人就能开。",
         "en": "Travel-sized mahjong. Find three friends and you're playing."
       },
       "desc": {
-        "zh": "缩小版麻将，一盒装得下，出门旅行随身带。三人也能打，但四人才是正经局。玩法按你们熟悉的规则来就行。",
+        "zh": "缩小版麻将，出门旅行随身带。三个人也能打，四人才是正经局。规则按你们熟的那套来就行。",
         "en": "A shrunk-down mahjong set that fits in one small box and travels anywhere. Three can play, but four is the real game. House rules welcome — we play whichever variant the table knows."
       },
       "coverAspect": 1.0
@@ -611,15 +611,15 @@
         "crowd"
       ],
       "blurb": {
-        "zh": "一副牌、一箱筹码，规则你们都会。",
+        "zh": "一副牌一箱筹码，规则不用教。",
         "en": "A deck, a case of chips, and rules everybody already knows."
       },
       "desc": {
-        "zh": "完整筹码套装，随时能开桌。两人单挑到十人满桌都行，时长完全看你们想打多久。",
+        "zh": "筹码管够，想什么时候开就什么时候开。两个人单挑到十人满桌都行，打多久完全看你们自己。",
         "en": "A full chip set, ready whenever someone suggests it. Heads-up at two, or a full table at ten. It runs as long as you want it to."
       },
       "playersNote": {
-        "zh": "筹码管够，人数只受一副牌限制——理论上最多 22 人",
+        "zh": "筹码管够，卡人数的是那副牌——理论上最多能坐 22 个",
         "en": "We have chips for days; the only limit is one deck of cards — 22 players, theoretically"
       },
       "coverAspect": 1.7812
