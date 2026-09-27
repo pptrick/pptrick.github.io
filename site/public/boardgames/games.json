@@ -80,7 +80,7 @@
         "en": "plus 1 Storyteller. The box starts at 5, but it needs a crowd to work"
       },
       "blurb": {
-        "zh": "死人也能继续说话，狼人杀老玩家来了都得重新学。",
+        "zh": "镇民找恶魔，恶魔藏到最后；死了还能发言投票。",
         "en": "Dead players keep talking. Werewolf, finally perfected."
       },
       "desc": {
@@ -133,7 +133,7 @@
         "twoPlayer"
       ],
       "blurb": {
-        "zh": "规则五分钟讲完，滚起雪球就停不下来。",
+        "zh": "拿宝石、买卡，买到的卡又变成下一张的折扣。",
         "en": "Take gems, buy cards, snowball. Thirty minutes, gone."
       },
       "desc": {
@@ -164,7 +164,7 @@
         "beginner"
       ],
       "blurb": {
-        "zh": "法医全程不能开口，凶手就坐在桌上听着。",
+        "zh": "法医只能摆证物说话，而凶手就坐在桌上。",
         "en": "The forensic scientist can't speak. The murderer is at the table."
       },
       "desc": {
@@ -199,7 +199,7 @@
         "en": "the box starts at 2, but you need 4 to make two teams"
       },
       "blurb": {
-        "zh": "一个词一个数字，就看队友跟你脑回路合不合。",
+        "zh": "一个词加一个数字，看队友能不能读懂你。",
         "en": "One word, one number. Now pray your friends think like you."
       },
       "desc": {
@@ -260,7 +260,7 @@
         "crowd"
       ],
       "blurb": {
-        "zh": "梅林什么都知道，但话说多了就得死。",
+        "zh": "梅林知道一切，但不能让莫德雷德认出他是谁。",
         "en": "Merlin knows everything — and must never let it show."
       },
       "desc": {
@@ -328,7 +328,7 @@
         "en": "official 2-player variant exists"
       },
       "blurb": {
-        "zh": "五分钟一局，输了洗牌重来就是。",
+        "zh": "选身份、暗杀、结盟，五分钟一局的极速狼人。",
         "en": "Pick a role, stab someone, betray a friend. Five minutes a round."
       },
       "desc": {
@@ -359,7 +359,7 @@
         "beginner"
       ],
       "blurb": {
-        "zh": "只过一个晚上，十分钟一把，没人出局。",
+        "zh": "只过一个晚上，投一次票，没人出局。",
         "en": "One night, one vote, ten minutes. Nobody sits out."
       },
       "desc": {
@@ -393,7 +393,7 @@
         "twoPlayer"
       ],
       "blurb": {
-        "zh": "德策进阶的唯一指定入口，怎么玩都不腻。",
+        "zh": "骰子决定你能拿哪块板块，一格一格拼出自己的领地。",
         "en": "The dice-placement classic. Every turn is an efficiency puzzle."
       },
       "desc": {
@@ -422,7 +422,7 @@
         "heavy"
       ],
       "blurb": {
-        "zh": "大家一起掷骰子，然后抢的是同一堆骰子。",
+        "zh": "掷骰选行动，把小咖啡馆经营成维也纳大饭店。",
         "en": "Turn a Viennese café into the hotel the emperor visits."
       },
       "desc": {
@@ -452,7 +452,7 @@
         "twoPlayer"
       ],
       "blurb": {
-        "zh": "合作吃墩，但你几乎不能开口。",
+        "zh": "不能说话的合作吃墩，96 关一路打下去。",
         "en": "Co-op trick-taking where you're barely allowed to speak. 96 missions deep."
       },
       "desc": {
@@ -486,7 +486,7 @@
         "beginner"
       ],
       "blurb": {
-        "zh": "说太明白不得分，说太玄也不得分。",
+        "zh": "一句话形容一张画，说太准和说太玄都会输。",
         "en": "Describe the picture. Too clear loses. Too clever loses too."
       },
       "desc": {
@@ -520,7 +520,7 @@
         "beginner"
       ],
       "blurb": {
-        "zh": "还是那套梦幻插画，这回比的是跟大家想到一块去。",
+        "zh": "同样的梦幻插画，这次比的是猜大家会怎么想。",
         "en": "Same dreamlike art — but now you're guessing how everyone else thinks."
       },
       "desc": {
@@ -554,7 +554,7 @@
         "beginner"
       ],
       "blurb": {
-        "zh": "黑白数字牌，猜错一次就自曝一张。",
+        "zh": "黑白数字牌，猜错一次就得翻开自己一张。",
         "en": "Black and white number tiles. Guess wrong and you expose yourself."
       },
       "desc": {
@@ -584,7 +584,7 @@
         "crowd"
       ],
       "blurb": {
-        "zh": "一盒装得下的国粹，凑齐四个人就能开。",
+        "zh": "便携版国粹，凑齐四个人就能开。",
         "en": "Travel-sized mahjong. Find three friends and you're playing."
       },
       "desc": {
@@ -611,7 +611,7 @@
         "crowd"
       ],
       "blurb": {
-        "zh": "一副牌一箱筹码，规则不用教。",
+        "zh": "一副牌、一箱筹码，规则你们都会。",
         "en": "A deck, a case of chips, and rules everybody already knows."
       },
       "desc": {
