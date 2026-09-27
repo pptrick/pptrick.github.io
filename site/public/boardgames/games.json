@@ -62,7 +62,7 @@
       },
       "cover": "covers/clocktower.webp",
       "players": [
-        5,
+        11,
         20
       ],
       "time": [
@@ -76,8 +76,8 @@
         "heavy"
       ],
       "playersNote": {
-        "zh": "另需 1 位说书人",
-        "en": "plus 1 Storyteller"
+        "zh": "另需 1 位说书人。盒子写 5 人起，但人太少撑不起来",
+        "en": "plus 1 Storyteller. The box starts at 5, but it needs a crowd to work"
       },
       "blurb": {
         "zh": "死人也能继续说话，狼人杀老玩家来了都得重新学。",
@@ -181,8 +181,8 @@
       },
       "cover": "covers/codenames.webp",
       "players": [
-        2,
-        8
+        4,
+        10
       ],
       "time": [
         15,
@@ -195,8 +195,8 @@
         "talky"
       ],
       "playersNote": {
-        "zh": "8 人以上也能玩",
-        "en": "8+ works fine too"
+        "zh": "盒子写 2 人起，但 4 个人才凑得成两队",
+        "en": "the box starts at 2, but you need 4 to make two teams"
       },
       "blurb": {
         "zh": "一个词一个数字，就看队友跟你脑回路合不合。",
@@ -345,7 +345,7 @@
       },
       "cover": "covers/one-night-werewolf.webp",
       "players": [
-        5,
+        8,
         12
       ],
       "time": [
@@ -367,8 +367,8 @@
         "en": "Werewolf compressed to a single night and one vote. Roles get swapped around in the dark, so the card you looked at may no longer be who you are. The companion app narrates, so nobody has to sit out as moderator."
       },
       "playersNote": {
-        "zh": "盒子印的是 3–10 人，但 3 人太少玩不起来，人多反而更好玩",
-        "en": "The box says 3–10, but three is far too thin — it gets better the more people you add"
+        "zh": "盒子印的是 3–10 人，我们玩下来 8 个人往上才够味",
+        "en": "the box says 3–10; we find it wants 8 or more to really work"
       },
       "coverAspect": 1.0
     },
