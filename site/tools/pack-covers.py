@@ -18,6 +18,10 @@ from PIL import Image
 
 MAX_EDGE = 800
 QUALITY = 82
+# Matches --card in index.html. Transparent pixels are flattened onto this
+# rather than white, so the corners left over around an angled 3D box render
+# disappear into the card instead of sitting on it as a pale rectangle.
+CARD_BG = (253, 243, 224)
 SITE = Path(__file__).resolve().parent.parent
 GAMES = SITE / "public/boardgames/games.json"
 COVERS = SITE / "public/boardgames/covers"
@@ -34,8 +38,8 @@ def trim_margin(im: Image.Image) -> Image.Image:
     """
     from PIL import ImageChops
 
-    white = Image.new("RGB", im.size, (255, 255, 255))
-    mask = ImageChops.difference(im, white).convert("L").point(lambda p: 255 if p > 11 else 0)
+    white = Image.new("RGB", im.convert("RGB").size, (255, 255, 255))
+    mask = ImageChops.difference(im.convert("RGB"), white).convert("L").point(lambda p: 255 if p > 11 else 0)
     box = mask.getbbox()
     if not box:
         return im
@@ -57,16 +61,20 @@ def pack(src: Path, dest: Path) -> str:
         im = ImageOps.exif_transpose(im)
     except Exception:
         pass
-    # Flatten transparency onto white rather than letting it go black in WebP.
+    # A publisher PNG is usually the box on transparency. Alpha gives the exact
+    # bounds, so crop from it before flattening -- far more accurate than
+    # guessing the subject back out of a flattened background afterwards.
     if im.mode in ("RGBA", "LA", "P"):
         im = im.convert("RGBA")
-        flat = Image.new("RGB", im.size, (255, 255, 255))
+        alpha_box = im.split()[-1].getbbox()
+        if alpha_box:
+            im = im.crop(alpha_box)
+        flat = Image.new("RGB", im.size, CARD_BG)
         flat.paste(im, mask=im.split()[-1])
         im = flat
     else:
         im = im.convert("RGB")
-
-    im = trim_margin(im)
+        im = trim_margin(im)
 
     w, h = im.size
     if max(w, h) > MAX_EDGE:

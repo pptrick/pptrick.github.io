@@ -109,7 +109,7 @@
           "en": "Temple Fair"
         }
       ],
-      "coverAspect": 1.0
+      "coverAspect": 0.852
     },
     {
       "id": "splendor",
@@ -236,7 +236,7 @@
         "zh": "电影《风声》改的身份局。红蓝两方加第三方各有各的赢法，靠传情报和互相试探摸底。单局短、重开快，一晚上能连打好几把。",
         "en": "A hidden-role game built on the Chinese spy film Fengsheng. Two intelligence factions plus a third party each chase different win conditions, passing intelligence cards around and calling each other out. Short games, fast resets — you'll play five in a row."
       },
-      "coverAspect": 1.0
+      "coverAspect": 0.985
     },
     {
       "id": "avalon",
@@ -370,7 +370,7 @@
         "zh": "盒子印的是 3–10 人，我们玩下来 8 个人往上才够味",
         "en": "the box says 3–10; we find it wants 8 or more to really work"
       },
-      "coverAspect": 1.0
+      "coverAspect": 1.1994
     },
     {
       "id": "castles-of-burgundy",
@@ -493,7 +493,7 @@
         "zh": "讲故事的人给自己那张画编个谜面，其他人各丢一张出来混淆，然后大家猜哪张是原牌。全猜中和全没猜中，讲故事的人都是零分，分寸得卡得刚刚好。这游戏很看人，跟脑洞大的人玩才尽兴。",
         "en": "The storyteller gives a clue for one of their dreamlike cards; everyone else submits a card to muddy the water, then all players guess which was the original. The catch: if everyone guesses right, or everyone guesses wrong, the storyteller scores nothing. The clue has to land exactly in between."
       },
-      "coverAspect": 1.0
+      "coverAspect": 0.895
     },
     {
       "id": "stella",
@@ -527,7 +527,7 @@
         "zh": "Dixit 世界观下的竞速版。给一个词，所有人同时在板上圈自己觉得沾边的牌。跟别人圈得一样才得分，圈了没人要的反而倒扣。最要命的是不知道什么时候该收手，贪一张就可能全盘皆输。",
         "en": "A race set in the Dixit universe. One word is revealed, and everyone simultaneously marks the cards they think connect to it. Matching other players scores; going out alone costs you. The real decision is when to stop — push too far and the round collapses."
       },
-      "coverAspect": 1.0
+      "coverAspect": 0.9637
     },
     {
       "id": "davinci-code",
