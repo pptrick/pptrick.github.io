@@ -1,0 +1,628 @@
+{
+  "tags": {
+    "strategy": {
+      "zh": "策略",
+      "en": "Strategy"
+    },
+    "party": {
+      "zh": "派对",
+      "en": "Party"
+    },
+    "coop": {
+      "zh": "合作",
+      "en": "Co-op"
+    },
+    "deduction": {
+      "zh": "阵营推理",
+      "en": "Social deduction"
+    },
+    "engine": {
+      "zh": "引擎构筑",
+      "en": "Engine building"
+    },
+    "abstract": {
+      "zh": "抽象",
+      "en": "Abstract"
+    },
+    "story": {
+      "zh": "叙事",
+      "en": "Storytelling"
+    },
+    "beginner": {
+      "zh": "适合新手",
+      "en": "Beginner friendly"
+    },
+    "twoPlayer": {
+      "zh": "双人友好",
+      "en": "Great at two"
+    },
+    "crowd": {
+      "zh": "多人混战",
+      "en": "Big group"
+    },
+    "talky": {
+      "zh": "需要嘴炮",
+      "en": "Talk your way out"
+    },
+    "heavy": {
+      "zh": "硬核长局",
+      "en": "Long and heavy"
+    }
+  },
+  "games": [
+    {
+      "id": "clocktower",
+      "name": {
+        "zh": "血染钟楼",
+        "en": "Blood on the Clocktower"
+      },
+      "alt": {
+        "zh": "官方译名《染·钟楼谜团》",
+        "en": ""
+      },
+      "cover": "covers/clocktower.webp",
+      "players": [
+        5,
+        20
+      ],
+      "time": [
+        45,
+        120
+      ],
+      "size": "large",
+      "tags": [
+        "deduction",
+        "talky",
+        "crowd",
+        "heavy"
+      ],
+      "playersNote": {
+        "zh": "另需 1 位说书人",
+        "en": "plus 1 Storyteller"
+      },
+      "blurb": {
+        "zh": "死了也能继续说话——狼人杀的终极进化。",
+        "en": "Dead players keep talking. Werewolf, finally perfected."
+      },
+      "desc": {
+        "zh": "需要一位「说书人」主持。村民阵营要找出恶魔，恶魔阵营要活到最后。最大的不同是：你死了还能投票、还能发言，所以没有人会提前退场干坐着。",
+        "en": "One player runs the game as Storyteller. The town hunts the Demon; the Demon survives to the end. The twist: dying doesn't remove you — you still speak, still vote once. Nobody sits out."
+      },
+      "notes": {
+        "zh": "我们有四套内容：暗流涌动（新手首选）、黯月初升、梦殒春宵，以及华灯初上（角色合集，需搭配自定义剧本使用）。",
+        "en": "We own four sets: Trouble Brewing (start here), Bad Moon Rising, Sects & Violets, and Temple Fair — a character collection rather than a standalone script, so it needs a custom script to play."
+      },
+      "extras": [
+        {
+          "zh": "暗流涌动",
+          "en": "Trouble Brewing"
+        },
+        {
+          "zh": "黯月初升",
+          "en": "Bad Moon Rising"
+        },
+        {
+          "zh": "梦殒春宵",
+          "en": "Sects & Violets"
+        },
+        {
+          "zh": "华灯初上",
+          "en": "Temple Fair"
+        }
+      ]
+    },
+    {
+      "id": "splendor",
+      "name": {
+        "zh": "璀璨宝石",
+        "en": "Splendor"
+      },
+      "cover": "covers/splendor.webp",
+      "players": [
+        2,
+        4
+      ],
+      "time": [
+        30,
+        30
+      ],
+      "size": "large",
+      "tags": [
+        "strategy",
+        "engine",
+        "beginner",
+        "twoPlayer"
+      ],
+      "blurb": {
+        "zh": "拿宝石、买卡、滚雪球，停不下来的三十分钟。",
+        "en": "Take gems, buy cards, snowball. Thirty minutes, gone."
+      },
+      "desc": {
+        "zh": "收集宝石筹码去买发展卡，买到的卡又变成永久折扣——越到后面一回合能做的事越多。规则五分钟讲完，是带新人入坑最稳的一款。",
+        "en": "Collect gem chips, spend them on development cards, and every card you buy becomes a permanent discount — so each turn does more than the last. Five minutes to teach. The safest game to hand a first-timer."
+      }
+    },
+    {
+      "id": "deception",
+      "name": {
+        "zh": "犯罪现场：CSI 还原真相",
+        "en": "Deception: Murder in Hong Kong"
+      },
+      "cover": "covers/deception.webp",
+      "players": [
+        4,
+        12
+      ],
+      "time": [
+        20,
+        30
+      ],
+      "size": "large",
+      "tags": [
+        "deduction",
+        "party",
+        "crowd",
+        "beginner"
+      ],
+      "blurb": {
+        "zh": "法医只能用证物说话，而凶手就坐在桌上。",
+        "en": "The forensic scientist can't speak. The murderer is at the table."
+      },
+      "desc": {
+        "zh": "一人当法医，全程不能开口，只能通过摆放「死因 / 线索」标记给出暗示；侦探要从满桌凶器和证物里拼出真正的作案组合。人越多越热闹，规则十分钟讲完。",
+        "en": "One player is the forensic scientist and may never talk — they can only place tiles marking cause of death and key evidence. Everyone else reads those clues to work out which weapon and which clue actually belong to the killer. Scales beautifully to a crowd, teaches in ten minutes."
+      }
+    },
+    {
+      "id": "codenames",
+      "name": {
+        "zh": "行动代号",
+        "en": "Codenames"
+      },
+      "cover": "covers/codenames.webp",
+      "players": [
+        2,
+        8
+      ],
+      "time": [
+        15,
+        30
+      ],
+      "size": "normal",
+      "tags": [
+        "party",
+        "beginner",
+        "crowd",
+        "talky"
+      ],
+      "playersNote": {
+        "zh": "8 人以上也能玩",
+        "en": "8+ works fine too"
+      },
+      "blurb": {
+        "zh": "一个词加一个数字，看队友能不能读懂你。",
+        "en": "One word, one number. Now pray your friends think like you."
+      },
+      "desc": {
+        "zh": "两队各有一位军师，只能用「一个词＋一个数字」提示队友在 5×5 词阵里找出自己的特工。最刺激的是刺客格——碰到直接输。人数可以随便加，旁观的人也会忍不住一起吵。",
+        "en": "Each team's spymaster gives a single word and a number, and their team has to pick their own agents out of a 5×5 grid of words. One square is the assassin — touch it and you lose on the spot. Add as many people as you like; the spectators end up shouting too."
+      }
+    },
+    {
+      "id": "fengsheng",
+      "name": {
+        "zh": "风声·再临",
+        "en": "The Message (Fengsheng)"
+      },
+      "cover": "covers/fengsheng.webp",
+      "players": [
+        3,
+        7
+      ],
+      "time": [
+        30,
+        45
+      ],
+      "size": "normal",
+      "tags": [
+        "deduction",
+        "talky",
+        "crowd"
+      ],
+      "blurb": {
+        "zh": "传情报、藏身份，一句话就能把人送走。",
+        "en": "Pass the intel, hide your allegiance, talk someone into the ground."
+      },
+      "desc": {
+        "zh": "改编自电影《风声》的身份推理游戏。红蓝两方加第三方各有各的目标，靠传递情报和互相「澄清」来试探。单局短、重开快，一晚上能连着打好几轮。",
+        "en": "A hidden-role game built on the Chinese spy film Fengsheng. Two intelligence factions plus a third party each chase different win conditions, passing intelligence cards around and calling each other out. Short games, fast resets — you'll play five in a row."
+      }
+    },
+    {
+      "id": "avalon",
+      "name": {
+        "zh": "阿瓦隆",
+        "en": "The Resistance: Avalon"
+      },
+      "cover": "covers/avalon.webp",
+      "players": [
+        5,
+        10
+      ],
+      "best": 7,
+      "time": [
+        30,
+        30
+      ],
+      "size": "normal",
+      "tags": [
+        "deduction",
+        "talky",
+        "crowd"
+      ],
+      "blurb": {
+        "zh": "梅林知道一切，但不能让莫德雷德发现他是谁。",
+        "en": "Merlin knows everything — and must never let it show."
+      },
+      "desc": {
+        "zh": "好人要连成三次任务，坏人要破坏三次——或者在最后一刺刺中梅林直接翻盘。全程没有人出局，所有人从头说到尾。七人局最经典。",
+        "en": "Good needs three successful quests; evil needs three failures — or one correct guess at Merlin in the final moment. Nobody is ever eliminated, so everyone argues from start to finish. Seven players is the classic count."
+      }
+    },
+    {
+      "id": "sanguosha",
+      "name": {
+        "zh": "三国杀（典藏版 + 国战）",
+        "en": "Legends of the Three Kingdoms"
+      },
+      "cover": "covers/sanguosha.webp",
+      "players": [
+        2,
+        12
+      ],
+      "time": [
+        30,
+        60
+      ],
+      "size": "normal",
+      "tags": [
+        "deduction",
+        "crowd",
+        "talky"
+      ],
+      "blurb": {
+        "zh": "主公忠臣反贼内奸，国民级身份局。",
+        "en": "Lord, loyalists, rebels, and one traitor. China's household hidden-role game."
+      },
+      "desc": {
+        "zh": "典藏版含标准版＋军争篇＋风火扩展，武将和牌堆都齐。主公 / 忠臣 / 反贼 / 内奸各有各的胜利条件，人多的时候最闹。基本属于不用解释规则的那种游戏。",
+        "en": "The Collector's Edition bundles the base game with the Warfare and Wind/Fire expansions, and we have Kingdom Wars alongside it, so the full hero roster is here. Everyone draws a secret role — Lord, Loyalist, Rebel, or Traitor — each with its own win condition, and plays a character with unique powers. Loud and chaotic at high counts."
+      },
+      "playersNote": {
+        "zh": "身份局 4–10 人；国战模式可到 12 人，军争篇另含 1v1 与 3v3",
+        "en": "4–10 in hidden-role mode; Kingdom Wars goes to 12, and Warfare adds 1v1 and 3v3"
+      }
+    },
+    {
+      "id": "night-of-the-ninja",
+      "name": {
+        "zh": "忍者之夜",
+        "en": "Night of the Ninja"
+      },
+      "cover": "covers/night-of-the-ninja.webp",
+      "players": [
+        4,
+        11
+      ],
+      "time": [
+        15,
+        30
+      ],
+      "size": "normal",
+      "tags": [
+        "deduction",
+        "party",
+        "crowd"
+      ],
+      "playersNote": {
+        "zh": "另有 2 人专用规则",
+        "en": "official 2-player variant exists"
+      },
+      "blurb": {
+        "zh": "选身份、暗杀、结盟，五分钟一局的极速狼人。",
+        "en": "Pick a role, stab someone, betray a friend. Five minutes a round."
+      },
+      "desc": {
+        "zh": "两大家族互相潜伏。每轮你要挑一个忍者身份：间谍和占卜师能拿情报，但只有忍者和盲刺客能真的动手杀人。单局非常短，输了马上再来一把。",
+        "en": "Two houses, both infiltrated. Each round you choose which ninja to be: a Spy or Fortune Teller gathers information, but only a Shinobi or Blind Assassin can actually take someone out. Rounds are so short that losing just means dealing again."
+      }
+    },
+    {
+      "id": "one-night-werewolf",
+      "name": {
+        "zh": "一夜终极狼人",
+        "en": "One Night Ultimate Werewolf"
+      },
+      "cover": "covers/one-night-werewolf.webp",
+      "players": [
+        5,
+        12
+      ],
+      "time": [
+        10,
+        10
+      ],
+      "size": "small",
+      "tags": [
+        "deduction",
+        "party",
+        "talky",
+        "beginner"
+      ],
+      "blurb": {
+        "zh": "只有一个夜晚，没有出局，十分钟结束战斗。",
+        "en": "One night, one vote, ten minutes. Nobody sits out."
+      },
+      "desc": {
+        "zh": "狼人杀的极速版：只过一个晚上，白天投一次票就结束。身份在夜里会被换来换去，所以你未必还是你以为的那个身份。配套 App 主持，不需要有人专门当法官。",
+        "en": "Werewolf compressed to a single night and one vote. Roles get swapped around in the dark, so the card you looked at may no longer be who you are. The companion app narrates, so nobody has to sit out as moderator."
+      },
+      "playersNote": {
+        "zh": "盒子印的是 3–10 人，但 3 人太少玩不起来，人多反而更好玩",
+        "en": "The box says 3–10, but three is far too thin — it gets better the more people you add"
+      }
+    },
+    {
+      "id": "castles-of-burgundy",
+      "name": {
+        "zh": "勃艮第城堡",
+        "en": "The Castles of Burgundy"
+      },
+      "cover": "covers/castles-of-burgundy.webp",
+      "players": [
+        2,
+        4
+      ],
+      "time": [
+        30,
+        90
+      ],
+      "size": "large",
+      "tags": [
+        "strategy",
+        "heavy",
+        "twoPlayer"
+      ],
+      "blurb": {
+        "zh": "骰子放置的经典之作，每一步都在算性价比。",
+        "en": "The dice-placement classic. Every turn is an efficiency puzzle."
+      },
+      "desc": {
+        "zh": "用两颗骰子决定能取哪块板块、能放在哪里，把自己的领地一格格填满。板块之间的连锁得分让每个决策都要权衡「现在就拿」还是「等更好的」。欧式策略的教科书，耐玩度极高。",
+        "en": "Two dice decide which tiles you can take and where they can go, and you fill in your estate hex by hex. Completing regions triggers chain scoring, so every turn is a choice between taking what's there and holding out for the better fit. A textbook euro, and it never gets old."
+      }
+    },
+    {
+      "id": "grand-austria-hotel",
+      "name": {
+        "zh": "奥地利大饭店",
+        "en": "Grand Austria Hotel"
+      },
+      "cover": "covers/grand-austria-hotel.webp",
+      "players": [
+        2,
+        4
+      ],
+      "time": [
+        60,
+        120
+      ],
+      "size": "normal",
+      "tags": [
+        "strategy",
+        "heavy"
+      ],
+      "blurb": {
+        "zh": "掷骰选行动，把小咖啡馆经营成维也纳大饭店。",
+        "en": "Turn a Viennese café into the hotel the emperor visits."
+      },
+      "desc": {
+        "zh": "骰子决定了每轮桌面上能选的行动，但怎么用完全看你。招员工、备酒水、安排客人入住，员工之间的连锁效果是全局的核心。中重度欧式策略，两人局也很紧凑。",
+        "en": "A shared pool of dice sets which actions are available each round, but what you do with them is entirely yours. Hire staff, stock the bar, seat guests in the right rooms — the staff combos are where the game really lives. Mid-heavy euro that stays tight at two."
+      }
+    },
+    {
+      "id": "crew-deep-sea",
+      "name": {
+        "zh": "深海远征",
+        "en": "The Crew: Mission Deep Sea"
+      },
+      "cover": "covers/crew-deep-sea.webp",
+      "players": [
+        2,
+        5
+      ],
+      "time": [
+        20,
+        20
+      ],
+      "size": "normal",
+      "tags": [
+        "coop",
+        "strategy",
+        "twoPlayer"
+      ],
+      "blurb": {
+        "zh": "不能说话的合作吃墩，96 个任务一路打下去。",
+        "en": "Co-op trick-taking where you're barely allowed to speak. 96 missions deep."
+      },
+      "desc": {
+        "zh": "合作版的吃墩游戏：每局有指定任务（比如「我必须赢下红 3」），但全程几乎不能交流，只能靠一枚提示标记给队友暗示。共 96 关，难度逐级升高，可以当成一场长线战役慢慢推。",
+        "en": "Trick-taking, but cooperative. Each mission hands out tasks like \"I must win the red 3\" — and you may not discuss them. One communication token per player is all the signalling you get. 96 missions of escalating difficulty, playable as a long campaign."
+      }
+    },
+    {
+      "id": "dixit",
+      "name": {
+        "zh": "只言片语",
+        "en": "Dixit"
+      },
+      "alt": {
+        "zh": "简中现行译名《画物语》",
+        "en": ""
+      },
+      "cover": "covers/dixit.webp",
+      "players": [
+        3,
+        6
+      ],
+      "time": [
+        30,
+        30
+      ],
+      "size": "normal",
+      "tags": [
+        "party",
+        "story",
+        "beginner"
+      ],
+      "blurb": {
+        "zh": "一句话形容一张画，太准和太玄都会输。",
+        "en": "Describe the picture. Too clear loses. Too clever loses too."
+      },
+      "desc": {
+        "zh": "讲故事的人给自己的牌起一个提示，其他人各出一张牌来混淆，然后大家猜哪张是原牌。妙处在于：所有人都猜中、或者都没猜中，讲故事的人都不得分——提示要卡在「刚刚好」。",
+        "en": "The storyteller gives a clue for one of their dreamlike cards; everyone else submits a card to muddy the water, then all players guess which was the original. The catch: if everyone guesses right, or everyone guesses wrong, the storyteller scores nothing. The clue has to land exactly in between."
+      }
+    },
+    {
+      "id": "stella",
+      "name": {
+        "zh": "Stella：只言片语宇宙",
+        "en": "Stella: Dixit Universe"
+      },
+      "alt": {
+        "zh": "港台译名《追星人》",
+        "en": ""
+      },
+      "cover": "covers/stella.webp",
+      "players": [
+        3,
+        6
+      ],
+      "time": [
+        30,
+        45
+      ],
+      "size": "normal",
+      "tags": [
+        "party",
+        "story",
+        "beginner"
+      ],
+      "blurb": {
+        "zh": "同样的梦幻插画，这次比的是「猜大家会怎么想」。",
+        "en": "Same dreamlike art — but now you're guessing how everyone else thinks."
+      },
+      "desc": {
+        "zh": "Dixit 世界观下的竞速版本：给一个词，所有人同时在板上圈出自己觉得相关的牌。和别人选得一样才得分，选了没人选的反而扣分。还得决定什么时候收手——贪心会爆掉。",
+        "en": "A race set in the Dixit universe. One word is revealed, and everyone simultaneously marks the cards they think connect to it. Matching other players scores; going out alone costs you. The real decision is when to stop — push too far and the round collapses."
+      }
+    },
+    {
+      "id": "davinci-code",
+      "name": {
+        "zh": "达芬奇密码",
+        "en": "Da Vinci Code"
+      },
+      "alt": {
+        "zh": "日版名 Algo，国际版名 Coda",
+        "en": "published as Algo in Japan, Coda internationally"
+      },
+      "cover": "covers/davinci-code.webp",
+      "players": [
+        2,
+        4
+      ],
+      "time": [
+        15,
+        30
+      ],
+      "size": "small",
+      "tags": [
+        "abstract",
+        "twoPlayer",
+        "beginner"
+      ],
+      "blurb": {
+        "zh": "黑白数字牌，一次猜错就暴露自己。",
+        "en": "Black and white number tiles. Guess wrong and you expose yourself."
+      },
+      "desc": {
+        "zh": "每人一排隐藏的数字牌，轮流猜别人的牌。猜中对方翻开，猜错自己翻开。规则三句话就能讲完，推理空间却意外地深，两个人也很好玩。",
+        "en": "Everyone holds a row of hidden numbered tiles in sorted order. Guess an opponent's tile correctly and they flip it; guess wrong and you flip one of your own. Three sentences of rules hiding a genuinely deep deduction game — and it's excellent at two."
+      }
+    },
+    {
+      "id": "mini-mahjong",
+      "name": {
+        "zh": "迷你麻将",
+        "en": "Mini Mahjong"
+      },
+      "cover": "covers/mini-mahjong.webp",
+      "players": [
+        3,
+        4
+      ],
+      "best": 4,
+      "time": [
+        30,
+        60
+      ],
+      "size": "small",
+      "tags": [
+        "abstract",
+        "crowd"
+      ],
+      "blurb": {
+        "zh": "便携版国粹，凑齐四个人就能开。",
+        "en": "Travel-sized mahjong. Find three friends and you're playing."
+      },
+      "desc": {
+        "zh": "缩小版麻将，一盒装得下，出门旅行随身带。三人也能打，但四人才是正经局。玩法按你们熟悉的规则来就行。",
+        "en": "A shrunk-down mahjong set that fits in one small box and travels anywhere. Three can play, but four is the real game. House rules welcome — we play whichever variant the table knows."
+      }
+    },
+    {
+      "id": "texas-holdem",
+      "name": {
+        "zh": "德州扑克（筹码套装）",
+        "en": "Texas Hold'em (chip set)"
+      },
+      "cover": "covers/texas-holdem.webp",
+      "players": [
+        2,
+        22
+      ],
+      "time": null,
+      "size": "small",
+      "tags": [
+        "strategy",
+        "talky",
+        "crowd"
+      ],
+      "blurb": {
+        "zh": "一副牌、一箱筹码，规则你们都会。",
+        "en": "A deck, a case of chips, and rules everybody already knows."
+      },
+      "desc": {
+        "zh": "完整筹码套装，随时能开桌。两人单挑到十人满桌都行，时长完全看你们想打多久。",
+        "en": "A full chip set, ready whenever someone suggests it. Heads-up at two, or a full table at ten. It runs as long as you want it to."
+      },
+      "playersNote": {
+        "zh": "筹码管够，人数只受一副牌限制——理论上最多 22 人",
+        "en": "We have chips for days; the only limit is one deck of cards — 22 players, theoretically"
+      }
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+#!/usr/bin/env python3
+"""Resize board game cover images into public/boardgames/covers/.
+
+Drop full-size files (photos or downloaded box art) into a folder, named after
+the game `id` in games.json -- e.g. `sanguosha.jpg` -- then:
+
+    python3 tools/pack-covers.py ~/Desktop/incoming
+
+Writes <id>.webp at 800px on the long edge, and reports which games in
+games.json still have no cover. Lives in tools/ rather than public/ so it is
+never shipped to the site: only public/ and the Next build output are exported.
+"""
+import json
+import sys
+from pathlib import Path
+
+from PIL import Image
+
+MAX_EDGE = 800
+QUALITY = 82
+SITE = Path(__file__).resolve().parent.parent
+GAMES = SITE / "public/boardgames/games.json"
+COVERS = SITE / "public/boardgames/covers"
+SOURCE_SUFFIXES = {".jpg", ".jpeg", ".png", ".webp", ".heic", ".tif", ".tiff"}
+
+
+def pack(src: Path, dest: Path) -> str:
+    im = Image.open(src)
+    # Phone photos carry rotation in EXIF; without this they land sideways.
+    try:
+        from PIL import ImageOps
+
+        im = ImageOps.exif_transpose(im)
+    except Exception:
+        pass
+    # Flatten transparency onto white rather than letting it go black in WebP.
+    if im.mode in ("RGBA", "LA", "P"):
+        im = im.convert("RGBA")
+        flat = Image.new("RGB", im.size, (255, 255, 255))
+        flat.paste(im, mask=im.split()[-1])
+        im = flat
+    else:
+        im = im.convert("RGB")
+
+    w, h = im.size
+    if max(w, h) > MAX_EDGE:
+        scale = MAX_EDGE / max(w, h)
+        im = im.resize((round(w * scale), round(h * scale)), Image.LANCZOS)
+
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    im.save(dest, "WEBP", quality=QUALITY, method=6)
+    return f"{im.width}x{im.height}  {dest.stat().st_size // 1024}KB"
+
+
+def main() -> int:
+    ids = {g["id"] for g in json.loads(GAMES.read_text("utf-8"))["games"]}
+
+    if len(sys.argv) > 1:
+        incoming = Path(sys.argv[1]).expanduser()
+        if not incoming.is_dir():
+            print(f"not a directory: {incoming}")
+            return 1
+        for src in sorted(incoming.iterdir()):
+            if src.suffix.lower() not in SOURCE_SUFFIXES:
+                continue
+            if src.stem not in ids:
+                print(f"  skip {src.name} -- no game with id '{src.stem}'")
+                continue
+            print(f"  {src.stem:<22} {pack(src, COVERS / f'{src.stem}.webp')}")
+
+    absent = sorted(i for i in ids if not (COVERS / f"{i}.webp").exists())
+    total = sum(p.stat().st_size for p in COVERS.glob("*.webp")) // 1024
+    print(f"\n{len(ids) - len(absent)}/{len(ids)} covers present, {total}KB total")
+    if absent:
+        print("still missing: " + ", ".join(absent))
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
